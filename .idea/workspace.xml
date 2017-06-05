@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6b059c3-e105-45e2-b15c-e0b8741f1cb9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imooc/testshizhan/test5.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imooc/testshizhan/test6.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imooc/testshizhan/test7totalpractice.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/testshizhan/test7totalpractice.py" afterPath="$PROJECT_DIR$/imooc/testshizhan/test7totalpractice.py" />
     </list>
     <ignored path="Python3Demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,7 +18,7 @@
     <SUITE FILE_PATH="coverage/Python3Demo$spider.coverage" NAME="spider Coverage Results" MODIFIED="1489841873102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gloryroad/crawler" />
     <SUITE FILE_PATH="coverage/Python3Demo$control.coverage" NAME="control Coverage Results" MODIFIED="1496157595217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/imooc/pythonapplication_in_science" />
     <SUITE FILE_PATH="coverage/Python3Demo$numpydemo.coverage" NAME="numpydemo Coverage Results" MODIFIED="1496151430686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/imooc/pythonapplication_in_science" />
-    <SUITE FILE_PATH="coverage/Python3Demo$test7totalpractice.coverage" NAME="test7totalpractice Coverage Results" MODIFIED="1496676056698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/imooc/testshizhan" />
+    <SUITE FILE_PATH="coverage/Python3Demo$test7totalpractice.coverage" NAME="test7totalpractice Coverage Results" MODIFIED="1496678420971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/imooc/testshizhan" />
     <SUITE FILE_PATH="coverage/Python3Demo$primepuzzle1.coverage" NAME="primepuzzle1 Coverage Results" MODIFIED="1495546297224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/kaiyuanyouce" />
     <SUITE FILE_PATH="coverage/Python3Demo$p7beautifulsoup.coverage" NAME="p7beautifulsoup Coverage Results" MODIFIED="1496150688478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webscrapingwithpython" />
     <SUITE FILE_PATH="coverage/Python3Demo$personalization.coverage" NAME="personalization Coverage Results" MODIFIED="1496156676048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/imooc/pythonapplication_in_science" />
@@ -139,8 +135,8 @@
       <file leaf-file-name="test7totalpractice.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imooc/testshizhan/test7totalpractice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="258">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -191,8 +187,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="102" />
-    <option name="y" value="378" />
+    <option name="x" value="87" />
+    <option name="y" value="360" />
     <option name="width" value="1194" />
     <option name="height" value="683" />
   </component>
@@ -636,14 +632,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="102" y="378" width="1194" height="683" extended-state="0" />
+    <frame x="87" y="360" width="1194" height="683" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20746528" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5160745" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5160745" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1008,8 +1004,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imooc/testshizhan/test7totalpractice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="258">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>

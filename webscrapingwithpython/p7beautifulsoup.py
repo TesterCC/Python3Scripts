@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 html = urlopen("http://pythonscraping.com/pages/page1.html")
 bsObj = BeautifulSoup(html.read(), "html.parser")  # different from book, need add "html.parser"
 print(bsObj.h1)
-print(bsObj.head)
+print(bsObj.head.get_text())     # filter html tag
+
 
 

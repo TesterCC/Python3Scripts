@@ -1,2 +1,7 @@
- # ignore generated html files
- *.pyc
+.idea/
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build

@@ -17,4 +17,4 @@ print(exampleData)
 print("-------------------------------")
 
 for row in exampleData:
-    print('Row: '+ str(exampleReader.line_num) + ' ' + str(row))   # something error
+        print('Row: ' + str(exampleReader.line_num) + ' ' + str(row))   # something error

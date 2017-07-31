@@ -1,5 +1,6 @@
-# coding:utf-8
-# !/usr/bin/env python
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+
 
 # python3
 # http://www.imooc.com/video/12624

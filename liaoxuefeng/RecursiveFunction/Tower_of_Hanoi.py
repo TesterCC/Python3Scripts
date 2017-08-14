@@ -16,10 +16,10 @@ def move(n, a, b, c):
     if n == 1:
         print(a, '->', c)
     else:
-        move(n-1, a, c, b)
-        move(1, a, b, c)
-        move(n-1, b, a, c)
+        move(n-1, a, c, b)      # n-1个盘，从A借助C移动到B
+        move(1, a, b, c)        # 1个盘，从A借助B移动到C
+        move(n-1, b, a, c)      # n-1个盘，从B借助A移动到C
 
 
 if __name__ == '__main__':
-    move(3, 'A', 'B', 'C')
+    move(2, 'A', 'B', 'C')

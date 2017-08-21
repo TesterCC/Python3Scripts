@@ -39,7 +39,14 @@ print("-------------------")
 
 # 列出当前目录下的所有文件和目录名
 print([d for d in os.listdir('.')])   # os.listdir可以列出文件和目录
+print("-------------------")
 
 # for循环其实可以同时使用两个甚至多个变量，比如dict的items()可以同时迭代key和value
 d = {'x': 'A', 'y': 'B', 'z': 'C'}
+print([k + '=' + v for k, v in d.items()])   # dict无序，故虽然key value对应，但展现顺序可能不同
+print("-------------------")
+
+# 把一个list中所有的字符串变成小写
+L = ['Hello', 'World', 'IBM', 'Apple']
+print([s.lower() for s in L])
 

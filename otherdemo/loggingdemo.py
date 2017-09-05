@@ -5,7 +5,7 @@
 
 
 '''
-P95-86
+P95-96
 python网络爬虫实战--胡松涛
 
 Python Logging模块

@@ -12,7 +12,7 @@ python网络爬虫实战--胡松涛
 '''
 
 
-from myLog import MyLog
+from otherdemo.myLog import MyLog
 
 
 if __name__ == '__main__':

@@ -5,6 +5,7 @@
 
 # A Byte of Python -- P63-64 -- Python3
 
+
 def total(a=5, *numbers, **phonebook):
     print('a', a)
 

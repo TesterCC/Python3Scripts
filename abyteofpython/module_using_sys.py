@@ -17,4 +17,5 @@ print('\n\nThe  PYTHONPATH is', sys.path, '\n')
 
 # 查看程序目前所处在的目录
 print("-------------------")
+print("当前目录是:")
 print(os.getcwd())

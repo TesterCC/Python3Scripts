@@ -14,5 +14,25 @@ sorted
 直接比较数学上的大小是没有意义的，因此，比较的过程必须通过函数抽象出来。
 """
 
+# Python内置的sorted()函数就可以对list进行排序
+L = [36, 5, -12, 9, -21]
+print(sorted(L))   # 默认升序排列
+
+# sorted()函数也是一个高阶函数，它还可以接收一个key函数来实现自定义的排序，例如按绝对值大小排序
+r = sorted([36, 5, -12, 9, -21], key=abs)    # 按绝对值大小升序排列
+print(r)
+
+# 默认情况下，对字符串排序，是按照ASCII的大小比较的。
+# 由于'Z' < 'a'，结果，大写字母Z会排在小写字母a的前面。A-Z < a-z
+r2 = sorted(['bob', 'about', 'Zoo', 'Credit'])
+print(r2)
+
+print("---------忽略大小写，按照字母序排序----------")
+r3 = sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower)
+print(r3)
+
+print("---------忽略大小写，按照字母序反向排序----------")
+r4 = sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower, reverse=True)
+print(r4)
 
 

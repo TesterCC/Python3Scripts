@@ -35,8 +35,36 @@ class Cat(Animal):
 # 当子类和父类都存在相同的run()方法时，我们说，子类的run()覆盖了父类的run()，在代码运行的时候，总是会调用子类的run()。
 # 这样，我们就获得了继承的另一个好处：多态。
 
+
+class Tortoise(Animal):
+    def run(self):
+        print('Tortoise is running slowly...')
+
+
+# 对于Python这样的动态语言来说，则不一定需要传入Animal类型
+class Timer(object):
+    def run(self):
+        print('Start...')
+
+
+def run_twice(animal):
+    animal.run()
+    animal.run()
+
+
 if __name__ == '__main__':
     dog = Dog()
     dog.run()
     cat = Cat()
     cat.run()
+
+    # 判断一个变量是否是某个类型可以用isinstance()判断
+    print(isinstance(dog, Dog))
+    print(isinstance(cat, list))
+    print(isinstance(cat, Animal))
+
+    run_twice(Animal())
+    run_twice(Dog())
+    run_twice(Cat())
+    run_twice(Tortoise())
+    run_twice(Timer())

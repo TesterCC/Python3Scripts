@@ -35,6 +35,13 @@ https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c
 
 # http://www.jianshu.com/p/dbc6e7637d3a
 # need understand
+# 01
+# 10
+# 11
+
+# 011
+# 110
+# 121
 
 
 def triangles():

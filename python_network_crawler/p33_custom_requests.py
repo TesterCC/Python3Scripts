@@ -10,7 +10,12 @@ Crawler Target: http://httpbin.org/get?key1=value1
 """
 
 import requests
-key_dict = {'key1': 'value1', 'key2': 'value2'}
-r = requests.get('http://httpbin.org/get?key1=value1', params=key_dict)
+
+headers = {
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/602.2.14 (KHTML, like Gecko) Version/10.0.1 Safari/602.2.14',
+    'Host': 'www.santostang.com'
+}
+r = requests.get('http://www.santostang.com', headers=headers)
 print('URL已经正确解码：', r.url)
 print('字符串方式的响应体：\n', r.text)
+print("文本响应状态码:", r.status_code)

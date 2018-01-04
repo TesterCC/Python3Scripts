@@ -27,7 +27,7 @@ class TestCardsMethods(unittest.TestCase):
     def test_frenchdeck(self):
         self.assertEqual(len(self.deck), 52)
 
-    def test_random_getcard(self):
+    def test_random_get_card(self):
         # 从一个序列中随机选出一个元素
         from random import choice
         self.assertIsInstance(choice(self.deck), Card)

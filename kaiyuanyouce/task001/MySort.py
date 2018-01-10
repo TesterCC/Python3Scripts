@@ -9,10 +9,6 @@ Task001-2
 import random
 
 
-# random_data = [randint(10, 1001) for i in range(100)]
-# print(data)
-
-
 class MySort:
     """
        生成随机数,返回排序后的结果

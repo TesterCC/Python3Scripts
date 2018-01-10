@@ -16,7 +16,7 @@ from web_interface_dev.unittestdemo.module import Calculator
 class ModuleTest(unittest.TestCase):
 
     def setUp(self):
-        self.cal = Calculator(8,4)
+        self.cal = Calculator(8, 4)
 
     def tearDown(self):
         # print("Testcase tear down.")

@@ -9,5 +9,8 @@ https://www.imooc.com/video/16361
 
 from collections import *
 
+# 抽象基类  类似java的interface
+from collections.abc import *
+
 
 

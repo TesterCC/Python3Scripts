@@ -29,6 +29,7 @@ def bubble_sort(relist):
                     relist[j], relist[j+1] = relist[j+1], relist[j]       # 就交换他们两个的位置
         return relist
 
+
 if __name__ == '__main__':
     List = [3, 8, 12, 0, 3, 1, 5, 9, 6]
     List2 = [-3, 8, 12, 0, 3, 1, 5, 9, 6]

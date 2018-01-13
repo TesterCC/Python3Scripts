@@ -47,7 +47,33 @@ def dict_for():
         print("%s : %s " % (key, dict[key]))
 
 
+def range_for():
+    """
+    用for循环如何进行对range()遍历输出
+    """
+    print(u"range for循环实例")
+
+    # 使用默认参数生成序列进行遍历
+    for i in range(5):
+        print(i, end=',')
+
+        # 换行
+    print('')
+
+    # 指定范围生成序列进行遍历
+    for i in range(0, 10):
+        print(i, end=',')
+
+        # 换行
+    print('')
+
+    # 带步长方式生成序列进行遍历
+    for i in range(0, 10, 2):
+        print(i, end=',')
+
+
 if __name__ == '__main__':
     tuple_for()
     list_for()
     dict_for()
+    range_for()

@@ -19,6 +19,7 @@ def recur_fib(n):
     else:
         return recur_fib(n-1) + recur_fib(n-2)
 
+
 if __name__ == '__main__':
     # 获取用户输入
     nterms = int(input("您要输出几项? "))

@@ -14,7 +14,7 @@ import time
 # source=['/Users/TesterCC/test']
 # 注意: 这里必须在字符串中使用双引号，用以括起其中包含空格的名称
 
-source = ['/Users/TesterCC/test']
+source = ['/Users/TesterCC/test']    # 要备份的文件所在的目录
 
 # 2.备份文件必须存储在一个主备份目录中
 target_dir = '/Users/TesterCC/backup'

@@ -1,0 +1,150 @@
+书名,作者,描述,出版社,价格
+Python编程：从入门到实践,[美]埃里克·马瑟斯,本书是一本针对所有层次的Python 读者而作的Python 入门书。全书分两部分：第一部分介绍用Python 编程所必须了解的基本概念，包括matplotlib、NumPy 和Pygal 等强大的Python 库和工具介绍，以及列表、字典、if 语句、类、文件与异常、代码测试等内容；第二部分将理论付诸实践，讲解如何开发三个项目，包括简单的Python 2D 游戏开发如何利用数据生成交互式的信息图，以及创建和定制简单的Web 应用，并帮读者解决常见编程问题和困惑。,人民邮电出版社,CNY 89.00
+利用Python进行数据分析,Wes McKinney,|【名人推荐】
+“科学计算和数据分析社区已经等待这本书很多年了：大量具体的实践建议，以及大量综合应用方法。本书在未来几年里肯定会成为Python领域中技术计算的权威指南。”
+——Fernando Pérez　加州大学伯克利分校 研究科学家， IPython的创始人之一
+【内容简介】
+还在苦苦寻觅用Python控制、处理、整理、分析结构化数据的完整课程？本书含有大量的实践案例，你将学会如何利用各种Python库（包括NumPy、pandas、matplotlib以及IPython等）高效地解决各式各样的数据分析问题。
+由于作者Wes McKinney是pandas库的主要作者，所以本书也可以作为利用Python实现数据密集型应用的科学计算实践指南。本书适合刚刚接触Python的分析人员以及刚刚接触科学计算的Python程序员。
+•将IPython这个交互式Shell作为你的首要开发环境。
+•学习NumPy（Numerical Python）的基础和高级知识。
+•从pandas库的数据分析工具开始。
+•利用高性能工具对数据进行加载、清理、转换、合并以及重塑。
+•利用matplotlib创建散点图以及静态或交互式的可视化结果。
+•利用pandas的groupby功能对数据集进行切片、切块和汇总操作。
+•处理各种各样的时间序列数据。
+•通过详细的案例学习如何解决Web分析、社会科学、金融学以及经•济学等领域的问题。|,机械工业出版社,89.00
+A Byte of Python,Swaroop C H,|'A Byte of Python' is a book on programming using the Python language. It serves as a tutorial or guide to the Python language for a beginner audience. If all you know about computers is how to save text files, then this is the book for you.|,Lulu Marketplace,USD 27.98
+Head First Python（中文版）,巴里（Barry.P.）,你想过可以通过一本书就学会Python吗？《Head First Python(中文版)》超越枯燥的语法和甩法手册，通过一种独特的方法教你学习这种语言。你会迅速掌握Python的基础知识，然后转向持久存储、异常处理、Web开发、SQLite、数据加工和lGoogle App Engine。你还将学习如何为Android编写移动应用，这都要归功于Python为你赋予的强大能力。本书会提供充分并且完备的学习体验，帮助你成为一名真正的Python程序员。    作者巴里觉得你的时间相当宝贵，不应当过多地花费在与新概念的纠缠之中。通过应用认知科学和学习理论的最新研究成果，《Head First Python(中文版)》可以让你投入一个需要多感官参与的学习体验，这本书采用丰富直观的形式使你的大脑真正开动起来，而不是长篇累牍地说教，让你昏昏欲睡。,中国电力出版社,68.00元
+Python灰帽子,[美] Justin Seitz,《Python灰帽子》是由知名安全机构Immunity Inc的资深黑帽Justin Seitz主笔撰写的一本关于编程语言Python如何被广泛应用于黑客与逆向工程领域的书籍。老牌黑客，同时也是Immunity Inc的创始人兼首席技术执行官（CTO）Dave Aitel为这本书担任了技术编辑一职。书中绝大部分篇幅着眼于黑客技术领域中的两大经久不衰的话题：逆向工程与漏洞挖掘，并向读者呈现了几乎每个逆向工程师或安全研究人员在日常工作中所面临的各种场景，其中包括：如何设计与构建自己的调试工具，如何自动化实现烦琐的逆向分析任务，如何设计与构建自己的fuzzing工具，如何利用fuzzing 测试来找出存在于软件产品中的安全漏洞，一些小技巧诸如钩子与注入技术的应用，以及对一些主流Python安全工具如PyDbg、 Immunity Debugger、Sulley、IDAPython、PyEmu等的深入介绍。作者借助于如今黑客社区中备受青睐的编程语言 Python引领读者构建出精悍的脚本程序来一一应对上述这些问题。出现在书中的相当一部分Python代码实例借鉴或直接来源于一些优秀的开源安全项目，诸如Pedram Amini的Paimei，由此读者可以领略到安全研究者们是如何将黑客艺术与工程技术优雅融合来解决那些棘手问题的。,电子工业出版社,39.00元
+Python网络编程基础,John Goerzen,《Python网络编程基础》可以作为各层次Python、Web和网络程序的开发人员的参考书，在实际工作中使用书中的技术，效果更佳。,电子工业出版社,68.00元
+Python Algorithms,Magnus Lie Hetland,|Python Algorithms explains the Python approach to algorithm analysis and design. Written by Magnus Lie Hetland, author of Beginning Python, this book is sharply focused on classical algorithms, but it also gives a solid understanding of fundamental algorithmic problem-solving techniques. * The book deals with some of the most important and challenging areas of programming and computer science, but in a highly pedagogic and readable manner. * The book covers both algorithmic theory and programming practice, demonstrating how theory is reflected in real Python programs. * Well-known algorithms and data structures that are built into the Python language are explained, and the user is shown how to implement and evaluate others himself. What you'll learn * Transform new problems to well-known algorithmic problems with efficient solutions, or show that the problems belong to classes of problems thought not to be efficiently solvable. * Analyze algorithms and Python programs both using mathematical tools and basic experiments and benchmarks. * Prove correctness, optimality, or bounds on approximation error for Python programs and their underlying algorithms. * Understand several classical algorithms and data structures in depth, and be able to implement these efficiently in Python. * Design and implement new algorithms for new problems, using time-tested design principles and techniques. * Speed up implementations, using a plethora of tools for high-performance computing in Python. Who this book is for The book is intended for Python programmers who need to learn about algorithmic problem-solving, or who need a refresher. Students of computer science, or similar programming-related topics, such as bioinformatics, may also find the book to be quite useful. Table of Contents * Introduction * The Basics * Counting 101 * Induction and Recursion ...and Reduction * Traversal: The Skeleton Key of Algorithmics * Divide, Combine, and Conquer * Greed Is Good? Prove It! * Tangled Dependencies and Memoization * From A to B with Edsger and Friends * Matchings, Cuts, and Flows * Hard Problems and (Limited) Sloppiness|,Apress,USD 49.99
+Python基础教程,Magnus Lie Hetland,本书是经典教程的全新改版，作者根据Python 3.0版本的种种变化，全面改写了书中内容，做到既能“瞻前”也能“顾后”。本书层次鲜明、结构严谨、内容翔实，特别是在最后几章，作者将前面讲述的内容应用到了10个引人入胜的项目中，并以模板的形式介绍了项目的开发过程。本书既适合初学者夯实基础，又能帮助Python程序员提升技能，即使是 Python方面的技术专家，也能从书里找到令你耳目一新的东西。,人民邮电出版社,69.00元
+Python核心编程（第二版）,[美]Wesley J. Chun（陳仲才）,|本书是Python开发者的完全指南——针对 Python 2.5全面升级
+·学习专业的Python风格、最佳实践和好的编程习惯；
+·加强对Python对象、内存模型和Python面向对象特性的深入理解；
+·构建更有效的Web、CGI、互联网、网络和其他客户端\/服务器架构应用程序及软件；
+·学习如何使用Python中的Tkinter和其他工具来开发自己的GUI应用程序及软件；
+·通过用C等语言编写扩展来提升Python应用程序的性能，或者通过使用多线程增强I\/0相关的应用程序的能力；
+·学习Python中有关数据库的API，以及如何在Python中使用各种不同的数据库系统，包括MySQL、Postgres和 SQLite。|,人民邮电出版社,89.00元
+贝叶斯思维,[美]Allen B. Downey（艾伦·唐尼）,|这本书帮助那些希望用数学工具解决实际问题的人们，仅有的要求可能就是懂一点概率知识和程序设计。而贝叶斯方法是一种常见的利用概率学知识去解决不确定性问题的数学方法，对于一个计算机专业的人士，应当熟悉其应用在诸如机器翻译，语音识别，垃圾邮件检测等常见的计算机问题领域。
+可是本书实际上会远远扩大你的视野，即使不是一个计算机专业的人士，你也可以看到在战争环境下（二战德军坦克问题），法律问题上（肾肿瘤的假设验证），体育博彩领域（棕熊队和加人队NFL比赛问题）贝叶斯方法的威力。怎么从有限的信息判断德军装甲部队的规模，你所支持的球队有多大可能赢得冠军，在《龙与地下城》勇士中，你应当对游戏角色属性的最大值有什么样的期望，甚至在普通的彩弹射击游戏中，拥有一些贝叶斯思维也能帮助到你提高游戏水平。
+除此以外，本书在共计15章的篇幅中讨论了怎样解决十几个现实生活中的实际问题。在这些问题的解决过程中，作者还潜移默化的帮助读者形成了建模决策的方法论，建模误差和数值误差怎么取舍，怎样为具体问题建立数学模型，如何抓住问题中的主要矛盾（模型中的关键参数），再一步一步的优化或者验证模型的有效性或者局限性。在这个意义上，这本书又是一本关于数学建模的成功样本。|,人民邮电出版社,49.00
+Django Web开发指南,|Jeff Forcier,Paul Bissex|,本书讲述如何用Python框架Django构建出强大的Web解决方案，本书讲解了使用新的Django 1.0版的各种主要特性所需要的技术、工具以及概念。 全书分为12章和6个附录，内容包括，Django Python实战，Django速成：构建一个Blog，起始，定义和使用模型，URL、HTTP机制和视图，模板和表单处理，Photo Gallery，内容管理系统，Liveblog，Pastebin，高级Django编程，高级Django部署。附录内容包括命令行基础，安装运行Django，实用Django开发工具，发现、评估、使用Django应用程序，在Google App Engine上使用Django，参与Django项目。 本书适用于Python框架Django初学者，Django Web开发技术人员。,机械工业出版社,49.00元
+Python源码剖析,陈儒,|作为主流的动态语言，Python不仅简单易学、移植性好，而且拥有强大丰富的库的支持。此外，Python强大的可扩展性，让开发人员既可以非常容易地利用C\/C++编写Python的扩展模块，还能将Python嵌入到C\/C++程序中，为自己的系统添加动态扩展和动态编程的能力。.
+为了更好地利用Python语言，无论是使用Python语言本身，还是将Python与C\/C++交互使用，深刻理解Python的运行原理都是非常重要的。本书以CPython为研究对象，在C代码一级，深入细致地剖析了Python的实现。书中不仅包括了对大量Python内置对象的剖析，更将大量的篇幅用于对Python虚拟机及Python高级特性的剖析。通过此书，读者能够透彻地理解Python中的一般表达式、控制结构、异常机制、类机制、多线程机制、模块的动态加载机制、内存管理机制等核心技术的运行原理，同时，本书所揭示的动态语言的核心技术对于理解其他动态语言，如 Javascript、Ruby等也有较大的参考价值。..
+本书适合于Python程序员、动态语言爱好者、C程序员阅读|,电子工业出版社,69.80元
+Python学习手册,Mark Lutz,|《Python学习手册(第3版)》讲述了：Python可移植、功能强大、易于使用，是编写独立应用程序和脚本应用程序的理想选择。无论你是刚接触编程或者刚接触Python，通过学习《Python学习手册(第3版)》，你可以迅速高效地精通核心Python语言基础。读完《Python学习手册(第3版)》，你会对这门语言有足够的了解，从而可以在你所从事的任何应用领域中使用它。
+《Python学习手册(第3版)》是作者根据过去10年用于教学而广为人知的培训课程的材料编写而成的。除了有许多详实说明和每章小结之外，每章还包括一个头脑风暴：这是《Python学习手册(第3版)》独特的一部分，配合以实用的练习题和复习题，让读者练习新学的技巧并测试自己的理解程度。
+《Python学习手册(第3版)》包括：
+类型和操作——深入讨论Python主要的内置对象类型：数字、列表和字典等。
+语句和语法——在Python中输入代码来建立并处理对象，以及Python一般的语法模型。
+函数——Python基本的面向过程工具，用于组织代码和重用。
+模块——封装语句、函数以及其他工具，从而可以组织成较大的组件。
+类和OOP——Python可选的面向对象编程工具，可用于组织程序代码从而实现定制和重用。
+异常和工具——异常处理模型和语句，并介绍编写更大程序的开发工具。
+讨论Python 3.0。
+《Python学习手册(第3版)》让你对Python语言有深入而完整的了解，从而帮助你理解今后遇到的任何Python应用程序实例。如果你准备探索Google和YouTube为什么选中了Python，《Python学习手册(第3版)》就是你入门的最佳指南。|,机械工业出版社,89.00元
+图灵程序设计丛书·父与子的编程之旅,|桑德 (Warren Sande),桑德 (Carter Sande)|,|本书是一本家长与孩子共同学习编程的入门书。作者是一对父子，他们以Python语言为例，详尽细致地介绍了Python如何安装、字符串和操作符等程序设计的基本概念，介绍了条件语句、函数、模块等进阶内容，最后讲解了用Python实现游戏编程。书中的语言生动活泼，叙述简单明了。 为了让学习者觉得编程有趣，本书编排了很多卡通人物及场景对话，让学习者在轻松愉快之中跨入计算机编程的大门。
+第 2 版新增内容
+首先，我们来说说第 2 版中有哪些内容没有改变，那就是我们决定在第 2 版中继续使用 Python 2，而不是转换到 Python 3。我们会在第 1 章解释其中的原因。
+下面是第 2 版与第 1 版的不同之处
+增加了一些说明，解释 Python 2 和 Python 3 的区别。
+第 12 章增加了一节关于 Python 字典的内容。
+在第 20 章的 GUI 编程部分，我们将不再被支持的 PythonCard 换成了应用更广泛的 PyQt。PyQt 也用在第 22 章的 Hangman 程序和第 24 章的电子宠物程序中。
+增加了第 25 章，用来详细解释第 10 章中的 Skier 程序。
+增加了第 26 章，讲述在简单的对战游戏中，如何编写一个有人工智|,人民邮电出版社,CNY 69.00
+Python入门经典,(美)William F. Punch\/Richard Enbody,《Python入门经典:以解决计算问题为导向的Python编程实践》是一本系统而科学的Python入门教程，美国密歇根州立大学等多所美国知名高校采用其作为编程语言的入门教材，被奉为经典。它不仅从计算机教学和计算机科学的角度讲解了初学者如何才能更有效地去学习Python，而且特别强调用Python解决生活中的实际问题，精心组织了大量来源于生活中不同领域的与数值计算和数据处理相关的案例。通过《Python入门经典:以解决计算问题为导向的Python编程实践》，读者不仅能系统掌握Python编程相关的知识，而且还能掌握利用Python处理各种与数据相关的问题。《Python入门经典:以解决计算问题为导向的Python编程实践》分为五部分，第一部分介绍计算机设备的一般概念和一些计算机术语；第二部分开始介绍编程的基本知识，包括入门知识和控制语句，为后续内容做铺垫；第三部分讲述数据结构和函数，包括字符串、列表和元组、字典和集合、文件、函数、算法和程序等进阶内容，有助于读者提升编程技能；第四部分重点介绍如何使用类定义数据结构和算法、开发程序等，培养读者运用Python语言来实现基本的计算思想和策略的能力；第五部分主要介绍异常、测试和递归，旨在使读者成为更好的程序员。《Python入门经典:以解决计算问题为导向的Python编程实践》深入浅出，每一章节均给出了大量的实例、示范代码和自测练习，便于读者理解和掌握相关知识。读者通过学习《Python入门经典:以解决计算问题为导向的Python编程实践》，不仅能掌握Python语言的基本知识，还能学习如何在实践中运用该语言解决问题。,机械工业出版社,79.00元
+学习Python,|Mark Lutz,David Ascher|,|Python是流行、开源、面向对象的编程语言，既可以用于编写单机运行的程序也可以编写脚本程序，具有可移植、强大、易用等特点。跟随专业教师学习是最快捷的掌握此语言的方式。新版的《学习Python》把你带到Mark Lutz和David Ascher面前，他们是著名的Python专家和培训师，他们的用语亲切、组织良好的文章已经指导了许多编程者精通这种语言。
+《学习Python（第二版）》给程序员提供了一个学习Python和面向对象编程的综合学习工具。它根据1999年该书第一版发布以来Python语言的大量变化做了更新。本书介绍了最近发布的Python 2.3的基本要素并涵盖了新的特性，如列表内涵，嵌套作用域和迭代器\/产生器。
+除了语言特性，《学习Python（第二版）》还为初级程序员提供了新的内容，包括新的面向对象编程和动态类型回顾，新的关于编程起步和配置选项的讨论，新的关于文档的内容等等。全书用新的实例使得语言特性的应用更加具体。
+《学习Python（第二版）》首先给出了理解和构造Python程序必需的所有信息，包括类型、运算符、表达式、类、函数、模块和异常。然后，作者给出了更高级的内容，通过真实的应用和可用扩展库说明如何用Python完成一般的任务。全书提供了练习以检验自己的新技能。
+《学习Python（第二版）》是本可灵活选读的图书，它让读者能够集中深入Python语言的核心。随着通读全书，你将获得对Python深入而完整的理解，这将帮助你自己开发大型的应用程序。本书适合于任何不仅仅想停留于了解Python而且想更好地掌握它的人。
+对本书第一版的褒奖：
+“这本书最优之处是作者在提供有用的实例与详细解释说明之间取得近乎完美的平衡。无论你是有经验的计算机程序员还是初学者，这本书对于学习Python语言都是非常适合的。”
+——Andrew Morrison, CedarLug|,东南大学出版社,68.00元
+python绝技：运用python成为顶级黑客,[美] TJ O'Connor,|Python 是一门常用的编程语言，它不仅上手容易，而且还拥有丰富的支持库。对经常需要针对自己所 处的特定场景编写专用工具的黑客、计算机犯罪调查人员、渗透测试师和安全工程师来说，Python 的这些 特点可以帮助他们又快又好地完成这一任务，以极少的代码量实现所需的功能。《Python绝技：运用Python成为顶级黑客》结合具体的场景和真 实的案例，详述了 Python 在渗透测试、电子取证、网络流量分析、无线安全、网站中信息的自动抓取、 病毒免杀等领域内所发挥的巨大作用。
+《Python绝技：运用Python成为顶级黑客》适合计算机安全管理人员、计算机犯罪调查和电子取证人员、渗透测试人员，以及所有对计算机 安全感兴趣的爱好者阅读。同时也可供计算机、信息安全及相关专业的本\/专科院校师生学习参考。|,电子工业出版社,79.00元
+Expert Python Programming,Tarek Ziadé,|Python is a dynamic programming language, used in a wide range of domains by programmers who find it simple, yet powerful. From the earliest version 15 years ago to the current one, it has constantly evolved with productivity and code readability in mind.
+Even if you find writing Python code easy, writing code that is efficient and easy to maintain and reuse is not so straightforward. This book will show you how to do just that:  it will show you how Python development should be done. Python expert Tarek Ziadé takes you on a practical tour of Python application development, beginning with setting up the best development environment, and along the way looking at agile methodologies in Python, and applying proven object-oriented principles to your design.|,Packt,45
+Effective Python,布雷特·斯拉特金（Brett Slatkin）,|用Python编写程序，是相当容易的，所以这门语言非常流行。但若想掌握Python所特有的优势、魅力和表达能力，则相当困难，而且语言中还有很多隐藏的陷阱，容易令开发者犯错。
+本书可以帮你掌握真正的Pythonic编程方式，令你能够完全发挥出Python语言的强大功能，并写出健壮而高效的代码。Scott Meyers在畅销书《Effective C++》中开创了一种以使用场景为主导的精练教学方式，本书作者Brett Slatkin就以这种方式汇聚了59条优秀的实践原则、开发技巧和便捷方案，并以实用的代码范例来解释它们。
+Slatkin根据自己在Google公司多年开发Python基础架构所积累的经验，揭示Python语言中一些鲜为人知的微妙特性，并给出了能够改善代码功能及运行效率的习惯用法。通过本书，你能够了解到解决关键编程任务所用的最佳方式，并学会编写易于理解、便于维护且利于改进的代码。
+本书核心内容包括：
+涵盖Python 3.x及Python 2.x主要应用领域的实用指南，以及与之配套的详细解释及代码范例。
+与函数相关的编程建议，这些建议有助于我们写出意图清晰、便于复用且缺陷较少的函数。
+如何准确地表达类与对象的行为。
+在使用元类和动态属性时，如何避免错误的用法。
+更为高效的并发及并行方式。
+与Python内置模块相关的编程技巧和习惯用法。
+多人协作时所用的开发工具和最佳实践方式。
+旨在改善代码质量和程序性能的调试、测试与优化方案。|,机械工业出版社,59
+"笨办法"学Python,肖 (Zed A.Shaw),|本书是一本Python入门书籍，适合对计算机了解不多，没有学过编程，但对编程感兴趣的读者学习使用。这本书以习题的方式引导读者一步一步学习编程，从简单的打印一直讲到完整项目的实现，让初学者从基础的编程技术入手，最终体验到软件开发的基本过程。
+本书结构非常简单，共包括52个习题，其中26个覆盖了输入\/输出、变量和函数三个主题，另外26个覆盖了一些比较高级的话题，如条件判断、循环、类和对象、代码测试及项目的实现等。每一章的格式基本相同，以代码习题开始，按照说明编写代码，运行并检查结果，然后再做附加练习。
+Zed Shaw完善了这个堪称世上最好的Python学习系统。只要跟着学习，你就会和迄今为止数十万Zed教过的初学者一样获得成功。
+在这本书中，你将通过完成52个精心设计的习题来学会Python。阅读这些习题，把习题的代码精确地写出来（禁止复制和粘贴！），修正你的错误，观察程序的运行。在这个过程中，你将了解软件是如何工作的，好的程序看起来是什么样子，怎样阅读、编写、思考代码，以及如何用专业程序员的技巧来找出并修正错误。最重要的是，你将学到下面这些编写优秀的Python软件必需的初始技能。
+这本书会让你的每一分钟投入都有回报。Python是世界上最强大、最受欢迎的编程语言之一，很快你就会成为一名Python程序员。
+你还可以看Zed的视频！随书附赠的DVD中包含5个多小时激情挥洒的教学内容：一部完整的Python视频教程！|,人民邮电出版社,CNY 49.00
+利用Python进行数据分析,Wes McKinney,|【名人推荐】
+“科学计算和数据分析社区已经等待这本书很多年了：大量具体的实践建议，以及大量综合应用方法。本书在未来几年里肯定会成为Python领域中技术计算的权威指南。”
+——Fernando Pérez　加州大学伯克利分校 研究科学家， IPython的创始人之一
+【内容简介】
+还在苦苦寻觅用Python控制、处理、整理、分析结构化数据的完整课程？本书含有大量的实践案例，你将学会如何利用各种Python库（包括NumPy、pandas、matplotlib以及IPython等）高效地解决各式各样的数据分析问题。
+由于作者Wes McKinney是pandas库的主要作者，所以本书也可以作为利用Python实现数据密集型应用的科学计算实践指南。本书适合刚刚接触Python的分析人员以及刚刚接触科学计算的Python程序员。
+•将IPython这个交互式Shell作为你的首要开发环境。
+•学习NumPy（Numerical Python）的基础和高级知识。
+•从pandas库的数据分析工具开始。
+•利用高性能工具对数据进行加载、清理、转换、合并以及重塑。
+•利用matplotlib创建散点图以及静态或交互式的可视化结果。
+•利用pandas的groupby功能对数据集进行切片、切块和汇总操作。
+•处理各种各样的时间序列数据。
+•通过详细的案例学习如何解决Web分析、社会科学、金融学以及经•济学等领域的问题。|,机械工业出版社,89.00
+A Byte of Python,Swaroop C H,|'A Byte of Python' is a book on programming using the Python language. It serves as a tutorial or guide to the Python language for a beginner audience. If all you know about computers is how to save text files, then this is the book for you.|,Lulu Marketplace,USD 27.98
+Head First Python（中文版）,巴里（Barry.P.）,你想过可以通过一本书就学会Python吗？《Head First Python(中文版)》超越枯燥的语法和甩法手册，通过一种独特的方法教你学习这种语言。你会迅速掌握Python的基础知识，然后转向持久存储、异常处理、Web开发、SQLite、数据加工和lGoogle App Engine。你还将学习如何为Android编写移动应用，这都要归功于Python为你赋予的强大能力。本书会提供充分并且完备的学习体验，帮助你成为一名真正的Python程序员。    作者巴里觉得你的时间相当宝贵，不应当过多地花费在与新概念的纠缠之中。通过应用认知科学和学习理论的最新研究成果，《Head First Python(中文版)》可以让你投入一个需要多感官参与的学习体验，这本书采用丰富直观的形式使你的大脑真正开动起来，而不是长篇累牍地说教，让你昏昏欲睡。,中国电力出版社,68.00元
+Python灰帽子,[美] Justin Seitz,《Python灰帽子》是由知名安全机构Immunity Inc的资深黑帽Justin Seitz主笔撰写的一本关于编程语言Python如何被广泛应用于黑客与逆向工程领域的书籍。老牌黑客，同时也是Immunity Inc的创始人兼首席技术执行官（CTO）Dave Aitel为这本书担任了技术编辑一职。书中绝大部分篇幅着眼于黑客技术领域中的两大经久不衰的话题：逆向工程与漏洞挖掘，并向读者呈现了几乎每个逆向工程师或安全研究人员在日常工作中所面临的各种场景，其中包括：如何设计与构建自己的调试工具，如何自动化实现烦琐的逆向分析任务，如何设计与构建自己的fuzzing工具，如何利用fuzzing 测试来找出存在于软件产品中的安全漏洞，一些小技巧诸如钩子与注入技术的应用，以及对一些主流Python安全工具如PyDbg、 Immunity Debugger、Sulley、IDAPython、PyEmu等的深入介绍。作者借助于如今黑客社区中备受青睐的编程语言 Python引领读者构建出精悍的脚本程序来一一应对上述这些问题。出现在书中的相当一部分Python代码实例借鉴或直接来源于一些优秀的开源安全项目，诸如Pedram Amini的Paimei，由此读者可以领略到安全研究者们是如何将黑客艺术与工程技术优雅融合来解决那些棘手问题的。,电子工业出版社,39.00元
+Python网络编程基础,John Goerzen,《Python网络编程基础》可以作为各层次Python、Web和网络程序的开发人员的参考书，在实际工作中使用书中的技术，效果更佳。,电子工业出版社,68.00元
+Python Algorithms,Magnus Lie Hetland,|Python Algorithms explains the Python approach to algorithm analysis and design. Written by Magnus Lie Hetland, author of Beginning Python, this book is sharply focused on classical algorithms, but it also gives a solid understanding of fundamental algorithmic problem-solving techniques. * The book deals with some of the most important and challenging areas of programming and computer science, but in a highly pedagogic and readable manner. * The book covers both algorithmic theory and programming practice, demonstrating how theory is reflected in real Python programs. * Well-known algorithms and data structures that are built into the Python language are explained, and the user is shown how to implement and evaluate others himself. What you'll learn * Transform new problems to well-known algorithmic problems with efficient solutions, or show that the problems belong to classes of problems thought not to be efficiently solvable. * Analyze algorithms and Python programs both using mathematical tools and basic experiments and benchmarks. * Prove correctness, optimality, or bounds on approximation error for Python programs and their underlying algorithms. * Understand several classical algorithms and data structures in depth, and be able to implement these efficiently in Python. * Design and implement new algorithms for new problems, using time-tested design principles and techniques. * Speed up implementations, using a plethora of tools for high-performance computing in Python. Who this book is for The book is intended for Python programmers who need to learn about algorithmic problem-solving, or who need a refresher. Students of computer science, or similar programming-related topics, such as bioinformatics, may also find the book to be quite useful. Table of Contents * Introduction * The Basics * Counting 101 * Induction and Recursion ...and Reduction * Traversal: The Skeleton Key of Algorithmics * Divide, Combine, and Conquer * Greed Is Good? Prove It! * Tangled Dependencies and Memoization * From A to B with Edsger and Friends * Matchings, Cuts, and Flows * Hard Problems and (Limited) Sloppiness|,Apress,USD 49.99
+Python基础教程,Magnus Lie Hetland,本书是经典教程的全新改版，作者根据Python 3.0版本的种种变化，全面改写了书中内容，做到既能“瞻前”也能“顾后”。本书层次鲜明、结构严谨、内容翔实，特别是在最后几章，作者将前面讲述的内容应用到了10个引人入胜的项目中，并以模板的形式介绍了项目的开发过程。本书既适合初学者夯实基础，又能帮助Python程序员提升技能，即使是 Python方面的技术专家，也能从书里找到令你耳目一新的东西。,人民邮电出版社,69.00元
+Python核心编程（第二版）,[美]Wesley J. Chun（陳仲才）,|本书是Python开发者的完全指南——针对 Python 2.5全面升级
+·学习专业的Python风格、最佳实践和好的编程习惯；
+·加强对Python对象、内存模型和Python面向对象特性的深入理解；
+·构建更有效的Web、CGI、互联网、网络和其他客户端\/服务器架构应用程序及软件；
+·学习如何使用Python中的Tkinter和其他工具来开发自己的GUI应用程序及软件；
+·通过用C等语言编写扩展来提升Python应用程序的性能，或者通过使用多线程增强I\/0相关的应用程序的能力；
+·学习Python中有关数据库的API，以及如何在Python中使用各种不同的数据库系统，包括MySQL、Postgres和 SQLite。|,人民邮电出版社,89.00元
+贝叶斯思维,[美]Allen B. Downey（艾伦·唐尼）,|这本书帮助那些希望用数学工具解决实际问题的人们，仅有的要求可能就是懂一点概率知识和程序设计。而贝叶斯方法是一种常见的利用概率学知识去解决不确定性问题的数学方法，对于一个计算机专业的人士，应当熟悉其应用在诸如机器翻译，语音识别，垃圾邮件检测等常见的计算机问题领域。
+可是本书实际上会远远扩大你的视野，即使不是一个计算机专业的人士，你也可以看到在战争环境下（二战德军坦克问题），法律问题上（肾肿瘤的假设验证），体育博彩领域（棕熊队和加人队NFL比赛问题）贝叶斯方法的威力。怎么从有限的信息判断德军装甲部队的规模，你所支持的球队有多大可能赢得冠军，在《龙与地下城》勇士中，你应当对游戏角色属性的最大值有什么样的期望，甚至在普通的彩弹射击游戏中，拥有一些贝叶斯思维也能帮助到你提高游戏水平。
+除此以外，本书在共计15章的篇幅中讨论了怎样解决十几个现实生活中的实际问题。在这些问题的解决过程中，作者还潜移默化的帮助读者形成了建模决策的方法论，建模误差和数值误差怎么取舍，怎样为具体问题建立数学模型，如何抓住问题中的主要矛盾（模型中的关键参数），再一步一步的优化或者验证模型的有效性或者局限性。在这个意义上，这本书又是一本关于数学建模的成功样本。|,人民邮电出版社,49.00
+Django Web开发指南,|Jeff Forcier,Paul Bissex|,本书讲述如何用Python框架Django构建出强大的Web解决方案，本书讲解了使用新的Django 1.0版的各种主要特性所需要的技术、工具以及概念。 全书分为12章和6个附录，内容包括，Django Python实战，Django速成：构建一个Blog，起始，定义和使用模型，URL、HTTP机制和视图，模板和表单处理，Photo Gallery，内容管理系统，Liveblog，Pastebin，高级Django编程，高级Django部署。附录内容包括命令行基础，安装运行Django，实用Django开发工具，发现、评估、使用Django应用程序，在Google App Engine上使用Django，参与Django项目。 本书适用于Python框架Django初学者，Django Web开发技术人员。,机械工业出版社,49.00元
+Python源码剖析,陈儒,|作为主流的动态语言，Python不仅简单易学、移植性好，而且拥有强大丰富的库的支持。此外，Python强大的可扩展性，让开发人员既可以非常容易地利用C\/C++编写Python的扩展模块，还能将Python嵌入到C\/C++程序中，为自己的系统添加动态扩展和动态编程的能力。.
+为了更好地利用Python语言，无论是使用Python语言本身，还是将Python与C\/C++交互使用，深刻理解Python的运行原理都是非常重要的。本书以CPython为研究对象，在C代码一级，深入细致地剖析了Python的实现。书中不仅包括了对大量Python内置对象的剖析，更将大量的篇幅用于对Python虚拟机及Python高级特性的剖析。通过此书，读者能够透彻地理解Python中的一般表达式、控制结构、异常机制、类机制、多线程机制、模块的动态加载机制、内存管理机制等核心技术的运行原理，同时，本书所揭示的动态语言的核心技术对于理解其他动态语言，如 Javascript、Ruby等也有较大的参考价值。..
+本书适合于Python程序员、动态语言爱好者、C程序员阅读|,电子工业出版社,69.80元
+Python学习手册,Mark Lutz,|《Python学习手册(第3版)》讲述了：Python可移植、功能强大、易于使用，是编写独立应用程序和脚本应用程序的理想选择。无论你是刚接触编程或者刚接触Python，通过学习《Python学习手册(第3版)》，你可以迅速高效地精通核心Python语言基础。读完《Python学习手册(第3版)》，你会对这门语言有足够的了解，从而可以在你所从事的任何应用领域中使用它。
+《Python学习手册(第3版)》是作者根据过去10年用于教学而广为人知的培训课程的材料编写而成的。除了有许多详实说明和每章小结之外，每章还包括一个头脑风暴：这是《Python学习手册(第3版)》独特的一部分，配合以实用的练习题和复习题，让读者练习新学的技巧并测试自己的理解程度。
+《Python学习手册(第3版)》包括：
+类型和操作——深入讨论Python主要的内置对象类型：数字、列表和字典等。
+语句和语法——在Python中输入代码来建立并处理对象，以及Python一般的语法模型。
+函数——Python基本的面向过程工具，用于组织代码和重用。
+模块——封装语句、函数以及其他工具，从而可以组织成较大的组件。
+类和OOP——Python可选的面向对象编程工具，可用于组织程序代码从而实现定制和重用。
+异常和工具——异常处理模型和语句，并介绍编写更大程序的开发工具。
+讨论Python 3.0。
+《Python学习手册(第3版)》让你对Python语言有深入而完整的了解，从而帮助你理解今后遇到的任何Python应用程序实例。如果你准备探索Google和YouTube为什么选中了Python，《Python学习手册(第3版)》就是你入门的最佳指南。|,机械工业出版社,89.00元
+图灵程序设计丛书·父与子的编程之旅,|桑德 (Warren Sande),桑德 (Carter Sande)|,|本书是一本家长与孩子共同学习编程的入门书。作者是一对父子，他们以Python语言为例，详尽细致地介绍了Python如何安装、字符串和操作符等程序设计的基本概念，介绍了条件语句、函数、模块等进阶内容，最后讲解了用Python实现游戏编程。书中的语言生动活泼，叙述简单明了。 为了让学习者觉得编程有趣，本书编排了很多卡通人物及场景对话，让学习者在轻松愉快之中跨入计算机编程的大门。
+第 2 版新增内容
+首先，我们来说说第 2 版中有哪些内容没有改变，那就是我们决定在第 2 版中继续使用 Python 2，而不是转换到 Python 3。我们会在第 1 章解释其中的原因。
+下面是第 2 版与第 1 版的不同之处
+增加了一些说明，解释 Python 2 和 Python 3 的区别。
+第 12 章增加了一节关于 Python 字典的内容。
+在第 20 章的 GUI 编程部分，我们将不再被支持的 PythonCard 换成了应用更广泛的 PyQt。PyQt 也用在第 22 章的 Hangman 程序和第 24 章的电子宠物程序中。
+增加了第 25 章，用来详细解释第 10 章中的 Skier 程序。
+增加了第 26 章，讲述在简单的对战游戏中，如何编写一个有人工智|,人民邮电出版社,CNY 69.00
+Python入门经典,(美)William F. Punch\/Richard Enbody,《Python入门经典:以解决计算问题为导向的Python编程实践》是一本系统而科学的Python入门教程，美国密歇根州立大学等多所美国知名高校采用其作为编程语言的入门教材，被奉为经典。它不仅从计算机教学和计算机科学的角度讲解了初学者如何才能更有效地去学习Python，而且特别强调用Python解决生活中的实际问题，精心组织了大量来源于生活中不同领域的与数值计算和数据处理相关的案例。通过《Python入门经典:以解决计算问题为导向的Python编程实践》，读者不仅能系统掌握Python编程相关的知识，而且还能掌握利用Python处理各种与数据相关的问题。《Python入门经典:以解决计算问题为导向的Python编程实践》分为五部分，第一部分介绍计算机设备的一般概念和一些计算机术语；第二部分开始介绍编程的基本知识，包括入门知识和控制语句，为后续内容做铺垫；第三部分讲述数据结构和函数，包括字符串、列表和元组、字典和集合、文件、函数、算法和程序等进阶内容，有助于读者提升编程技能；第四部分重点介绍如何使用类定义数据结构和算法、开发程序等，培养读者运用Python语言来实现基本的计算思想和策略的能力；第五部分主要介绍异常、测试和递归，旨在使读者成为更好的程序员。《Python入门经典:以解决计算问题为导向的Python编程实践》深入浅出，每一章节均给出了大量的实例、示范代码和自测练习，便于读者理解和掌握相关知识。读者通过学习《Python入门经典:以解决计算问题为导向的Python编程实践》，不仅能掌握Python语言的基本知识，还能学习如何在实践中运用该语言解决问题。,机械工业出版社,79.00元
+学习Python,|Mark Lutz,David Ascher|,|Python是流行、开源、面向对象的编程语言，既可以用于编写单机运行的程序也可以编写脚本程序，具有可移植、强大、易用等特点。跟随专业教师学习是最快捷的掌握此语言的方式。新版的《学习Python》把你带到Mark Lutz和David Ascher面前，他们是著名的Python专家和培训师，他们的用语亲切、组织良好的文章已经指导了许多编程者精通这种语言。
+《学习Python（第二版）》给程序员提供了一个学习Python和面向对象编程的综合学习工具。它根据1999年该书第一版发布以来Python语言的大量变化做了更新。本书介绍了最近发布的Python 2.3的基本要素并涵盖了新的特性，如列表内涵，嵌套作用域和迭代器\/产生器。
+除了语言特性，《学习Python（第二版）》还为初级程序员提供了新的内容，包括新的面向对象编程和动态类型回顾，新的关于编程起步和配置选项的讨论，新的关于文档的内容等等。全书用新的实例使得语言特性的应用更加具体。
+《学习Python（第二版）》首先给出了理解和构造Python程序必需的所有信息，包括类型、运算符、表达式、类、函数、模块和异常。然后，作者给出了更高级的内容，通过真实的应用和可用扩展库说明如何用Python完成一般的任务。全书提供了练习以检验自己的新技能。
+《学习Python（第二版）》是本可灵活选读的图书，它让读者能够集中深入Python语言的核心。随着通读全书，你将获得对Python深入而完整的理解，这将帮助你自己开发大型的应用程序。本书适合于任何不仅仅想停留于了解Python而且想更好地掌握它的人。
+对本书第一版的褒奖：
+“这本书最优之处是作者在提供有用的实例与详细解释说明之间取得近乎完美的平衡。无论你是有经验的计算机程序员还是初学者，这本书对于学习Python语言都是非常适合的。”
+——Andrew Morrison, CedarLug|,东南大学出版社,68.00元

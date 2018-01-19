@@ -67,7 +67,6 @@ def douban_spider(keyword):
                 print("别老爬别人的数据，要爬也别太快，会被封IP的")  
                 break
 
-
             # 将bytes数据流解码成string
             ebook_str = response.read().decode()
 
@@ -81,7 +80,7 @@ def douban_spider(keyword):
                 book["summary"], 
                 book["publisher"], 
                 book["price"]])
-                sleep(5)      # 增加等待时间，以防被封ip，最好要用动态UA和IP代理
+                sleep(2)      # 增加等待时间，以防被封ip，最好要用动态UA和IP代理
                 print(book)
 
         print("总计搜索到 %d 本书的信息" % total)

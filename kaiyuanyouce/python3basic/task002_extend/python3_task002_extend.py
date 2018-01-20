@@ -13,6 +13,8 @@ __time__ = '18/1/19 23:20'
 
 豆瓣API快速入门
 https://developers.douban.com/wiki/?title=guide
+
+纯单IP:  150/3600 = 0.041666 = 0.041 次/s   24s/次
 """
 
 from time import sleep
@@ -21,7 +23,7 @@ import requests
 from openpyxl import Workbook
 
 
-def get_data_save_excel(keyword, filename):
+def douban_spider_ver2(keyword, file_name="douban_book.xlsx"):
     """
     用Requests库请求目标API接口
     注意反爬虫策略
@@ -31,8 +33,9 @@ def get_data_save_excel(keyword, filename):
 
     target_url = "https://api.douban.com/v2/book/search?q={0}".format(keyword)
 
-    r = requests.get(target_url)    # requests.models.Response
+    print("api url: %s " % target_url)
 
+    r = requests.get(target_url)    # requests.models.Response
     ebook_dict = r.json()   # dict
 
     count = ebook_dict["count"]  # 本页书籍
@@ -45,51 +48,55 @@ def get_data_save_excel(keyword, filename):
 
     print("Please wait (Maybe a long time...)")
 
-    # 这段代码采集了大量数据，容易被封IP，所以注释了
+    # 创建一个excel工作区
+    wb = Workbook()
+
+    # 获取sheet名称
+    # print(wb.get_sheet_names())
+
+    # 激活当前工作簿 worksheet
+    ws = wb.active
+
+    ws.append(["书名", "作者", "描述", "出版社", "价格"])
+
+    # 从第2页开始，获取其他书籍信息
     for start in range(1, int(total / count) + 1):
         print("开始解析第{0}页数据".format(start))
         url = "https://api.douban.com/v2/book/search?q=%s&start=%d" % (keyword, start)
         try:
             response = requests.get(url)
-            sleep(4)    # 增加延时，防止反爬虫策略
+            sleep(5)
         except KeyboardInterrupt:
             print("没耐心了，那就不要爬了")
             break
         except Exception as e:
-            print("程序异常, 别老爬别人的数据，要爬也别太快，会被封IP的")
+            print("抛出异常，自己看堆栈报错信息:")
             print(e)
             break
 
-        ebook_dict = response.json()
-        # print(ebook_dict)
-        # print(type(ebook_dict))
+        ebook_dict = response.json()   # dict
 
-        # 构建一个Workbook对象
-        wb = Workbook()
-
-        # 激活第一个sheet
-        ws = wb.active
-
-        # 写入表头
-        ws.append(["书名", "作者", "描述", "出版社", "价格"])
-
-        # 写入书信息
+        # 输出书籍信息
         for book in ebook_dict["books"]:
             ws.append([book["title"],
                        ",".join(book["author"]),
                        book["summary"],
                        book["publisher"],
                        book["price"]])
-            # print("当前页书籍信息已写入Excel")
 
-        # 保存
-        wb.save(filename)
-        print("完成第{0}页数据写入".format(start))
-    print("目前获取的结果已写入excel")
+            # 保存为excel文件
+            wb.save(file_name)
+
+            sleep(1)  # 暂时使用增加等待时间的方案，以防被封ip，最好要用动态UA和IP代理
+
+        print("完成写入第{0}页数据".format(start))
 
 
 if __name__ == '__main__':
-    get_data_save_excel("Python", "douban_spider_python_book.xlsx")
+    douban_spider_ver2("Python", "python_book_requests.xlsx")
+    douban_spider_ver2("java", "java_book_requests.xlsx")
+
+
 
 
 

@@ -4,7 +4,10 @@ __time__ = '18/1/17 22:31'
 
 """
 读写Excel - openpyxl库
+http://openpyxl.readthedocs.io/en/default/
+
 openpyxl是一个第三方的pythonexcel读写库，支持Excel2010 xlsx/xlsm/xltx/xltm文件格式。
+
 https://mp.weixin.qq.com/s?__biz=MzI0NDQ5NzYxNg==&mid=2247484065&idx=1&sn=35cb15d02a6d503714f9e220397eb438&scene=19#wechat_redirect
 """
 

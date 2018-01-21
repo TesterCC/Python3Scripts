@@ -8,11 +8,15 @@ HTTP处理 - urllib模块
 
 豆瓣网API网址：
 https://developers.douban.com/wiki/?title=guide
+https://developers.douban.com/wiki/?title=api_v2
+
+https://github.com/douban/douban-client
 
 不需要授权公开api可以使用http，参数里面如果不包含apikey的话，限制单ip每小时150次，带的话每小时500次。带apikey的例子为: http://api.douban.com/v2/user/1000001?apikey=XXX, XXX为你的apikey(非公开)
 
 纯单IP:  150/3600 = 0.041666 = 0.041 次/s   24s/次
 """
+
 
 from time import sleep
 
@@ -25,8 +29,8 @@ def douban_spider(keyword, file_name="douban_book.xlsx"):
     实例演示了如何使用豆瓣网的API 进行数据爬取
     :param keyword: 搜索关键字
     """
-
     url = "https://api.douban.com/v2/book/search?q={0}".format(keyword)
+    # url = "https://api.douban.com/v2/book/search?q=%s" % keyword
     print("api url: %s " % url)
 
     response = urllib.request.urlopen(url)
@@ -99,9 +103,12 @@ def douban_spider(keyword, file_name="douban_book.xlsx"):
 if __name__ == '__main__':
     print("urllib爬取豆瓣网数据示例：")
     print("启动爬虫...")
+
     input_keyword = input("请输入一个您要检索的关键字:\n")
+    print("您输入的搜索关键词为: %s" % input_keyword)
     input_filename = input("请输入你的.xlsx文件名:\n")
-    input_filename = str(input_filename + ".xlsx")
+    input_filename = input_filename + ".xlsx"
     print("结果将输出到%s文件中" % input_filename)
     douban_spider(input_keyword, input_filename)
+
 

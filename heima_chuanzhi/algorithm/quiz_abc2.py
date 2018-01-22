@@ -12,6 +12,8 @@ __time__ = '18/1/21 03:36'
 c = 1000 - a -b
 
 about 1s
+
+Tn = n * n * (1 + max(1,0)) = n**2 * 2 = O(n**2)
 """
 
 import time

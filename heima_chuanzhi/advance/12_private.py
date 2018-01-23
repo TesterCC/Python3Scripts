@@ -15,7 +15,6 @@ class Test(object):
         self.__num = newNum
 
 
-
 if __name__ == '__main__':
     t = Test()
     print(t.getNum())

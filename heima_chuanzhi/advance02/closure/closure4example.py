@@ -13,6 +13,7 @@ __time__ = '18/1/24 03:39'
 
 def line_conf(a, b):
     """
+    平面直角坐标系
     :param a:
     :param b:
     :return: line
@@ -31,4 +32,5 @@ if __name__ == '__main__':
 
     print(line1(5))
     print(line2(5))
+    print(line1(0))   # 1
 

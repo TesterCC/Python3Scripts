@@ -23,22 +23,31 @@ from time import ctime
 from time import sleep
 
 
-# 例1:无参数的函数
+# 例4:装饰器中的return
+# 一般情况下为了让装饰器更通用，可以有return
 
 def timefun(func):
     def wrappedfunc():
-        # 4 内部函数wrappedfunc被引用，所以外部函数的func变量(自由变量)并没有释放
         print("%s called at %s" % (func.__name__, ctime()))
-        func()  # 5 func里保存的是原foo函数对象
+        re = func()   # 保存返回的'----hahaha---'
+        return re     # 把hahaha返回到52行调用
     return wrappedfunc
 
 
-@timefun    # 2 foo先作为参数赋值给func后,foo接收指向timefun返回的wrappedfunc
-def foo():   # 1 foo = timefun(foo)
-    print("I am a test foo.")
+@timefun
+def foo():
+    print("I am foo test")
+
+
+@timefun
+def getInfo():
+    return '----hahaha---'
 
 
 if __name__ == '__main__':
-    foo()   # 3 调用foo(),即等价调用wrappedfunc()
+
+    foo()
     sleep(2)
     foo()
+
+    print(getInfo())

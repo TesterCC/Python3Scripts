@@ -41,6 +41,7 @@ def log(text):
 def abc():
     print("test by abc")
 
+
 @log("Lily")
 def efg():
     print("test by efg")

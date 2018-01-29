@@ -27,16 +27,16 @@ import time
 # 记录运行时间的装饰器 -- 通用写法
 def timelog(func):
     """
-    通用计时装饰器
+    通用计时装饰器(使用通用写法)
     :param func:
     """
     def wrappedfunc(*args, **kwargs):
-        print("%s was called." % (func.__name__))
+        print("%s was called..." % func.__name__)
         start_time = time.time()  # current time
         re = func(*args, **kwargs)
-        end_time = time.time()
+        end_time = time.time()    # end time
         print("run times: %f seconds" % (end_time - start_time))
-        return re     # 把hahaha返回到52行调用
+        return re
     return wrappedfunc
 
 
@@ -45,7 +45,7 @@ def generator():
     随机生成1-1000之间无序序列整数数据
     """
     random_data = []
-    for i in range(0, 10):
+    for i in range(0, 100):
         random_data.append(random.randint(1, 1000))
 
     return random_data
@@ -60,7 +60,7 @@ def shell_sort(data_list):
     # 序列长度
     length = len(data_list)
     # 步长，数据可修改下，查看排序过程
-    step = 7   # step越大，排序完成越快
+    step = 5
     # 分组
     group = int(length/step)
     print("group: ", group)

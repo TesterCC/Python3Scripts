@@ -31,4 +31,3 @@ if __name__ == '__main__':
     t.score = 99
 
     print(t.score)
-    

@@ -1,0 +1,22 @@
+<data>
+    <country name="Liechtenstein">
+        <rank>1</rank>
+        <year>2008</year>
+        <gdppc>141100</gdppc>
+        <neighbor direction="E" name="Austria" />
+        <neighbor direction="W" name="Switzerland" />
+    <wx>测试开发2</wx></country>
+    <country name="Singapore">
+        <rank>4</rank>
+        <year updated="yes">2018</year>
+        <gdppc>59900</gdppc>
+        <neighbor direction="N" name="Malaysia" />
+    <wx>测试开发2</wx></country>
+    <country name="Panama">
+        <rank>68</rank>
+        <year updated="yes">2018</year>
+        <gdppc>13600</gdppc>
+        <neighbor direction="W" name="Costa Rica" />
+        <neighbor direction="E" name="Colombia" />
+    <wx>测试开发2</wx></country>
+</data>

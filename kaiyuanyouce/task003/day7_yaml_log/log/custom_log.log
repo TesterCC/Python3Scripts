@@ -1,0 +1,5 @@
+Tue, 06 Feb 2018 23:57:09 CustomLogging.py[line:49] DEBUG it's debug msg
+Tue, 06 Feb 2018 23:57:09 CustomLogging.py[line:52] INFO it's info msg
+Tue, 06 Feb 2018 23:57:09 CustomLogging.py[line:55] WARNING it's warning msg
+Tue, 06 Feb 2018 23:57:09 CustomLogging.py[line:58] ERROR it's error msg
+Tue, 06 Feb 2018 23:57:09 CustomLogging.py[line:61] CRITICAL it's fuck msg

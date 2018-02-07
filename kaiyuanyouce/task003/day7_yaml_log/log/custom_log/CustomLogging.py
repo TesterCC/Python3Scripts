@@ -15,19 +15,22 @@ LOGGING_FORMAT = '%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(mess
 
 
 class CustomLogging:
+    """
+    使用Python代码显式的创建loggers
+    """
     def __init__(self,
                  level=logging.DEBUG,
                  format=LOGGING_FORMAT,
-                 datefmt="%a, %d %b %Y %H:%M:%S",
+                 datefmt="%Y-%m-%d %a %H:%M:%S",
                  filename='custom_log.log',
-                 filemode="w"):
+                 filemode="a"):
         self.level = level
         self.format = format
         self.datefmt = datefmt
         self.filename = filename
         self.filemode = filemode
 
-        # 初始化日志同时输出到console和日志文件  # 可以创建一个config.ini来管理
+        # 初始化日志同时输出到console和日志文件
         logging.basicConfig(level=self.level,
                             format=self.format,
                             datefmt=self.datefmt,
@@ -74,4 +77,8 @@ if __name__ == '__main__':
     log.output("it's warning msg", level=logging.WARNING)
     log.output("it's error msg", level=logging.ERROR)
     log.output("it's fuck msg", level=logging.CRITICAL)
+
+    logging.info("Test logging info")  # in custom_log.log, not in console
+
+
 

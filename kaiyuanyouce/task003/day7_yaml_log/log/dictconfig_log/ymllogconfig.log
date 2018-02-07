@@ -1,0 +1,10 @@
+2018-02-07 15:24:12,852 - DictExample - DEBUG - debug message
+2018-02-07 15:24:12,852 - DictExample - INFO - info message
+2018-02-07 15:24:12,852 - DictExample - WARNING - warn message
+2018-02-07 15:24:12,852 - DictExample - ERROR - error message
+2018-02-07 15:24:12,852 - DictExample - CRITICAL - critical message
+2018-02-07 15:24:48,813 - DictExample - DEBUG - debug message
+2018-02-07 15:24:48,813 - DictExample - INFO - info message
+2018-02-07 15:24:48,813 - DictExample - WARNING - warn message
+2018-02-07 15:24:48,813 - DictExample - ERROR - error message
+2018-02-07 15:24:48,814 - DictExample - CRITICAL - critical message

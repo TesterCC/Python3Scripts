@@ -1,0 +1,11 @@
+2018-02-07 14:10:01,691 - CustomExample - INFO - info message
+2018-02-07 14:10:01,692 - CustomExample - WARNING - warn message
+2018-02-07 14:10:01,692 - CustomExample - ERROR - error message
+2018-02-07 14:10:01,692 - CustomExample - CRITICAL - critical message
+2018-02-07 14:10:01,692 - root - INFO - test info level
+2018-02-07 14:10:01,692 - root - WARNING - test warning level
+2018-02-07 14:10:01,692 - TestExample - DEBUG - debug message
+2018-02-07 14:10:01,692 - TestExample - INFO - info message
+2018-02-07 14:10:01,692 - TestExample - WARNING - warn message
+2018-02-07 14:10:01,692 - TestExample - ERROR - error message
+2018-02-07 14:10:01,692 - TestExample - CRITICAL - critical message

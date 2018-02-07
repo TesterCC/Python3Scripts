@@ -32,5 +32,12 @@ for data in load:
     # dump 将python对象转换成为yaml格式文档
     output = yaml.dump(data)
     print(type(output))
-    print(output)
+    # print(output)  # \u4E2D\u6587\
+    print(output.encode('utf-8').decode('unicode_escape'))
 
+
+"""
+先检查text是什么类型
+如果type(text) is bytes，那么text.decode('unicode_escape')
+如果type(text) is str，那么text.encode('utf-8').decode('unicode_escape')
+"""

@@ -6,7 +6,7 @@ __time__ = '18/1/14 17:09'
 import os
 import time
 
-
+# A-Byte-of-Python
 # 1.需要备份的文件与目录被指定在一个列表中。
 # 例如：windows下：
 # source=['C:\\My Documents', 'C:\\Code']
@@ -27,9 +27,8 @@ target = target_dir + os.sep + time.strftime('%Y%m%d%H%M%S') + '.zip'
 if not os.path.exists(target_dir):
     os.mkdir(target_dir)
 
-# 5.使用zip命令嫁给你文件打包成zip格式
+# 5.使用zip命令给你文件打包成zip格式
 zip_command = 'zip -r {0} {1}'.format(target, ''.join(source))
-
 
 # 6.运行备份
 print('Zip command is:')

@@ -21,3 +21,4 @@ class Test():
 
 t = Test()
 t()   # call
+print(callable(t))

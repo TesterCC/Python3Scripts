@@ -48,9 +48,15 @@ print(driver.current_url)
 after_login_page_url = "https://mp.sohu.com/mpfe/v3/main/first/page"
 if driver.current_url == after_login_page_url:
     print("Login Success!")
+    print("Cookie:\n{}".format(driver.get_cookies()))
+    print("Clear cookie...")
+    driver.delete_all_cookies()
+    print("Cookie:\n{}".format(driver.get_cookies()))
+
     driver.quit()
 else:
     print("Current url is incorrect!")
+    driver.quit()
 
 
 # try:

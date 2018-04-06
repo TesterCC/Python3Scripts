@@ -11,6 +11,7 @@ import requests
 
 
 TARGET_URL = "https://www.huodongjia.com/event-1322992792.html?json=1"
+DOMAIN_URL = "https://www.huodongjia.com"
 
 # UA = "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.13 Safari/537.36"
 
@@ -47,4 +48,28 @@ for k, v in req_dict['event'].items():   # req_dict['event']  type dict
     print("{0} ---> {1}".format(k, v))
     print(type(k), type(v))
 
+
+def get_event_name():
+    return req_dict['event']['event_name']
+
+
+def get_event_url():
+    event_url = DOMAIN_URL + req_dict['event']['event_url']
+    return event_url
+
+
+def get_id():
+    return str(req_dict['event']['id'])
+
+
+def get_event_begin_time():
+    return req_dict['event']['event_begin_time']
+
+
+if __name__ == '__main__':
+    print("＊＊＊＊" * 30)
+    print(get_event_name())
+    print(get_event_url())
+    print(get_id())
+    print(get_event_begin_time())
 

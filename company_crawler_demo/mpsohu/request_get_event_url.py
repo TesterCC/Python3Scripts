@@ -10,9 +10,13 @@ import requests
 # CAT_URL = "https://www.huodongjia.com/it/"
 CAT_URL = "https://www.huodongjia.com/medical/"
 
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+    'Host': 'www.huodongjia.com'
+}
 
 # 获取网页内容
-r = requests.get(CAT_URL)
+r = requests.get(CAT_URL, headers=headers, timeout=10)
 data = r.text
 
 
@@ -20,6 +24,7 @@ data = r.text
 # 1.先找到 https://www.huodongjia.com/event-1322992792.html，
 # 2.然后拼接成 json， https://www.huodongjia.com/event-1322992792.html?json=1
 DOMAIN_URL = "https://www.huodongjia.com/"
+
 link_list = re.findall(r"event-\d{10}.html", data)    # 匹配event-{old_event_id}
 
 event_list = []
@@ -36,5 +41,5 @@ print(len(event_list))
 # https://www.huodongjia.com/medical/page-6/
 
 
-CAT_URL = "https://www.huodongjia.com/medical/page-{}".format()
+# CAT_URL = "https://www.huodongjia.com/medical/page-{}".format()
 # https://blog.csdn.net/u010839779/article/details/77346254

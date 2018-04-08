@@ -62,8 +62,8 @@ def mpsohu_sender(url=LOGIN_URL, username=USERNAME, password=PASSWORD):
 
     print(driver.current_url)
 
-    after_login_page_url = AFTER_LOGIN_URL
-    if driver.current_url == after_login_page_url:
+    after_login_url = AFTER_LOGIN_URL
+    if driver.current_url == after_login_url:
         print("Login Success!")
 
         # Get and Save cookie
@@ -94,13 +94,6 @@ def mpsohu_sender(url=LOGIN_URL, username=USERNAME, password=PASSWORD):
         for cookie in Cookies:
             s.cookies.set(cookie['name'], cookie['value'])
 
-        # 访问写文章界面
-        response = s.get(EDIT_ARTICLE_URL)
-        # bodyStr = response.text
-        # print(bodyStr)   # return html
-        print(response.status_code)
-
-        # 尝试发表文章
         # 加正常UserAgent, 应对反爬虫策略
         UA = "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.13 Safari/537.36"
 
@@ -111,6 +104,14 @@ def mpsohu_sender(url=LOGIN_URL, username=USERNAME, password=PASSWORD):
 
         header = s.headers.update({"User-Agent": UA})
         # print(s.headers)
+
+        # 访问写文章界面
+        response = s.get(EDIT_ARTICLE_URL)
+        # bodyStr = response.text
+        # print(bodyStr)   # return html
+        print(response.status_code)
+
+        # 尝试发表文章
 
         post_draft_url = "https://mp.sohu.com/v3/news/draft"
         publish_direct_url = "https://mp.sohu.com/v3/news/publish"
@@ -172,7 +173,7 @@ def mpsohu_sender(url=LOGIN_URL, username=USERNAME, password=PASSWORD):
 
 
 if __name__ == '__main__':
-    mpsohu_sender(LOGIN_URL)
+    mpsohu_sender(username='18702895635', password='huodongjia123456')
 
 
 

@@ -36,6 +36,7 @@ for event_id in link_list:
 print(event_list)
 print(len(event_list))
 
+
 # 分页
 # https://www.huodongjia.com/medical/page-1/
 # https://www.huodongjia.com/medical/page-6/

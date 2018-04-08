@@ -29,7 +29,7 @@ print(type(req))
 
 # 将已编码的json字符串解码为Python对象
 req_dict = json.loads(req)
-# print(type(req_dict))
+print("req_dict type is %s" % type(req_dict))
 
 print("遍历主要节点：")
 for i in req_dict:
@@ -66,10 +66,34 @@ def get_event_begin_time():
     return req_dict['event']['event_begin_time']
 
 
+# def print_dict(k, v):
+#     if isinstance(v, dict):
+#         print(k, v)
+#         for kk in v.keys():
+#             print_dict(kk, v[kk])
+#     else:
+#         print(k, v)
+
+
+def get_event_img():
+    """
+    event_img_list = [{'Asin': b2b}]
+    取出其中的value，使用如下代码就可以了
+    [item[key] for item in event_img_list for key in item]
+    :return:
+    """
+    event_img_list = req_dict['event']['event_img']
+    res_list = [item[key] for item in event_img_list for key in item]
+    pic_url = res_list[1]+res_list[2]
+    # print(type(pic_url))   # str
+    return pic_url
+
+
 if __name__ == '__main__':
     print("＊＊＊＊" * 30)
-    print(get_event_name())
-    print(get_event_url())
-    print(get_id())
-    print(get_event_begin_time())
+    # print(get_event_name())
+    # print(get_event_url())
+    # print(get_id())
+    # print(get_event_begin_time())
+    print(type(get_event_img()))
 

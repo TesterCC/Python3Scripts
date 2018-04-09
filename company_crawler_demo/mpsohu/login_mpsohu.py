@@ -90,7 +90,8 @@ def mpsohu_sender(url=LOGIN_URL, username=USERNAME, password=PASSWORD):
         sleep(3)
         # driver.quit()
 
-        s = requests.Session()
+        s = requests.session()
+
         for cookie in Cookies:
             s.cookies.set(cookie['name'], cookie['value'])
 

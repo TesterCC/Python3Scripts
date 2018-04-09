@@ -20,131 +20,253 @@ req = requests.get(TARGET_URL, headers=headers, timeout=10).content
 # print(type(req))   # python2 str, python3 bytes
 
 # the JSON object must be str, not 'bytes'
-req = req.decode("utf-8")
-print(type(req))
+req = req.decode("utf-8")  # str
+# print(type(req))
 
 # 将已编码的json字符串解码为Python对象
 req_dict = json.loads(req)
 print("req_dict type is %s" % type(req_dict))
 
-# dict can use get() and items()
-d_event = req_dict.get('event')
-print(d_event)
-print(type(d_event))
-print('****'*40)
-# print(d_event.items()) # dict_items
-for k,v in d_event.items():
-    print("{0}-->{1}".format(k, v))
-print('****'*40)
+
+def get_id():
+    return str(req_dict['event']['id'])
 
 
-print(d_event.get('event_tag_info'))
+def get_event_name():
+    return req_dict['event']['event_name']
 
 
-def get_event_img():
+def get_event_id():
+    return req_dict['event']['event_id']     # 1322992792
+
+
+def get_event_status():
+    return req_dict['event']['event_status']
+
+
+def get_event_url():
+    event_url = DOMAIN_URL + req_dict['event']['event_url']
+    return event_url
+
+
+def get_event_begin_time():
+    return req_dict['event']['event_begin_time']
+
+
+def get_event_end_time():
+    return req_dict['event']['event_end_time']
+
+
+def get_event_img_v2():
+    d_event = req_dict.get('event')
+    # print("Output event_img list:")
+    # print(d_event.get('event_img'))
+    for item in d_event.get('event_img'):
+        # print(item)
+        # print(type(item))   # dict
+        return item['server__name'] + item['urls']
+
+
+def get_event_tag_info_v2():
     """
-    event_img_list = [{'Asin': b2b}]
-    取出其中的value，使用如下代码就可以了
-    [item[key] for item in event_img_list for key in item]
+    v2 return tag 1 by 1
+    TODO some bug need to fix
     :return:
     """
-    event_img_list = req_dict['event']['event_img']
-    res_list = [item[key] for item in event_img_list for key in item]
-    pic_url = res_list[1]+res_list[2]
-    # print(type(pic_url))   # str
-    return pic_url
+    # dict can use get() and items()
+    d_event = req_dict.get('event')
+    # print(d_event)
+    # print(type(d_event))
+    # print('++++'*40)
+    # for k,v in d_event.items():
+    #     print("{0}-->{1}".format(k, v))
+    # print('++++'*40)
+
+    # print(d_event.get('event_tag_info'))
+    for i in d_event.get('event_tag_info'):
+        print(i['name'])
+
+
+def get_event_cat_info():
+    d_event = req_dict.get('event')
+
+    for i in d_event.get('event_cat_info'):
+        return i['name']
 
 
 def get_event_tag_info():
+    """
+    v1
+    :return: a tag list
+    """
     event_tag_list = req_dict['event']['event_tag_info']
-    # print(type(event_tag_list))  # list
-    # print(event_tag_list)
-    # a = []
-    # for item in event_tag_list:
-    #     for key in item:
-    #         if isinstance(item[key], str):
-    #             a.append(item[key])
-    # return a
     res_list = [item[key] for item in event_tag_list for key in item if isinstance(item[key], str)]
 
     return res_list
 
 
-
-
-# write for tes draft
-
+# get article content
 def get_event_content():
-    event_content_list = req_dict['event']['properties']
-    # content_list = [item[key] for item in event_tag_list for key in item]
-    a = []
-    for item in event_content_list:
-        for key in item:
-            if isinstance(item[key], str):
-                print(item[key])
-            elif isinstance(item[key], dict):
-                for _key in item[key]:
-                    print(_key)
+    """
+    获取会议内容html important
+    :return:
+    """
+    d_event = req_dict.get('event')
+
+    for items in d_event.get('properties'):
+        for k, v in items.items():
+            if k == 'children':
+                # print(type(v))   # list
+                for i in v:
+                    # print(type(i))  # dict
+                    # print(type(i.get('value')))   # str
+                    return i.get('value')
+
+
+def get_event_content_v2():
+    """
+    FIXME issue , get all html event content
+    :return:
+    """
+    event_info = req_dict.get('event', '').get('properties', '')
+    event_content = "".join([i.get('value', "") for items in event_info for k, v in items.items() if k == 'children' for i in v])
+    return event_content
+
+
+def get_event_schedule():
+    """
+    获取会议日程html
+    TODO 学习一下这种写发重构get_event_content()
+    important, all event content in this node
+    :return:
+    """
+    event_info = req_dict.get('event')
+    event_schedules = [propertie.get("value", "") for propertie in event_info.get("properties") if
+                      u"日程" in propertie.get("name", "")]     # property是保留关键字
+
+    event_schedule = event_schedules[0] if event_schedules else ""
+    return event_schedule
+
+
+def get_event_schedule_v2():
+    """
+    这种写发，前面加个join 就不用判断是否为空了
+    :return:
+    """
+    event_info = req_dict.get('event')
+    properties = event_info.get("properties")
+    event_schedule = "<br/>".join([propertie.get("value", "") for propertie in properties if u"日程" in
+                                   propertie.get("name", "")])
+    return event_schedule
+
+
+def get_article_message():
+    """
+    拼接需求中的文章的模版
+    :return:
+    """
+    prefix = ""
+    content_message = "<b>会议内容</b>" + get_event_content() + "<b>会议日程</b>" + get_event_schedule()
+    suffix = ""
+
+    return content_message
+
+
+# Tools Method
+def list_all_dict(dict_a=req_dict):
+    """
+    嵌套字典环境下获取所有内容
+    :param dict_a:
+    :return:
+    """
+
+    if isinstance(dict_a, dict):  # 使用isinstance检测数据类型
+
+        for x in range(len(dict_a)):
+
+            temp_key = list(dict_a.keys())[x]
+            # 原文 temp_key = dict_a.keys()[x] 报错'dict_keys' object does not support indexing
+            # 由于python3改变了dict.keys,返回的是dict_keys对象,支持iterable 但不支持indexable，我们可以将其明确的转化成list
+
+            temp_value = dict_a[temp_key]
+
+            print("%s : %s" % (temp_key, temp_value))
+
+            list_all_dict(temp_value)  # 递归, 自我调用实现无限遍历
+
+
+def dict_get(dict_input=req_dict, objkey='', default=None):
+    """
+    获取字典中的objkey对应的值，适用于字典嵌套 -- 不太好用
+    :param dict: 字典
+    :param objkey: 目标key
+    :param default: 找不到时返回的默认值
+    :return:
+    """
+    tmp = dict_input
+    for k, v in tmp.items():
+        if k == objkey:
+            return v
+        else:
+            if isinstance(v, dict):
+                ret = dict_get(v, objkey, default)
+                if ret is not default:
+                    return ret
+    return default
+
+
+# TODO write code  draft >>>>>>>>>>>>>>>>>
+def get_event_properties():
+    """
+    important, all event content in this node
+    :return:
+    """
+    d_event = req_dict.get('event')
+
+    for items in d_event.get('properties'):
+        # print(type(items))
+        # print(items)
+        for k, v in items.items():
+            print("{}---------->{}".format(k, v))
 
 
 def get_event_intro():
     pass
 
 
-# def get_event_schedule():
-#     event_content_list = req_dict['event']['properties']
-#     for item in event_content_list:
-#         for key in item:
-#             if isinstance(item[key], str):
-#                 print(item[key])
-#             elif isinstance(item[key], dict):
-#                 print(item[key])
-#             elif isinstance(item[key], list):
-#                 print(item[key])
-#             else:
-#                 print(item[key])
-
-
-# def get_event_properties():
-#     res = req_dict['event']['properties']
-#     print(type(res))  # list
-
-def run(t=req_dict):
-    for k, v in t.items():   # Python 3 renamed dict.iteritems -> dict.items
-        if isinstance(v, list):
-            for element in v:
-                run(element)
-        elif isinstance(v, dict):
-            run(v)
-        else:
-            print(k, v)
-# AttributeError: 'str' object has no attribute 'items'
-
-
-def print_keyvalue_all(input_json=req):
-    key_value=''
-    if isinstance(input_json,dict):
-        for key in input_json.keys():
-            key_value = input_json.get(key)
-            if isinstance(key_value,dict):
-                print_keyvalue_all(key_value)
-            elif isinstance(key_value,list):
-                for json_array in key_value:
-                    print_keyvalue_all(json_array)
-            else:
-                print(str(key)+" = "+str(key_value))
-    elif isinstance(input_json,list):
-        for input_json_array in input_json:
-            print_keyvalue_all(input_json_array)
-
-
 if __name__ == '__main__':
-    # print(get_event_img())
+    # print(get_event_url())
+    # print(get_id())
+    # print(get_event_id())
+    print("＊＊＊＊" * 30)
+    # print(get_event_end_time())
+    # print(get_event_name())
     # print(get_event_tag_info())
     # print(get_event_content())
 
     # print(get_event_properties())
-    # get_event_intro()
-    print('Start to Test!')
-    # print_keyvalue_all()
+    # print(get_event_tag_info_v2())
+    # print(get_event_img_v2())
+
+    # print(get_event_cat_info())
+
+    # Parser Json Data
+    # print(get_event_properties())
+    # print(get_event_content())
+    # print(get_event_schedule())
+    # print(get_event_schedule_v2())
+    # print(get_event_content())
+    # print(get_event_content_v2())  # bug
+
+    # list_all_dict()
+
+    # print(dict_get(objkey='properties', default=None))
+
+    # print(get_article_message())
+
+    content_message = get_article_message()    # str
+    print(content_message)
+
+
+
 

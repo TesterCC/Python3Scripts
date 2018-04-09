@@ -5,10 +5,11 @@ __time__ = '18/4/4 09:12'
 
 
 import json
-import codecs
-
 import requests
 
+"""
+ignore it, just save as draft
+"""
 
 TARGET_URL = "https://www.huodongjia.com/event-1322992792.html?json=1"
 DOMAIN_URL = "https://www.huodongjia.com"
@@ -66,34 +67,11 @@ def get_event_begin_time():
     return req_dict['event']['event_begin_time']
 
 
-# def print_dict(k, v):
-#     if isinstance(v, dict):
-#         print(k, v)
-#         for kk in v.keys():
-#             print_dict(kk, v[kk])
-#     else:
-#         print(k, v)
-
-
-def get_event_img():
-    """
-    event_img_list = [{'Asin': b2b}]
-    取出其中的value，使用如下代码就可以了
-    [item[key] for item in event_img_list for key in item]
-    :return:
-    """
-    event_img_list = req_dict['event']['event_img']
-    res_list = [item[key] for item in event_img_list for key in item]
-    pic_url = res_list[1]+res_list[2]
-    # print(type(pic_url))   # str
-    return pic_url
-
-
 if __name__ == '__main__':
     print("＊＊＊＊" * 30)
     # print(get_event_name())
     # print(get_event_url())
     # print(get_id())
     # print(get_event_begin_time())
-    print(type(get_event_img()))
+    # print(type(get_event_img()))
 

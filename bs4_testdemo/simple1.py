@@ -53,6 +53,7 @@ if r.status_code == 200:
 
     for link in soup.find_all('a'):
         print(link.get('href'))
+        print(link.get_text())   # 获取href的text
 
     print("+++" * 30)
     # print("从文档中获取所有文字内容:")

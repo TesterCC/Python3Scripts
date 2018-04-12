@@ -3,10 +3,8 @@
 __author__ = 'MFC'
 __time__ = '18/4/8 15:25'
 
-
 import json
 import requests
-
 
 TARGET_URL = "https://www.huodongjia.com/event-1322992792.html?json=1"
 DOMAIN_URL = "https://www.huodongjia.com"
@@ -37,7 +35,7 @@ def get_event_name():
 
 
 def get_event_id():
-    return req_dict['event']['event_id']     # 1322992792
+    return req_dict['event']['event_id']  # 1322992792
 
 
 def get_event_status():
@@ -94,6 +92,10 @@ def get_event_cat_info():
         return i['name']
 
 
+def get_event_cat_info_v2():
+    return [i['name'] for i in req_dict.get('event').get('event_cat_info')]
+
+
 def get_event_tag_info():
     """
     v1
@@ -124,12 +126,9 @@ def get_event_content():
 
 
 def get_event_content_v2():
-    """
-    FIXME issue , get all html event content
-    :return:
-    """
     event_info = req_dict.get('event', '').get('properties', '')
-    event_content = "".join([i.get('value', "") for items in event_info for k, v in items.items() if k == 'children' for i in v])
+    event_content = "".join(
+        [i.get('value', "") for items in event_info for k, v in items.items() if k == 'children' for i in v])
     return event_content
 
 
@@ -142,7 +141,7 @@ def get_event_schedule():
     """
     event_info = req_dict.get('event')
     event_schedules = [propertie.get("value", "") for propertie in event_info.get("properties") if
-                      u"日程" in propertie.get("name", "")]     # property是保留关键字
+                       u"日程" in propertie.get("name", "")]  # property是保留关键字
 
     event_schedule = event_schedules[0] if event_schedules else ""
     return event_schedule
@@ -183,7 +182,6 @@ def list_all_dict(dict_a=req_dict):
     if isinstance(dict_a, dict):  # 使用isinstance检测数据类型
 
         for x in range(len(dict_a)):
-
             temp_key = list(dict_a.keys())[x]
             # 原文 temp_key = dict_a.keys()[x] 报错'dict_keys' object does not support indexing
             # 由于python3改变了dict.keys,返回的是dict_keys对象,支持iterable 但不支持indexable，我们可以将其明确的转化成list
@@ -264,9 +262,9 @@ if __name__ == '__main__':
 
     # print(get_article_message())
 
-    content_message = get_article_message()    # str
-    print(content_message)
+    # content_message = get_article_message()    # str
+    # print(content_message)
 
-
-
+    # print(get_event_cat_info_v2())
+    # print(type(get_event_cat_info()))
 

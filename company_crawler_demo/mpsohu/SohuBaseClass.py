@@ -31,9 +31,10 @@ class SohuBaseClass(object):
     PUBLISH_DIRECT_URL = "https://mp.sohu.com/v3/news/publish"
 
     USERNAME = "18702895635"  # [18702895635, 15281005385, 18683715921, 18782291154, 18108061758]
-    PASSWORD = ""
+    PASSWORD = "huodongjia123456"
 
-    DRIVER = webdriver.Chrome()
+    # DRIVER = webdriver.Chrome()
+    DRIVER = webdriver.PhantomJS()
 
     username_related = {
         '18702895635': '全部',
@@ -252,7 +253,7 @@ class SohuBaseClass(object):
 if __name__ == '__main__':
     sbc = SohuBaseClass()
     sbc.login_platform()
-    sbc.request_with_cookie()    # 发文章才调用此方法
-    # sbc.check_published_url()    # 正式发布文章后检查用
+    # sbc.request_with_cookie()    # 发文章才调用此方法
+    sbc.check_published_url()    # 正式发布文章后检查用
 
 

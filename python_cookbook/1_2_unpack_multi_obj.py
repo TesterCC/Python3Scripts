@@ -33,4 +33,6 @@ print("-" * 5 + "example 2" + "-" * 5)
 record = ('Dave', 'dave@example.com', '773-555-1212', '847-555-1212')
 name, email, *phone_numbers = record
 print(*phone_numbers)
+print(phone_numbers)   # return a list
+
 

@@ -14,3 +14,12 @@ __time__ = '18/4/17 22:35'
 # 保留有限历史记录正是collections.deque大显身手的时候。
 
 from collections import deque
+
+# break point debug
+# import pdb
+# pdb.set_trace()
+# python -m pdb target.py
+#
+# import ipdb
+# ipdb.set_trace()
+# python target.py

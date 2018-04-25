@@ -14,7 +14,7 @@ http://jsonplaceholder.typicode.com
 
 安装pytest，命令如下：
 pip install pytest
-pip isntall pytest-html
+pip install pytest-html
 
 pytest pytest-html
 执行文件：

@@ -1,0 +1,66 @@
+.mv_play {
+    margin-left: 20px;
+    position: relative;
+}
+
+.fontdiv {
+    position: absolute;
+    z-index: 120;
+    width: 750px;
+    height: 386px;
+    top: 0px;
+    color: white;
+    overflow: hidden;
+}
+.pushtext {
+    margin-left: 20px;
+    margin-top: 15px;
+    height: 50px;
+}
+.pushtext > textarea {
+    width: 678px;
+    height: 16px;
+    border: 1px solid #433B38;
+    border-radius: 4px 0 0 4px;
+    resize: none;
+    outline: none;
+    padding: 12px;
+    padding-left: 15px;
+    line-height: 15px;
+    float: left;
+}
+.pushbtn {
+    display: block;
+    width: 43px;
+    height: 42px;
+    border-radius: 0 4px 4px 0;
+    line-height: 45px;
+    background: #433B38;
+    color: #fff;
+    font-size: 14px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+
+.changmessage{
+    transition:right linear 6s;
+    right: 750px;
+    animation:toleft 5.5s  linear;
+}
+
+@keyframes toleft{
+    0%{
+        transform:translateX(0);
+    }
+    100%{
+        transform:translateX(-1200px);
+    }
+}
+.oldp{
+    position: absolute;
+    border: 2px solid cadetblue;
+    margin-top: 5px;
+    left: 750px;
+    font-size: 20px;
+}

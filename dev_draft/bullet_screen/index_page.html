@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视频弹幕发送UI</title>
+    <!-- https://blog.csdn.net/qq2712193/article/details/51725705 -->
+    <link rel="stylesheet" href="bullet.css">
+    <script src="bullet.js"></script>
+
+</head>
+<body>
+<div class="mv_play">
+    <video width="750px" height="" src="source/yilu.mp4" controls="controls" ></video>
+        <div id="fontdiv" class="fontdiv"></div>
+</div>
+
+<div class="pushtext">
+    <textarea id="message" maxlength="15" ></textarea>
+    <div onclick="pushtext()" class="pushbtn">发送</div>
+</div>
+
+</body>
+</html>

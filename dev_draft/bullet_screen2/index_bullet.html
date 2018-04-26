@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery实现类似于弹幕效果</title>
+
+    <script src="http://cdn.gbtags.com/jquery/1.8.0/jquery-1.8.0.min.js"></script>
+
+    <style type="text/css">
+        .scroll li {
+            position: fixed;
+            display: inline-block;
+            top: 70%;
+            left: 100%;
+            color: #fff;
+            white-space: nowrap;
+            font-size: 14px;
+            text-align: center;
+            z-index: 100;
+            background: rgba(0,0,0,0.5);
+            padding: 5px 25px;
+            border-radius: 20px;
+            font-size: 16px;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="scroll">
+        <li>156***91112&nbsp;&nbsp;  9分钟前注册成功!!!</li>
+        <li>152***92244&nbsp;&nbsp;  12分钟前注册成功!</li>
+        <li>159***92932&nbsp;&nbsp;  15分钟前注册成功</li>
+        <li>139***04555&nbsp;&nbsp;  21分钟前注册成功</li>
+        <li>155***59509&nbsp;&nbsp;  23分钟前注册成功</li>
+        <li>135***93950&nbsp;&nbsp;  29分钟前注册成功</li>
+        <li>155***52421&nbsp;&nbsp;  29分钟前注册成功</li>
+        <li>132***22029&nbsp;&nbsp;  29分钟前注册成功</li>
+        <li>155***42959&nbsp;&nbsp;  35分钟前注册成功</li>
+        <li>155***09954&nbsp;&nbsp;  45分钟前注册成功</li>
+    </ul>
+</body>
+<script>
+    var num = 0;
+    var arrColor = ['#5dd9ff','#fbe091','#ff0','#b5d8f4','#0f0','#0ff','#83dd57','#fff','#b4f4ff','#ccc','#fff'];
+    function suiji() {
+        $('.scroll li').eq(num).css('color',arrColor[parseInt(10*Math.random())]);
+        $('.scroll li').eq(num).animate({'left':-300},18000,function () {
+            $('.scroll li').eq(num).css('left','100%');
+        });
+    }
+
+    suiji();
+
+    setInterval(function () {
+        num++;
+        if (num>=10) {
+            num = 0;
+        }
+        suiji();
+    },22000);
+
+</script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Demo</title>
+
+    <style>
+        .error{
+            color:red
+        }
+    </style>
+</head>
+<body>
+
+
+<form class="Form">
+
+    <p>姓名&nbsp;&nbsp;<input class="v1" type="text" name="username" mark="用户名"></p>
+    <p>密码&nbsp;&nbsp;<input class="v1" type="text" name="email" mark="邮箱"></p>
+    <p><input type="submit" value="submit"></p>
+
+</form>
+
+<script src="jquery-3.1.1.js"></script>
+
+<script>
+
+    $(".Form :submit").click(function(){
+
+        flag=true;
+
+        $("Form .v1").each(function(){
+
+            var value=$(this).val();
+            if (value.trim().length==0){
+                 var mark=$(this).attr("mark");
+                 var $span=$("<span>");
+                 $span.html(mark+"不能为空!");
+                 $span.prop("class","error");
+                 $(this).after($span);
+
+                 setTimeout(function(){
+                      $span.remove();
+                 },800);
+
+                 flag=false;
+                 return flag;
+
+            }
+        });
+        return flag
+    });
+
+
+</script>
+
+
+</body>
+</html>

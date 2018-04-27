@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<country>
+    <name>中国</name>
+    <province>
+        <name>黑龙江</name>
+        <cities>
+            <city>哈尔滨</city>
+            <city>大庆</city>
+        </cities>
+    </province>
+    <province>
+        <name>广东</name>
+        <cities>
+            <city>广州</city>
+            <city>深圳</city>
+            <city>珠海</city>
+        </cities>
+    </province>
+    <province>
+        <name>台湾</name>
+        <cities>
+            <city>台北</city>
+            <city>高雄</city>
+        </cities>
+    </province>
+    <province>
+        <name>新疆</name>
+        <cities>
+            <city>乌鲁木齐</city>
+        </cities>
+    </province>
+</country>

@@ -25,17 +25,22 @@ def get_detail_html(url):
 
 def get_detail_url(url):
     print("get detail url started")
-    time.sleep(2)
+    time.sleep(4)
     print("get detail url end")
 
 
 if __name__ == '__main__':
     thread1 = threading.Thread(target=get_detail_html, args=("",))
     thread2 = threading.Thread(target=get_detail_url, args=("",))
+
+    # setDaemon将thread1和thread2设置为守护进程
+    thread1.setDaemon(True)
+    thread2.setDaemon(True)
+
     # 实际上这里还有第三个线程，主线程
     start_time = time.time()
     thread1.start()
     thread2.start()
 
-    # 剩余的线程在脚本里运行其他代码, 下面这句是在主线程中运行的
+    # 当主线程退出的时候，子线程kill掉   因为thread1和thread2 setDaemon(True)
     print("last time:{}".format(time.time() - start_time))

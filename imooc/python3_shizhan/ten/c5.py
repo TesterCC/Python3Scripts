@@ -31,9 +31,25 @@ import re
 # 概括字符集    \d 数字    \D 非数字  32:41
 a = 'python1111java678php'
 
+# 匹配数字
 r = re.findall('\d', a)
 print(r)
 
+# 匹配非数字
+r = re.findall('\D', a)
+print(r)
+
+# 匹配数字
+r = re.findall('[0-9]', a)
+print(r)
+
+# 匹配非数字
+r = re.findall('[^0-9]', a)
+print(r)
+
+# 匹配数字和字母  \w   35:05
+r = re.findall('\w', a)
+print(r)
 
 
 

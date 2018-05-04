@@ -20,6 +20,15 @@ https://blog.csdn.net/wwj_748/article/details/78135879?utm_source=tuicool&utm_me
 import time
 from wand.image import Image
 
+import requests
+
+
+pdf_urls = ['', '']     # get untrans pdf url from list
+
+
+def download_pdf(pdf_urls):
+    pass
+
 
 def convert_pdf_to_jpg(filename):
     with Image(filename=filename) as img:

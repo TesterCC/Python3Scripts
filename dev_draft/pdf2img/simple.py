@@ -23,7 +23,8 @@ from wand.image import Image
 import requests
 
 
-pdf_urls = ['', '']     # get untrans pdf url from list
+# pdf_urls = ['', '']     # get untrans pdf url from list
+
 
 
 def download_pdf(pdf_urls):

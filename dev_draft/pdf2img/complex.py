@@ -1,29 +1,34 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 __author__ = 'MFC'
-__time__ = '18/5/4 16:11'
+__time__ = '18/5/3 10:49'
 
-import requests
-import json
+"""
+use Wand for pdf to images
+http://docs.wand-py.org/en/latest/
+
+Install:
+pip install Wand -i https://pypi.douban.com/simple/
+
+install other lib which needed
+
+ref(recommend):
+https://blog.csdn.net/wwj_748/article/details/78135879?utm_source=tuicool&utm_medium=referral
+
+It can quickly repair old doc pic issue!!!
+
+"""
+
 import os
-import datetime
 import time
 import ftplib
-import json
-import shutil
-
 from wand.image import Image
 from PIL import Image as Image2
 
-# https://pic.huodongjia.com/ganhuodocs/2017-06-23/1498188660.2.pdf   未加载
-# https://pic.huodongjia.com/ganhuodocs/2017-11-24/1511509253.34.pdf   404  # 通过requests排除
-# https://pic.huodongjia.com/ganhuodocs/2018-03-02/1519978003.48.pdf   正常的
+import requests
 
 
-untrans_url_list = [u'https://pic.huodongjia.com/ganhuodocs/2017-06-23/1498188660.2.pdf',
-                    u'https://pic.huodongjia.com/ganhuodocs/2017-11-24/1511509253.34.pdf',
-                    u'https://pic.huodongjia.com/ganhuodocs/2018-03-02/1519978003.48.pdf', ]
-
+# pdf_urls = ['', '']     # get untrans pdf url from list
 
 base_dir = os.getcwd()
 print(base_dir)
@@ -35,6 +40,7 @@ LOG_PATH = base_dir + '/log'
 print(ZIP_PATH)
 print(PDF_PATH)
 print(LOG_PATH)
+
 
 # 上传工具类
 class FtpUploadTracker:
@@ -51,6 +57,7 @@ class FtpUploadTracker:
 
         if self.lastShownPercent != percentComplete:
             self.lastShownPercent = percentComplete
+
 
 # pdf 转换成图片
 def pdf_convert_pic(url, path, img_path):
@@ -69,6 +76,15 @@ def pdf_convert_pic(url, path, img_path):
             img_name = _file.replace('pdf', 'png')
             image.save(filename='{0}/{1}'.format(img_path, img_name))
     os.remove('{0}/{1}'.format(path, _file))
+
+
+def convert_pdf_to_jpg(filename):
+    # simple1
+    with Image(filename=filename) as img:
+        print('total pages = ', len(img.sequence))
+
+        with img.convert('png') as converted:
+            converted.save(filename='image/page.png')   # generate pic name: page-0.jpeg page-1.jpeg, same name covered directly
 
 
 # 图片压缩批处理
@@ -145,16 +161,15 @@ def upload(url, path):
         except Exception as e:
             print(e)
         s.quit()
-        url = 'http://pic.huodongjia.com/' + spot + '/' + curTime + '/' + filename
+        url = 'https://pic.huodongjia.com/' + spot + '/' + curTime + '/' + filename
     print(url)
     os.remove(path)
 
-if __name__ == '__main__':
-    base_dir = os.getcwd()
 
+if __name__ == '__main__':
     flag = 1
     if flag:
-        with open(base_dir+'/test_untrans_url_list2.txt', 'r') as f:
+        with open(base_dir+'/debug_url_list2.txt', 'r') as f:    # write pdf url in debug_url_list2.txt
             urls = f.readlines()
             urls = [x.strip() for x in urls]
 
@@ -192,5 +207,3 @@ if __name__ == '__main__':
                 f.write(u + '---------->' + str(count) + '\n')
     else:
         pass
-
-

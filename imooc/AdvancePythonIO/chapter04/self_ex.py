@@ -13,6 +13,9 @@ from imooc.AdvancePythonIO.chapter04.class_method import Date
 
 
 class Person:
+    """
+    Class Person
+    """
     name = "user"
 
 
@@ -26,3 +29,10 @@ if __name__ == '__main__':
     print(user.__dict__)
     print(user.name)
     print(user.scool_name)
+
+    user.__dict__['school_addr'] = "Beijing"
+    print(user.school_addr)
+    print(Person.__dict__)
+    print(user.name)
+    print(dir(user))
+

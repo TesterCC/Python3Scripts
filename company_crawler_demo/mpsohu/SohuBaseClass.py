@@ -31,7 +31,7 @@ class SohuBaseClass(object):
     PUBLISH_DIRECT_URL = "https://mp.sohu.com/v3/news/publish"
 
     USERNAME = "18702895635"  # [18702895635, 15281005385, 18683715921, 18782291154, 18108061758]
-    PASSWORD = "huodongjia123456"
+    PASSWORD = ""
 
     # DRIVER = webdriver.Chrome()
     DRIVER = webdriver.PhantomJS()

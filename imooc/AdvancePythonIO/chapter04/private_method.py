@@ -19,7 +19,14 @@ class User:
         return 2018 - self.__birthday.year
 
 
+class Student(User):
+    def __init__(self, birthday):
+        self.__birthday = birthday
+
+
 if __name__ == '__main__':
     user = User(Date(1990, 12, 12))
+    user2 = Student(Date(1988, 11, 11))
     print(user._User__birthday)  # __attr的值其实通过这种方式也能获取到
+    print(user2._Student__birthday)  # 子类的__attr的值其实通过这种方式也能获取到
     print(user.get_age())

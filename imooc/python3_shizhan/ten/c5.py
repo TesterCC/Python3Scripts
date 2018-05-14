@@ -51,6 +51,18 @@ print(r)
 r = re.findall('\w', a)
 print(r)
 
+# 概括字符集  单词字符 \w         非单词字符 \W
+b = 'python 1111java\r67&8p\nhp\t'
+
+r = re.findall('\W', b)
+print(r)
+
+# 概括字符集  空白字符 \s
+r = re.findall('\s', b)
+print(r)
+
+
+
 
 
 

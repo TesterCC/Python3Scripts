@@ -10,4 +10,14 @@ Test DRF interface by python
 from rest_framework.test import APIRequestFactory
 from rest_framework.test import APIClient
 
-# Use User to login and get cookies
+# Auth and login
+# http://www.django-rest-framework.org/api-guide/testing/#authenticating
+
+
+# Make all requests in the context of a logged in session.
+client = APIClient()
+client.login(username='test', password='test123')
+
+# Log out
+client.logout()
+

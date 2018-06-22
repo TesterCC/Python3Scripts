@@ -50,21 +50,29 @@ class WechatUtils(object):
             }
         }
 
-        r = requests.post(url, data=json.dumps(data))
+        # r = requests.post(url, data=json.dumps(data))   # encoding the dict yourself
+        r = requests.post(url, json=data)   # Instead of encoding the dict yourself, request >= 2.4.2  http://www.python-requests.org/en/master/user/quickstart/#post-a-multipart-encoded-file
         print(r.text)
 
-    def main(self):
-        pass
+# combine action
+    def main_customer_reply(self):
+        access_token = self.get_access_token()
+        print(access_token)
+        self.customer_service_reply_media(access_token)
 
 
 if __name__ == '__main__':
     wu = WechatUtils()
 
-    # Test get access_token
-    access_token = wu.get_access_token()
-    print(access_token)
+    # # Test get access_token
+    # access_token = wu.get_access_token()
+    # print(access_token)
+    #
+    # # Test auto custom reply info.
+    # wu.customer_service_reply_media(access_token)
 
-    # Test auto custom reply info.
-    req = wu.customer_service_reply_media(access_token)
+    wu.main_customer_reply()
+
+
 
 

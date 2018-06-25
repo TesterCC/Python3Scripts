@@ -5,12 +5,16 @@ __time__ = '18/6/13 21:48'
 
 """
 大话设计模式Python实现-简单工厂模式
-简单工厂模式(Simple Factory Pattern):
+
+01.简单工厂模式(Simple Factory Pattern):
 是通过专门定义一个类来负责创建其他类的实例，被创建的实例通常都具有共同的父类.
 
 模式特点：工厂根据条件产生不同功能的类。
 
 程序实例：四则运算计算器，根据用户的输入产生相应的运算类，用这个运算类处理具体的运算。
+
+代码特点：C/C++中的switch...case...分支使用字典的方式代替。
+         使用异常机制对除数为0的情况进行处理。
 
 https://www.cnblogs.com/onepiece-andy/p/python-simple-factory-pattern.html
 

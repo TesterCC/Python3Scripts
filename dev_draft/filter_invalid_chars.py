@@ -24,3 +24,7 @@ print(s1)
 s2 = re.sub(u"[\x00-\x08\x0b-\x0c\x0e-\x1f]+", u"", company)  # 推荐，优雅易理解
 
 print(s2)
+
+# method 3
+s3 = re.sub(u"[\\x00-\\x08\\x0b-\\x0c\\x0e-\\x1f]", u"", company)  # 推荐，优雅易理解
+print(s3)

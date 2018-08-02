@@ -11,6 +11,8 @@ __time__ = '18/8/2 11:56'
 
 解决方案:
   最简单的方式是使用字典推导。
+  
+列表推倒式效率更高
 """
 
 import time
@@ -30,12 +32,6 @@ t1 = time.time()
 
 print(p1)
 
-# Make a dictionary of tech stocks
-tech_names = {'AAPL', 'IBM', 'HPQ', 'MSFT'}
-p2 = {key: value for key, value in prices.items() if key in tech_names}
-print(p2)
-
-
 # 大多数情况下字典推导能做到的,通过创建一个元组序列然后把它传给dict()函数也能实现
 # 但是，字典推导式p1比用dict()函数p3更快
 
@@ -47,4 +43,25 @@ print(p3)
 
 print("p1 time: ", (t1-t0))
 print("p3 time: ", (t3-t2))
+
+
+
+# Make a dictionary of tech stocks
+tech_names = {'AAPL', 'IBM', 'HPQ', 'MSFT'}
+t4 = time.time()
+p2 = {key: value for key, value in prices.items() if key in tech_names}
+t5 = time.time()
+print(p2)
+
+
+# p2的另外一种实现方式   比p2的实现方式慢1.6倍
+# Make a dictionary of tech stocks
+tech_names = {'AAPL', 'IBM', 'HPQ', 'MSFT'}
+t6 = time.time()
+p22 = {key: prices[key] for key in prices.keys() & tech_names}
+t7 = time.time()
+print(p22)
+
+print("p2 time: ", (t5-t4))
+print("p22 time: ", (t7-t6))
 

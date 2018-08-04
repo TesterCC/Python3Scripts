@@ -29,8 +29,13 @@ print(a.keys() - b.keys())
 # Find (key, value) pairs in common
 print(a.items() & b.items())
 
+# 以现有字典构造一个排除几个指定键的新字典
+# Make a new dictionary with certain keys removed
 
+c = {key: a[key] for key in a.keys() - {'z', 'w'}}
 
+print(c)
 
+d = {key: b[key] for key in b.keys() - {'z', 'w'}}
 
-
+print(d)

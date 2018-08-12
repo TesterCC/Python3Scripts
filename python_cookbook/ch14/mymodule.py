@@ -13,7 +13,12 @@ __time__ = '18/8/10 13:31'
 你想写个测试来证明它,给定一个输入,相应的输出能正常显示出来。
 
 解决方案:
-使用unittest.mock模块中的patch()函数
+使用unittest.mock模块中的patch()函数, 可以很方便的在测试运行的上下文中替换对象，且当测试完成时自动返回它们的原有状态
 可以为单个测试模拟sys.stdout然后回滚,并且不产生大量的临时变量或在测试用例直接暴露状态变量。
 """
+
+
+def urlprint(protocol, host, domain):
+    url = '{}://{}.{}'.format(protocol, host, domain)
+    print(url)
 

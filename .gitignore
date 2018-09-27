@@ -8,3 +8,4 @@ dist
 build
 company_crawler_demo/mpsohu/cookies/
 tmp/
+req.txt

@@ -12,7 +12,7 @@ ua = UserAgent()
 # http://www.xicidaili.com/nn/
 PROXY_POOL_HTTP = ["58.53.128.83:3128", "61.135.217.7:80"]
 PROXY_POOL_HTTPS = ["124.226.192.215:41193", "223.240.218.29:8118", "117.88.217.18:8118", "115.225.58.242:8118"]
-PROXY_POOL = ["58.53.128.83:3128", "61.135.217.7:80", "123.7.61.8:53281"]
+PROXY_POOL = ["123.7.61.8:53281", "117.88.217.18:8118"]
 
 
 def get_proxy_ip_port():
@@ -31,6 +31,7 @@ options = webdriver.ChromeOptions()
 options.add_argument('--no-sandbox')
 options.add_argument('--headless')
 options.add_argument('--disable-gpu')
+
 # 设置中文
 options.add_argument('lang=zh_CN.UTF-8')
 # options.add_argument('window-size=1200x600')

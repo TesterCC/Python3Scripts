@@ -14,7 +14,8 @@ ua = UserAgent()
 # HTTPS PROXY  http://www.xicidaili.com/nn/  1109S
 PROXY_POOL_HTTP = ["58.53.128.83:3128", "118.190.95.35:9001", "124.235.135.166:80"]
 PROXY_POOL_HTTPS = ["124.226.192.215:41193", "223.240.218.29:8118", "117.88.217.18:8118", "115.225.58.242:8118"]
-PROXY_POOL = ["223.240.218.29:8118", "123.7.61.8:53281"]
+PROXY_POOL = ["123.7.61.8:53281"]
+# PROXY_POOL = [""]  for test single
 
 # print(ua.random)
 
@@ -28,7 +29,7 @@ print(proxy_ip)
 
 proxies = {
   "http": proxy_ip,
-  "https": proxy_ip,  # user https need both
+  "https": proxy_ip,  # use https need both
 }
 
 

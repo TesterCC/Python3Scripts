@@ -12,13 +12,15 @@ ua = UserAgent()
 # http://www.xicidaili.com/nn/
 PROXY_POOL_HTTP = ["58.53.128.83:3128", "61.135.217.7:80"]
 PROXY_POOL_HTTPS = ["124.226.192.215:41193", "223.240.218.29:8118", "117.88.217.18:8118", "115.225.58.242:8118"]
-PROXY_POOL = ["58.53.128.83:3128", "61.135.217.7:80"]
+PROXY_POOL = ["58.53.128.83:3128", "61.135.217.7:80", "123.7.61.8:53281"]
 
 
 def get_proxy_ip_port():
     return random.sample(PROXY_POOL, 1)[0]
 
 proxy_ip = get_proxy_ip_port()
+# proxy_ip = "123.7.61.8:53281"   ＃ for debug
+
 print(proxy_ip)
 # print(random.sample(PROXY_POOL, 1))   # list
 # print(random.sample(PROXY_POOL, 1))

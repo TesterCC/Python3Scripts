@@ -15,9 +15,10 @@ ua = UserAgent()
 
 # 要是高匿代理才可以 http://www.xicidaili.com/nn/
 
+
 PROXY_POOL_HTTP = ["58.53.128.83:3128", "61.135.217.7:80"]
-PROXY_POOL_HTTPS = ["124.226.192.215:41193", "223.240.218.29:8118", "117.88.217.18:8118", "115.225.58.242:8118"]
-PROXY_POOL = ["58.53.128.83:3128", "61.135.217.7:80"]
+PROXY_POOL_HTTPS = ["124.226.192.215:41193", "223.240.218.29:8118", "117.88.217.18:8118", "115.225.58.242:8118", "123.7.61.8:53281"]
+PROXY_POOL = ["124.226.192.215:41193", "223.240.218.29:8118", "117.88.217.18:8118", "115.225.58.242:8118", "123.7.61.8:53281"]   # 117 123
 
 
 def get_proxy_ip_port():
@@ -43,9 +44,9 @@ dcap["phantomjs.page.settings.loadImages"] = False
 
 # 设置代理
 # service_args = ['--proxy=127.0.0.1:9999', '--proxy-type=socks5']
-service_args = ['--proxy={}'.format(get_proxy_ip_port()), '--proxy-type=http']
+service_args = ['--proxy={}'.format(get_proxy_ip_port()), '--proxy-type=https']
+# service_args = ['--proxy=123.7.61.8:53281', '--proxy-type=https']   # success, 要用高匿代理
 print("server_args {}".format(service_args))
-# service_args = ['--proxy=58.53.128.83:3128', '--proxy-type=http']   # success, 要用高匿代理
 
 driver = webdriver.PhantomJS(desired_capabilities=dcap, service_args=service_args)
 

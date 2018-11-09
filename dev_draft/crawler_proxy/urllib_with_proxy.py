@@ -17,7 +17,8 @@ if __name__ == "__main__":
     # 访问网址
     url = 'http://httpbin.org/ip'
     # 这是代理IP
-    proxy = {'https': '123.7.61.8:53281'}
+    # proxy = {'https': '123.7.61.8:53281'}   # can use
+    proxy = {'https': '175.148.72.86:1133'}   # for test
     # 创建ProxyHandler
     proxy_support = request.ProxyHandler(proxy)
     # 创建Opener

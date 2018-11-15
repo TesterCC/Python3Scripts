@@ -24,10 +24,13 @@ import upyun
 from PIL import Image
 from io import BytesIO
 
+# from dev_draft.use_wx_token_by_redis.redis_cache import cache_method, cache_func
+
 SECRET = ''
 APPID = ''
 
 
+# @cache_func(7200)    # 每次请求access_token过期是7200s=2hours  ，local_redis can use, but method need modify
 def _get_wx_access_token():
     url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={appid}&secret={secret}'.format(appid=APPID, secret=SECRET)
     response = requests.get(url)
@@ -48,10 +51,8 @@ def get_wx_qrcode_unlimit():
     """
     https://developers.weixin.qq.com/miniprogram/dev/api/open-api/qr-code/getWXACodeUnlimit.html
     """
-    # access_token = _get_wx_access_token()
-
-    # TODO
     access_token = _get_wx_access_token()
+    print(access_token)
     old_event_id = "1913199967"   # event.old_event_id
 
     if access_token:
@@ -165,26 +166,27 @@ def upload_file_pic_by_http(file_obj, image_type="jpeg", directory='test'):
         return 'https://pic.huodongjia.com/' + server_directory + upload_filename
 
 
-def upload_img():
+def upload_return_imgurl():
     img_bytes = get_wx_qrcode_unlimit()
     # ret = upload_file_pic_by_ftp(img_bytes)
 
     img = Image.open(BytesIO(img_bytes))
     img_type = img.format.lower()
+    print(img_type)
     ret_url = upload_file_pic_by_http(img_bytes, image_type=img_type, directory='event_detail_qrcode')
+    # ret_url = upload_file_pic_by_http(img_bytes, directory='event_detail_qrcode')
 
     return ret_url
 
 
 if __name__ == '__main__':
     # print(_get_wx_access_token())
-
     # get_wx_qrcode_unlimit()
-
 
     ts = time.time()
     # show_img()
-    upload_img()
+    upload_return_imgurl()
     te = time.time()
 
     print(te-ts)
+

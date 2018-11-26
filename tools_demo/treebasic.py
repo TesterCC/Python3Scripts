@@ -10,13 +10,14 @@ http://blog.csdn.net/huang_yx005/article/details/52299460
 Python显示目录的树形结构
 """
 import os
+from tools_demo.count_decor import count_runtime
 
 
 def fileCntIn(currPath):
     """汇总当前目录下文件数"""
     return sum([len(files) for root, dirs, files in os.walk(currPath)])
 
-
+@count_runtime
 def dirsTree(startPath):
     """树形打印出目录结构"""
     for root, dirs, files in os.walk(startPath):

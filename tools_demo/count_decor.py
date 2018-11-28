@@ -7,7 +7,7 @@ import time
 
 """
 Python 函数运行时间装饰器
-Python3.6.3
+Python2 Python3通用
 """
 
 

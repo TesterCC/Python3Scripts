@@ -5,6 +5,8 @@ __time__ = '18/6/29 14:06'
 
 """
 Effective Python编写高质量Python代码的59个有效方法  P6
+第3条 了解bytes、str、unicode的区别
+
 Python3  bytes(包含原始8位，等价Python2的str)    -- 原始8位:由于每个字节有8个二进制位，故是原始的8位
 Python3  str(包含Unicode字符)
 

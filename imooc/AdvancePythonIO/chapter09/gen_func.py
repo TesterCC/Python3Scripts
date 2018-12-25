@@ -4,7 +4,7 @@ __author__ = 'MFC'
 __time__ = '18/6/20 13:18'
 
 
-# 生成器函数，函数里只要有yield关键字
+# 生成器函数，函数里只要有yield关键字   # 利用yield使实现协程成为可能
 def gen_func():
     yield 1
     yield 2    # use

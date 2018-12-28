@@ -10,3 +10,4 @@ company_crawler_demo/mpsohu/cookies/
 tmp/
 req.txt
 *.db
+.pytest_cache/

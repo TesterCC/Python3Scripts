@@ -12,19 +12,19 @@ __time__ = '2018-12-25 14:51'
 """
 
 def myreadlines(f, newline):
-    buf = ""
+    buf = ""   # 可以视为缓存，存储已经读出的数据
     while True:
         while newline in buf:
             pos = buf.index(newline)
             yield buf[:pos]
-            buf = buf[pos + len(newline):]
-        chunk = f.read(4096)
+            buf = buf[pos + len(newline):]   # 把已经yield的数据丢弃掉
+        chunk = f.read(4096)  # 一次性读取的数据量
 
         if not chunk:
             # 说明已经读到了文件结尾
             yield buf
             break
-        buf += chunk
+        buf += chunk  # 已经读到就会压到缓存buffer中
 
 with open('input.txt') as f:
     for line in myreadlines(f, "{|}"):

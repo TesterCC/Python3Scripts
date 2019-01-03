@@ -11,3 +11,4 @@ tmp/
 req.txt
 *.db
 .pytest_cache/
+*.log

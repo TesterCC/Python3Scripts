@@ -1,44 +1,68 @@
-<person>
-  <firstName>John</firstName>
-  <lastName>Smith</lastName>
-  <age>25</age>
-  <address>
-    <streetAddress>21 2nd Street</streetAddress>
-    <city>New York</city>
-    <state>NY</state>
-    <postalCode>10021</postalCode>
-  </address>
-  <phoneNumber>
-    <type>home</type>
-    <number>212 555-1234</number>
-  </phoneNumber>
-  <phoneNumber>
-    <type>fax</type>
-    <number>646 555-4567</number>
-  </phoneNumber>
-  <gender>
-    <type>male</type>
-  </gender>
-</person>
-<person>
-  <firstName>Jimy</firstName>
-  <lastName>Liar</lastName>
-  <age>19</age>
-  <address>
-    <streetAddress>18 2nd Street</streetAddress>
-    <city>New York</city>
-    <state>NY</state>
-    <postalCode>10021</postalCode>
-  </address>
-  <phoneNumber>
-    <type>home</type>
-    <number>777 555-1234</number>
-  </phoneNumber>
-  <phoneNumber>
-    <type>fax</type>
-    <number>777 555-4567</number>
-  </phoneNumber>
-  <gender>
-    <type>male</type>
-  </gender>
-</person>
+<persons>
+    <person>
+        <firstName>John</firstName>
+        <lastName>Smith</lastName>
+        <age>25</age>
+        <address>
+            <streetAddress>21 2nd Street</streetAddress>
+            <city>New York</city>
+            <state>NY</state>
+            <postalCode>10021</postalCode>
+        </address>
+        <phoneNumber>
+            <type>home</type>
+            <number>212 555-1234</number>
+        </phoneNumber>
+        <phoneNumber>
+            <type>fax</type>
+            <number>646 555-4567</number>
+        </phoneNumber>
+        <gender>
+            <type>male</type>
+        </gender>
+    </person>
+    <person>
+        <firstName>Patty</firstName>
+        <lastName>Liar</lastName>
+        <age>27</age>
+        <address>
+            <streetAddress>1st Street</streetAddress>
+            <city>Los Angles</city>
+            <state>NY</state>
+            <postalCode>10021</postalCode>
+        </address>
+        <phoneNumber>
+            <type>home</type>
+            <number>212 555-1234</number>
+        </phoneNumber>
+        <phoneNumber>
+            <type>fax</type>
+            <number>646 555-4567</number>
+        </phoneNumber>
+        <gender>
+            <type>male</type>
+        </gender>
+    </person>
+    <person>
+        <firstName>Tom</firstName>
+        <lastName>Liar</lastName>
+        <age>47</age>
+        <address>
+            <streetAddress>7th Street</streetAddress>
+            <city>Los Angles</city>
+            <state>LA</state>
+            <postalCode>10023</postalCode>
+        </address>
+        <phoneNumber>
+            <type>company</type>
+            <number>212 555-1234</number>
+        </phoneNumber>
+        <phoneNumber>
+            <type>fax</type>
+            <number>646 555-4567</number>
+        </phoneNumber>
+        <gender>
+            <type>male</type>
+        </gender>
+    </person>
+</persons>

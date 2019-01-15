@@ -12,3 +12,4 @@ req.txt
 *.db
 .pytest_cache/
 *.log
+auto_add_white_ip.py

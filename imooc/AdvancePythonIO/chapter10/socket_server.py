@@ -14,6 +14,14 @@ server.listen()
 sock, addr = server.accept()
 
 # 获取从客户端发送的数据
- 
+# 一次获取1k的数据
 
+data = sock.recv(1024)
+print(data.decode("utf8"))   # 返回的是bytes类型，需要decode
+
+print("reply message...")
+sock.send("hello {}".format(data.decode("utf8")).encode("utf8"))    # send的数据也要是bytes类型
+server.close()
+
+sock.close()  # 真正的server一般不会close
 

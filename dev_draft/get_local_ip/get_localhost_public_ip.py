@@ -8,7 +8,7 @@ import requests
 import re
 
 
-QUERY_SITE_URL = "http://2018.ip138.com/ic.asp"  # 可能会变
+QUERY_SITE_URL = "http://2019.ip138.com/ic.asp"  # 可能会变
 
 def get_ip_by_ip138():
     response = requests.get(QUERY_SITE_URL)

@@ -14,3 +14,4 @@ req.txt
 *.log
 auto_add_white_ip.py
 imooc/celery_learning/celery_app/celeryconfig.py
+local_debug_config/*

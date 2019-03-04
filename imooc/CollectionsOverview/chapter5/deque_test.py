@@ -9,3 +9,4 @@ deque 双端队列
 https://www.imooc.com/video/16365
 """
 
+from collections import deque

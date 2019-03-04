@@ -6,18 +6,23 @@ __time__ = '18/11/21 13:39'
 
 """
 算法图解  实现图 P85-87  图算法基础   P90 广度优先算法最终代码
+
+广度优先算法
+breadth-first algorithm
 """
 
 graph = {}
 graph["you"] = ["alice", "bob", "claire"]
 graph["bob"] = ["anuj", "peggy"]
-graph["alice"] = ["peggy"]    # tom is mango
+graph["alice"] = ["peggy"]
+graph["claire"] = ["thom", 'jonny']
 graph["anuj"] = [""]
 graph["peggy"] = [""]
 graph["thom"] = [""]
 graph["jonny"] = [""]
 
-print(graph)    # 散列表是无序的，散列表能将key映射到value
+# key-value添加顺序对应结果无影响，因为散列表是无序的，散列表能将key映射到value
+print(graph)
 
 from collections import deque
 
@@ -31,7 +36,8 @@ def person_is_seller(name):
     if not name:
         return False
 
-    return name[-1] == 'm'   # Python2可以，Python3报错
+    # return name[-1] == 'm'   # Python2可以，Python3也可以，但写法不优雅
+    return name.endswith('m')  # It's better, suggest by Endlex-net
 
 
 def search(name):
@@ -49,6 +55,7 @@ def search(name):
     searched = []
 
     # print(search_queue)
+    print("\n[+] Start to breadth-first search")
 
     while search_queue:   # 只要队列不为空
         person = search_queue.popleft()   # 取出其中的第一个人
@@ -56,6 +63,8 @@ def search(name):
             if person_is_seller(person):
                 print("{} is a mango seller!".format(person))
                 return True
+            elif person == '':
+                print("There is no neighbor...")
             else:
                 print("-->", person)
                 search_queue += graph[person]
@@ -65,8 +74,8 @@ def search(name):
 
 if __name__ == '__main__':
     search("you")
-    # print(search("alice"))
-    # print(search_target("thom"))   # 引起各种问题
+    search("alice")
+    search("thom")
 
 
 

@@ -45,10 +45,17 @@ re.findall
 # compile 函数用于编译正则表达式，生成一个正则表达式（ Pattern ）对象，供 match() 和 search() 这两个函数使用。
 # 那 ?: 的作用就是把捕获分组转变为非捕获分组。
 pattern = re.compile(r"(\d{3}-|\(\d{3}\)\s)\d{3}-\d{4}")   # 注意文本汇中不要匹配首尾)
+pattern2 = re.compile(r"(?:\d{3}-|\(\d{3}\)\s)\d{3}-\d{4}")   # ?: 把捕获组转变为一个非捕获组，使得这个式子可以从头到尾全部匹配
 
+'''
+若匹配成功，match()/search()返回的是Match对象，finditer()返回的也是Match对象的迭代器，
+获取匹配结果需要调用Match对象的group()、groups或group(index)方法。
+'''
 # method 1
 ret = pattern.finditer(txt_content)
-# print(ret)
 
 ret_list = [i.group() for i in ret]
 print(ret_list)
+
+# method 2
+print(pattern2.findall(txt_content))

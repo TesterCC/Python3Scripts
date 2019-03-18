@@ -13,8 +13,8 @@ html_loop_template = '''<tr>
                             </tr>'''
 
 
-test_dict = {'content': ''}
-# print(test_dict)
+event_content_dict = {'content': ''}
+# print(event_content_dict)
 # print(html_template.format(ticket_name="1",current_price="2",origin_price="3",price_description="4"))
 
 ticket_list = [{'status': 1,
@@ -91,7 +91,7 @@ html_loop = [html_loop_template.format(ticket_name=ticket.get("property"),curren
 html_loop_str = ''.join(html_loop)
 
 
-html_template = '''<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+html_template_str = '''<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
     <tbody>
         <tr>
             <td>票种名称</td>
@@ -108,4 +108,4 @@ html_template = '''<table border="1" cellpadding="1" cellspacing="1" style="widt
 
 print("*"*80)
 
-print(html_template)
+print(html_template_str)

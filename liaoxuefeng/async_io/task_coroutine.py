@@ -13,6 +13,9 @@ asyncio的编程模型就是一个消息循环。
 
 1.我们从asyncio模块中直接获取一个EventLoop的引用，
 2.然后把需要执行的协程扔到EventLoop中执行，就实现了异步IO。
+
+用asyncio提供的@asyncio.coroutine可以把一个generator标记为coroutine类型，
+然后在coroutine内部用yield from调用另一个coroutine实现异步操作。
 """
 
 # 用Task封装两个coroutine

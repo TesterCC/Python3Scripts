@@ -18,6 +18,10 @@ print(target.shape)
 iris = load_iris()
 print(iris.data.shape)
 
-print()
+print(iris.target.shape)
+
+print(list(iris.target_names))
+
+
 
 

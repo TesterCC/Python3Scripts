@@ -6,7 +6,7 @@ __time__ = '18/4/22 23:51'
 """
 11-1 python 中的 GIL  07:47
 gil 会根据执行的字节码行数以及时间片释放gil，gil在遇到IO的操作时会主动释放
-使得Pyhton多线程在IO操作频繁的情况下也很适用
+使得Python多线程在IO操作频繁的情况下也很适用
 """
 
 import threading

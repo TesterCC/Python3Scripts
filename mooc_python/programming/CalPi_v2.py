@@ -24,3 +24,4 @@ for i in range(1, DARTS+1):
 
 pi = 4 * (hits/DARTS)
 print("圆周率近似值是：{}".format(pi))
+print("运行时间是: {:.5f}s".format(perf_counter()-start))

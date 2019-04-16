@@ -37,7 +37,18 @@ def drawDigit(d):  # 根据数字绘制七段数码管
 def drawDate(date):
     t.pencolor("red")
     for i in date:
-        drawDigit(eval(i))    # 通过eval()函数将数字变为整数
+        if i == '-':
+            t.write('年', font=("Arial", 18, "normal"))
+            t.pencolor("green")
+            t.fd(40)
+        elif i == '=':
+            t.write('月', font=("Arial", 18, "normal"))
+            t.pencolor("blue")
+            t.fd(40)
+        elif i == '+':
+            t.write('日', font=("Arial", 18, "normal"))
+        else:
+            drawDigit(eval(i))    # 通过eval()函数将数字变为整数
 
 
 def main():
@@ -45,7 +56,9 @@ def main():
     t.penup()
     t.fd(-300)
     t.pensize(5)
-    drawDate(time.strftime('%Y%m%d', time.gmtime()))
+    # print(time.strftime('%Y-%m=%d+', time.gmtime()))
+    drawDate(time.strftime('%Y-%m=%d+', time.gmtime()))
+    t.hideturtle()
     t.done()
 
 

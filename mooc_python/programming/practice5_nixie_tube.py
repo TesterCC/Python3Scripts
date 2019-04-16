@@ -36,7 +36,7 @@ def drawGap():  # 绘制数码管间隔
 
 def drawLine(draw):  # 绘制单段数码管
     drawGap()
-    t.pendown() if draw else t.penup()
+    t.pendown() if draw else t.penup()  # 真值落笔，非真抬笔
     t.fd(40)
     drawGap()
     t.right(90)
@@ -55,11 +55,11 @@ def drawDigit(d):  # 根据数字绘制七段数码管
     t.penup()
     t.fd(20)
 
-
+# 输出将要输出的字符
 def drawDate(date):
     t.pencolor("red")
     for i in date:
-        drawDigit(eval(i))
+        drawDigit(eval(i))    # 通过eval()函数将数字变为整数
 
 
 def main():

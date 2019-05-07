@@ -22,10 +22,8 @@ print(clf.predict(x))  # 预测
 
 # 基于方程可以拟合的直线绘制出来
 
-plt.plot(X, a+b*X, color='red')
+plt.plot(X, a + b * X, color='red')
 
 plt.scatter(X, y, color='blue')
 
 plt.show()
-
-

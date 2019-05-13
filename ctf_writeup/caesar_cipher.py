@@ -20,6 +20,9 @@ https://www.cnblogs.com/kurokoleung/p/6363845.html
 
 flag{4c850c5b3b2756e67a91bad8e046ddac}
 
+VprPGS{jnvg_bar_cyhf_1_vf_3?}
+tips：flag格式是IceCTF
+IceCTF{wait_one_plus_1_is_3?}
 """
 
 # Caesar Cipher
@@ -29,7 +32,7 @@ MAX_KEY_SIZE = 26
 
 def getMode():
     while True:
-        print('Do you wish to encrypt or decrypt a message?')
+        print('Enter either "encrypt" or "e" or "decrypt" or "d":')
         mode = input().lower()
         if mode in 'encrypt e decrypt d'.split():
             return mode

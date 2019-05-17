@@ -1,0 +1,26 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+__author__ = 'MFC'
+__time__ = '2019-05-17 17:22'
+
+"""
+python批量检测爆破发现phpMyAdmin后台简单扫描脚本
+"""
+import requests
+
+
+def run(url):
+    try:
+        r = requests.get(url, timeout=20)
+        print('{} : {}'.format(r.url, r.status_code))
+        # print(r.content)
+        if b'pma_username' in r.content:
+            print('网址:{} 发现phpMyAdmin后台'.format(url))
+            with open('phpmyadmin_url.txt', 'a+')as a:
+                a.write(r.url + '\n')
+    except:
+        pass
+
+
+if __name__ == '__main__':
+    run('http://127.0.0.1/phpmyadmin/index.php')

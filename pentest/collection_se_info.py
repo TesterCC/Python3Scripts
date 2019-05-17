@@ -1,0 +1,202 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+__author__ = 'MFC'
+__time__ = '2019-05-17 20:01'
+
+
+import nmap
+import sys
+import getopt
+import requests
+import re
+import os
+import base64
+import simplejson
+import urllib3
+
+
+"""
+调试有很多问题，特别是接口不稳定，代码仅供参考学习思路
+"""
+
+urllib3.disable_warnings()
+
+topDomainSet = set()
+
+def checkOpenPort(ip):
+    scanner = nmap.PortScanner()
+    result = scanner.scan(ip, arguments="")
+
+    openPortList= []
+    if ip in result["scan"] and "tcp" in result["scan"][ip]:
+        for openPort in result["scan"][ip]["tcp"]:
+            state = result["scan"][ip]["tcp"][openPort]["state"]
+            name = result["scan"][ip]["tcp"][openPort]["name"]
+            # return openPort, state, name
+            list = (openPort, state, name)
+            openPortList.append(list)
+    return openPortList
+
+def queryIp(filename):
+    # filePath = os.getcwd() + "/subDomainsBrute-master/" + filename
+    filePath = os.getcwd() + filename
+    print(filePath)
+    if os.path.isfile(filePath):
+        lines = open(filePath, "r").readlines()
+        urlList = set()
+        for url in lines:
+            url = re.subn(" .*|:.*", "", url)[0]
+            # url = re.findall("^(.*?) |^(.*?)\n", url.strip())[0]
+
+            urlList.add(url)
+        print(urlList)
+        print(filename+"\t\t\tip+域名共计"+str(len(urlList)))
+        w = open("output_" + filename, "w+")
+        for url in urlList:
+            r = requests.get("https://www.ip.cn/index.php?ip="+str(url),verify=False)
+
+            if re.findall("请输入要查询的域名或 IP 地址",r.text):
+                ip = re.findall("您查询的 IP：<code>(.*?)<", r.text)[0]
+                addr = re.findall("所在地理位置：<code>(.*?)<", r.text)[0]
+                w.writelines([url.strip() + "\t\t\t", ip + "\t\t\t", addr, "\n"])
+                print(url.strip(), ip, addr)
+                openPortList = checkOpenPort(ip)
+                for openPort in openPortList:
+                    print(openPort)
+                    w.writelines(str(openPort))
+                    w.writelines("\n")
+                # print(openPortList)
+                w.flush()
+        w.close()
+    else:
+        print('文件名错误')
+        sys.exit(2)
+
+
+def fofaScan(topDomain, mode,domain):
+    email = '你的邮箱'
+    key = '你的key'
+    if mode == 1:
+        query = "domain=%s" % (topDomain,)
+    else:
+        query = "cert=%s" % (topDomain,)
+    bquery = base64.b64encode(query.encode("utf-8")).decode('utf-8')
+    # print(bquery)
+    apipath = 'https://fofa.so/api/v1/search/all?full=true&email=%s&key=%s&qbase64=%s&size=9999' % (email, key, bquery)
+    r = requests.get(apipath).text
+    resultJson = simplejson.loads(r)
+    filePath = os.getcwd() + "/%s.txt" % str(domain).strip()
+    fileWrite = open(filePath, "a+")
+    for results in resultJson["results"]:
+        domain = re.subn("http://|https://", "", results[0])
+        fileWrite.writelines(domain[0]+"\n")
+    fileWrite.close()
+
+
+
+
+def findSubDomain(topDomain, domain):
+    print(topDomain+"开始枚举子域名")
+    os.system("python2 subDomainsBrute.py  "+topDomain +" -o "+domain+".txt")
+    print(topDomain+"子域名枚举结束")
+
+
+def findTopDomain(mode, host, domain):
+    reverseEmailURL = "http://whois.chinaz.com/reverse?ddlSearchMode="+str(mode)+"&host="+host
+    r = requests.get(reverseEmailURL)
+    sumURL = re.findall("col-blue02\">(.*)</i>", r.text)
+    dict = ["注册邮箱", "注册人", "注册手机号"]
+    if sumURL:
+        print(dict[mode-1]+"反查域名个数："+sumURL[0]+"跳过提取")
+        topDomainSet.add(domain)
+    else:
+        URLs = re.findall("<div class=\"w13-0 domain\"><div class=\"listOther\"><a href=\"/(.*?)\"", r.text)
+        print("根据"+dict[mode-1]+"反查结果："+str(URLs))
+        for url in URLs:
+            topDomainSet.add(url)
+
+# 查询企业备案的相关域名
+def findEnterDomain(domain):
+    rg = requests.get("http://www.beianbeian.com/s-0/"+domain)
+    # print(rg.text)
+    if re.findall("没有符合条件的记录, 请点击",rg.text):
+        print("备案信息查询失败，请传入顶级域名例：hao123.com,或者该域名没有备案")
+        return
+    try:
+      name = re.findall("<div id=\"kind\">(.*?)</div>", rg.text)[0]
+    except:
+        print("禁止国外ip访问，请更换国内，或者接口错误，请等等再试")
+        return
+    rg2 = requests.get("http://www.beianbeian.com/s?keytype=2&q="+name)
+    topDomains = re.findall("\" target=\"_blank\">(.*?)</a></div>|CCCCCC;\"><div>(.*)</div>", rg2.text)
+
+    for topDomain in topDomains:
+        if topDomain[0]:
+            top = re.subn("www.", "", topDomain[0])
+            topDomainSet.add(top[0])
+        else:
+            top = re.subn("www.", "", topDomain[1])
+            topDomainSet.add(top[0])
+    print("根据企业备案信息反查：" + str(topDomainSet))
+# whois反查
+def findWhois(domain):
+    # 定义一个set 存放whois 反查出来的域名
+    domainSet = set()
+    r = requests.get("http://whois.chinaz.com/"+domain)
+    # print(r.text)
+    # 注册人反查
+    reversePeople = re.findall("host=(.*)\">注册人反查", r.text)
+
+    # 注册邮箱反查
+    reverseEmail = re.findall("host=(.*)\">邮箱反查", r.text)
+
+    #注册电话反查
+    reversePhone = re.findall("host=(.*)\">电话反查", r.text)
+
+    if reverseEmail:
+        findTopDomain(1, reverseEmail[0], domain)
+    if reversePeople:
+        findTopDomain(2, reversePeople[0], domain)
+    if reversePhone:
+        findTopDomain(3, reversePhone[0], domain)
+    if not topDomainSet:
+        print("域名有误或者网络连接失败（请输入顶级域名，例如：hao123.com")
+
+
+if __name__ == "__main__":
+
+    try:
+        opts, args = getopt.getopt(sys.argv[1:], "-h-d:-s:", ["help", "domain", "filename"])
+        if not opts:
+            print('请输入-h查看帮助')
+            sys.exit(2)
+    except getopt.GetoptError:
+        print('请输入-h查看帮助')
+        sys.exit(2)
+
+    for opt, arg in opts:
+        if opt in ('-h', '--help'):
+            print("""autoattack.py -h <help>  帮助文档
+             -d <domain> 枚举企业所有子域名，请输入一个企业域名，并在subDomainsBrute-master目录下生成一个结果文件
+             -p<file> 输入枚举子域名结果的文件，查询出ip所属地,并进行端口，并在当前目录生成一个结果文件
+             """)
+            sys.exit()
+        if opt in ("-d", '--domain'):
+            domain = arg
+            print('你输入的域名是：', domain)
+            findEnterDomain(domain)
+            findWhois(domain)
+            # path = os.getcwd() + "/subDomainsBrute-master"
+            path = os.getcwd()
+            os.chdir(path)
+            filePath = os.getcwd() + "/%s.txt" % str(domain).strip()
+            fileWrite = open(filePath, "w+")
+            for topDomain in topDomainSet:
+                print("开始使用fofa探测子域名")
+                fofaScan(topDomain, 1, domain)   # 子域名探测
+                print("开始使用fofa探测证书")
+                fofaScan(topDomain, 2, domain)   # 证书搜集
+                findSubDomain(topDomain, domain)
+        if opt in ("-s", '--filename'):
+            filename = arg
+            queryIp(filename)

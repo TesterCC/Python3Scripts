@@ -14,12 +14,20 @@ http://www.tornadoweb.org/en/stable/
 
 cd  ~/tornado_web
 python hello_world.py
+
+how to use ipdb
+
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple ipdb
+
+ipdb debug:
+import ipdb; ipdb.set_trace()
 """
 
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         # self.write("<h1>Hello, Tornado</h1>")
+        # import ipdb;ipdb.set_trace()
         self.render("base.html")
 
 

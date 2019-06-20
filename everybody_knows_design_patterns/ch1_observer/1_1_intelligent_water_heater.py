@@ -14,6 +14,8 @@ lesson 1 - 监听模式
 设计模式之监听模式（观察者模式与监听模式区别）
 ref:
 https://www.cnblogs.com/jackson-zhangjiang/p/7784694.html
+
+version 1.0
 """
 
 from abc import ABCMeta, abstractmethod

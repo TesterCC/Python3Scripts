@@ -59,4 +59,31 @@ class WaterHeater(Observable):
         self.__temperature = temperature
         print("Current temperature is : " + str(self.__temperature) + " degree centigrade")
         self.notifyObservers()
-        pass
+
+
+class WashingMode(Observer):
+    """洗澡模式"""
+
+    def update(self, observable, object):
+        if isinstance(observable, WaterHeater) and observable.getTemperature() >= 50 and observable.getTemperature() < 70:
+            print("水已烧好，温度正好！可以用来洗澡了。")
+
+
+class DrinkingMode(Observer):
+    def update(self, observable, object):
+        if isinstance(observable, WaterHeater) and observable.getTemperature() >= 100:
+            print("水已烧开！可以用来饮用了。")
+
+
+def testWaterHeater():
+    heater = WaterHeater()
+    washingObser = WashingMode()
+    drinkingObser = DrinkingMode()
+    heater.addObserver(washingObser)
+    heater.addObserver(drinkingObser)
+    heater.setTemperature(40)
+    heater.setTemperature(60)
+    heater.setTemperature(100)
+
+if __name__ == '__main__':
+    testWaterHeater()

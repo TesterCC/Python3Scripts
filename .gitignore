@@ -17,3 +17,4 @@ imooc/celery_learning/celery_app/celeryconfig.py
 local_debug_config/*
 *.xlsx
 *.xls
+.coverage

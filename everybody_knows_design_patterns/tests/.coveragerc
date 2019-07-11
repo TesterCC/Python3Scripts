@@ -1,0 +1,7 @@
+[run]
+omit =
+    tests/*
+    __init__.py
+    */__init__.py
+
+branch = True

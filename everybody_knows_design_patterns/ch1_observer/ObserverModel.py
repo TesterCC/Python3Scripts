@@ -12,6 +12,8 @@ __time__ = '2019-06-24 13:33'
 Observable: 被观察者的抽象类
 Observer: 观察者的抽象类
 
+监听模式：在对象间定义一种一对多的依赖关系，当这个对象状态发生改变时，所有依赖它的对象都会被同时并自动更新。
+
 """
 
 from abc import ABCMeta, abstractmethod  # 引入ABCMeta, abstractmethod来定义抽象类和抽象方法

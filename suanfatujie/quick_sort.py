@@ -28,14 +28,31 @@ def quick_sort(array):
         return quick_sort(less) + [pivot] + quick_sort(greater)  # [pivot]否则拼合报错
 
 
+def quick_sort_v2(array:list) -> list:
+    if len(array) < 2:
+        return array
+
+    pivot = array[0]   # baseline
+    less = [ i for i in array[1:] if i <= pivot]
+    more = [ i for i in array[1:] if i > pivot]
+    return quick_sort_v2(less) + [pivot] + quick_sort_v2(more)
+
+
 if __name__ == '__main__':
     List = [3, 8, 12, 0, 3, 1, 5, 9, 6]
     List2 = [-3, 8, 12, 0, 3, 1, 5, 9, 6]
     List3 = [6]
     List4 = [4, 4]
     List5 = [10, 5, 2, 3]
-    print(quick_sort(List))
-    print(quick_sort(List2))
-    print(quick_sort(List3))
-    print(quick_sort(List4))
-    print(quick_sort(List5))
+    # print(quick_sort(List))
+    # print(quick_sort(List2))
+    # print(quick_sort(List3))
+    # print(quick_sort(List4))
+    # print(quick_sort(List5))
+
+
+    print(quick_sort_v2(List))
+    print(quick_sort_v2(List2))
+    print(quick_sort_v2(List3))
+    print(quick_sort_v2(List4))
+    print(quick_sort_v2(List5))

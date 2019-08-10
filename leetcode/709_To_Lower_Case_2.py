@@ -7,8 +7,7 @@ __time__ = '2019-03-22 00:32'
 https://leetcode-cn.com/problems/to-lower-case/
 
 PS:这道题虽然python有极简做法，但是实际考的知识点参考这个。
-极简：
-return str.islower()
+极简做法调用lower()
 
 ASCII不经过比较转换字母大小写
 https://blog.csdn.net/dd864140130/article/details/41578501
@@ -24,8 +23,17 @@ class Solution:
                 new_str += i
         return new_str
 
+    def toLowerCase_v2(self, str: str) -> str:
+        return str.lower()
+
 if __name__ == '__main__':
     targets = ["Hello", "here", "LOVELY", "tESt"]   # test case
     so = Solution()
     for target in targets:
         print(so.toLowerCase(target))
+
+    print("--"*40)
+
+    for target in targets:
+        print(so.toLowerCase_v2(target))
+

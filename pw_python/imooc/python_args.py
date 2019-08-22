@@ -7,12 +7,14 @@ __time__ = '2019-08-17 13:36'
 
 def flist(l):
     l.append(0)
+    print(id(l))
     print(l)
 
 
-l = []
-flist(l)
-flist(l)
+ll = []
+print(id(ll))
+flist(ll)
+flist(ll)
 
 
 def fstr(s):
@@ -20,9 +22,9 @@ def fstr(s):
     print(s)
 
 
-s = 'hehe'
-fstr(s)
-fstr(s)
+ss = 'hehe'
+fstr(ss)
+fstr(ss)
 
 
 
@@ -30,3 +32,6 @@ fstr(s)
 # [0, 0]
 # hehea
 # hehea
+
+
+

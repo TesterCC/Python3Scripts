@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package order;
+message OrderRequest {
+  string phone = 1;
+  string price = 2;
+  map<string, string> request_arg = 3;//便于字段扩展
+}
+
+message JSONResponse{
+ string rst_string = 1; //统一返回json字符串作处理
+ }
+
+service OrderHandler {
+// format a list of events.
+rpc create_order (OrderRequest) returns (JSONResponse) {}
+}

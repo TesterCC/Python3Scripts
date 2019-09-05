@@ -10,9 +10,9 @@ https://github.com/mozillazg/python-pinyin
 """
 from pypinyin import pinyin, lazy_pinyin
 
-print(pinyin("重庆"))
-print(lazy_pinyin("重庆"))
-print(lazy_pinyin("天津"))
+# print(pinyin("重庆"))
+print(lazy_pinyin("郑州"))
+print(lazy_pinyin("沈阳"))
 
-s = "".join(lazy_pinyin("呼和浩特"))
+s = "".join(lazy_pinyin("东莞"))
 print(s)

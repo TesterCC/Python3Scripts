@@ -16,6 +16,7 @@ localhost：127.0.0.1
 # A B 类型运行时间超慢，原因，看代码就能明白
 """
 
+import time
 
 def generate_class_a_ip_list():
     # generate class A IP    # 16777216
@@ -56,5 +57,16 @@ def generate_all_lan_ip_list():
 
     return all_lan_ip_list
 
+def write_all_lan_ip_in_txt(all_lan_ip_list):
+    print('length of ip list: {}'.format(len(all_lan_ip_list)))
+    with open('./lan_ip.txt', 'wb+') as f:
+        for ip in all_lan_ip_list:
+            f.write((ip+'\n').encode("utf-8"))
+
+
 if __name__ == '__main__':
-    generate_all_lan_ip_list()
+    start_time = time.time()
+    all_lan_ip_list = generate_all_lan_ip_list()
+    write_all_lan_ip_in_txt(all_lan_ip_list)    # txt size is about 254M
+    delta_time = time.time()-start_time
+    print("=== run time : {} ===".format(delta_time))

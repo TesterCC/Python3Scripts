@@ -86,8 +86,29 @@ class FileCtrl:
             print(self.IMAGE_DOMAIN + server_directory + upload_filename)
             return self.IMAGE_DOMAIN + server_directory + upload_filename
 
+
+    def point_upload(self, file_path='/Users/TesterCC/ACG/web_logo/requests.png'):
+        # http://docs.upyun.com/api/sdk/#_7
+        from upyun import FileStore
+        from upyun import print_reporter
+
+        BUCKETNAME = ''
+        USERNAME = ''
+        PASSWORD = ''
+
+        up = upyun.UpYun(BUCKETNAME, USERNAME, PASSWORD, timeout=20, endpoint=upyun.ED_AUTO)
+
+
+
+        with open('{}'.format(file_path), 'rb') as f:
+            res = up.put('/up/dd.png', f, checksum=True, need_resume=True, headers={}, store=None,
+                         reporter=print_reporter)
+        print(res)
+        print(up.getinfo('/up/dd.png'))
+
 if __name__ == '__main__':
     file_ctrl = FileCtrl()
-    image_obj, image_type =file_ctrl.download_image_from_url("http://www.eshow365.com/UserUpload/ZhanHui/Title/201902280224443782.png")
-    file_ctrl.upload_file_by_http(image_obj,image_type,directory='expo-content')
+    # image_obj, image_type =file_ctrl.download_image_from_url("http://www.eshow365.com/UserUpload/ZhanHui/Title/201902280224443782.png")
+    # file_ctrl.upload_file_by_http(image_obj,image_type,directory='expo-content')
 
+    file_ctrl.point_upload()

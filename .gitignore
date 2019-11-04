@@ -18,3 +18,5 @@ local_debug_config/*
 *.xlsx
 *.xls
 .coverage
+.DS_Store
+dev_draft/

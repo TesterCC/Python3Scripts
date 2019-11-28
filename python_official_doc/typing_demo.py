@@ -7,8 +7,6 @@ __time__ = '2018-12-13 17:46'
 https://docs.python.org/3/library/typing.html
 """
 
-
-
 def greeting(name: str) -> str:
     return "Hello " + name
 
@@ -20,3 +18,4 @@ def func() -> List[Dict[str, int]]:
 
 if __name__ == '__main__':
     print(greeting("devops"))
+    # greeting(1)

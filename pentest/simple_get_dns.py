@@ -1,0 +1,19 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+__author__ = 'MFC'
+__time__ = '2019-11-29 19:34'
+
+
+import socket
+
+domain_list = ['www.163.com', 'www.t00ls.net', 'www.baidu.com']
+
+result = {}
+
+for domain in domain_list:
+    hostname, alias, ip_address = socket.gethostbyname_ex(domain)
+    # print(hostname, alias, ip_address)
+    result[domain] = ip_address
+
+print(result)
+

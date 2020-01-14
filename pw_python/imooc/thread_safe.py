@@ -6,9 +6,13 @@ __time__ = '2020-01-09 23:45'
 """
 非原子操作不是线程安全的
 可以通过加锁保证线程安全
+如何保证线程安全：给线程加锁 (会对程序性能有一定影响)
 
-3-5 08：44
-如何保证线程安全：给线程加锁
+cProfile用法：
+cd ~/pw_python/imooc
+python -m cProfile -o test_thread.out thread_safe.py    # 分析结果在test_thread.out
+python -c "import pstats; p=pstats.Stats('test_thread.out'); p.print_stats()"   # 展示分析结果
+python -c "import pstats; p=pstats.Stats('test_thread.out'); p.sort_stats('time').print_stats()"  # 查看排序后的运行结果
 """
 
 import threading
@@ -37,4 +41,4 @@ for t in threads:
 
 print(n)
 
-# 在一定环境下应该会有9998的情况出现，这个其实是线程不安全的
+# 没加线程锁的话，在一定环境下应该会有9998的情况出现，这个其实是线程不安全的

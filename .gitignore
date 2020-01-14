@@ -20,3 +20,4 @@ local_debug_config/*
 .coverage
 .DS_Store
 dev_draft/
+*.out

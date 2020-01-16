@@ -28,6 +28,7 @@ Least-Recently-Used 替换掉最近最少使用的对象
 自己实现LRUCache，并编写单元测试
 """
 
+import time
 from collections import OrderedDict
 
 class LRUCache:
@@ -64,6 +65,17 @@ class LRUCache:
 
 
 
+if __name__ == "__main__":
+    keys = ['python', 'go', 'java', 'php', 'c', 'javascript']
+    cache = LRUCache(capacity=4)
+
+    print(cache.od)
+
+    for key in keys:
+        if cache.get(key) == -1:
+            cache.put(key,key)
+
+    print(cache.od)
 
 
 

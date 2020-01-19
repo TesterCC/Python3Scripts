@@ -16,8 +16,7 @@ linked_list.appendleft(value)	     O(1)
 linked_list.find(value)	             O(n)
 linked_list.remove(value)	         O(n)
 
-7、8.循环双端链表
-
+7、8.循环双端链表   1:02
 """
 
 

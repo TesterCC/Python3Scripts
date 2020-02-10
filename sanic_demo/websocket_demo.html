@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+   <meta charset="utf-8">
+   <title>TesterCC Test Websocket</title>
+
+      <script type="text/javascript">
+         function WebSocketTest()
+         {
+            if ("WebSocket" in window)
+            {
+               alert("您的浏览器支持 WebSocket!");
+
+               // 打开一个 web socket
+               var ws = new WebSocket("ws://localhost:8000/feed");   // 对应后端的websocket服务接口
+
+               ws.onopen = function()   // 连接建立时触发
+               {
+                  // Web Socket 已连接上，使用 send() 方法发送数据
+                  ws.send("Front-End data by javascript");    // 使用连接发送数据
+                  alert("数据发送中...");
+               };
+
+               ws.onmessage = function (evt)   // 客户端接收服务端数据时触发
+               {
+                  var received_msg = evt.data;
+                  alert("数据已接收...");
+               };
+
+               ws.onclose = function()   // 连接关闭时触发
+               {
+                  // 关闭 websocket
+                  alert("连接已关闭...");     // 在我们停止后端ws服务后，会弹出 "连接已关闭..."。
+               };
+            }
+
+            else
+            {
+               // 浏览器不支持 WebSocket
+               alert("您的浏览器不支持 WebSocket!");
+            }
+         }
+      </script>
+
+   </head>
+   <body>
+
+      <div id="sse">
+         <a href="javascript:WebSocketTest()">运行 WebSocket</a>
+      </div>
+
+   </body>
+</html>

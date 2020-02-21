@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 __author__ = 'MFC'
-__time__ = '2020-02-21 06:33'
+__time__ = '2020-02-21 22:22'
 
 """
 ref:
@@ -17,7 +17,8 @@ https://zhuanlan.zhihu.com/p/103711201
 
 如果你要发送很多请求，并且越快越好，那么使用 aiohttp 最快。
 
-aiohttp 的内存占用要比 httpx 低, 因为aiohttp 有一部分 C 语言实现的代码。而httpx 全部用的 Python实现。
+
+aiohttp 的内存占用要比 httpx 低，因为aiohttp 有一部分 C 语言实现的代码。httpx 全部用的 Python。
 """
 
 """发送100次请求
@@ -28,30 +29,23 @@ aiohttp 的内存占用要比 httpx 低, 因为aiohttp 有一部分 C 语言实�
 
 使用requests.post每次都会创建新的连接，速度较慢。而如果首先初始化一个 Session，那么 requests 会保持连接，从而大大提高请求速度。
 所以在这次测评中，我们分别对两种情况进行测试。
-
-不明原因倒入报错，无法运行。知道原因了，因为目前用的python3.6.8.
-在Python3.7以前的版本，调用异步函数前要先调用asyncio.get_event_loop()函数获取事件循环loop对象，然后通过不同的策略调用loop.run_forever()方法或者loop.run_until_complete()方法执行异步函数。
-asyncio.run()是python3.7的新API。
-
-所以运行此脚本注意先切换环境 workon py375
 """
 
-import httpx
+import aiohttp
 import random
 import datetime
 import asyncio
 import time
 
-# httpx 异步模式
 
 async def request(client, body):
     resp = await client.post('http://122.51.39.219:8000/query', json=body)
-    result = resp.json()
+    result = await resp.json()
     print(result)
 
 
 async def main():
-    async with httpx.AsyncClient() as client:
+    async with aiohttp.ClientSession() as client:
         start = time.time()
         task_list = []
         for _ in range(100):
@@ -65,4 +59,4 @@ async def main():
         end = time.time()
     print(f'发送100次请求，耗时：{end - start}')
 
-asyncio.run(main())   # 4.1723151206970215
+asyncio.run(main())   # 1.1405057907104492

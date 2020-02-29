@@ -21,3 +21,4 @@ local_debug_config/*
 .DS_Store
 dev_draft/
 *.out
+t00ls_demo

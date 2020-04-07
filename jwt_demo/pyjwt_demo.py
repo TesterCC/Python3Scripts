@@ -7,6 +7,8 @@ import jwt
 import datetime
 from jwt import exceptions
 
+# ref: https://jwt.io/ jwt揭秘
+
 SALT ='@#$$2423523lkjklad#@#$_32344'
 print(f"SALT length: {len(SALT)}")
 
@@ -19,7 +21,7 @@ def create_token():
 
     # build payload
     payload = {
-        'user_id': 1001,
+        'user_id': 10,
         'user_name': 'Test',
         'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=5)
     }

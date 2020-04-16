@@ -3,6 +3,11 @@
 __author__ = 'MFC'
 __time__ = '2020-04-16 18:49'
 
+"""
+最简单的FTP下载文件
+
+先执行服务端，再执行客户端，最后会在upload文件夹下看到你上传的文件。
+"""
 
 # TCP客户端_client.py
 import socket

@@ -18,20 +18,23 @@ n个盘子时：
 3.把n-1个圆盘从B经过A移动到C
 """
 
-def hanoi(n:int, A:str, B:str, C:str):
+def hanoi(n:int, a:str, b:str, c:str):
     """
     汉诺塔解法
     :param n: 问题规模
-    :param A: 起始盘子
-    :param B: 路过盘子
-    :param C: 目标盘子
+    :param a: 起始盘子
+    :param b: 路过盘子
+    :param c: 目标盘子
     :return: 操作路径
     """
     if n > 0:
-        hanoi(n-1, A, C, B)        # 1.把n-1个圆盘从A经过C移动到B
-        print("%s->%s" % (A, C))   # 2.把第n个圆盘从A移动到C
-        hanoi(n-1, B, A, C)        # 3.把n-1个圆盘从B经过A移动到C
+        hanoi(n - 1, a, c, b)        # 1.把n-1个圆盘从A经过C移动到B
+        print("%s->%s" % (a, c))   # 2.把第n个圆盘从A移动到C
+        hanoi(n - 1, b, a, c)        # 3.把n-1个圆盘从B经过A移动到C
 
 hanoi(2, "A", "B", "C")
 print("*"*40)
 hanoi(3, "A", "B", "C")
+
+print("*"*40)
+hanoi(1, "A", "B", "C")

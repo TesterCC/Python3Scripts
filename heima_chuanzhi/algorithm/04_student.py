@@ -12,6 +12,7 @@ __time__ = '18/1/23 16:26'
 如何用Python中的类型来保存一个班的学生信息？ 
 如果想要快速的通过学生姓名获取其信息呢？
 
+ref: https://www.bilibili.com/video/BV1at411Y71D?p=8
 """
 
 

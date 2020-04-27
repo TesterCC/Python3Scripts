@@ -9,7 +9,7 @@
          {
             if ("WebSocket" in window)
             {
-               alert("您的浏览器支持 WebSocket!");
+               console.log("您的浏览器支持 WebSocket!");
 
                // 打开一个 web socket
                var ws = new WebSocket("ws://localhost:8000/feed");   // 对应后端的websocket服务接口

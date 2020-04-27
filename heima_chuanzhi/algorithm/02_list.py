@@ -28,7 +28,7 @@ def t2():
     """
     li = []
     for i in range(10000):
-        li += [i]
+        li += [i]   # 和 t7()的li = li + [i] 不同，有做优化
 
 
 def t3():
@@ -69,7 +69,7 @@ def t7():
     """
     li = []
     for i in range(10000):
-        li = li + [i]
+        li = li + [i]    # 耗时最长
 
 
 from timeit import Timer
@@ -95,7 +95,7 @@ print("t5 list extend():", timer5.timeit(1000))
 timer6 = Timer("t6()", "from __main__ import t6")
 print("t6 list insert():", timer6.timeit(1000))
 
-# list = list + [i]直接添加元素
+# list = list + [i]直接添加元素   # 最慢，177s
 timer7 = Timer("t7()", "from __main__ import t7")
 print("t7 list = list + [i]:", timer7.timeit(1000))
 

@@ -22,3 +22,4 @@ local_debug_config/*
 dev_draft/
 *.out
 t00ls_demo
+crawler/*.txt

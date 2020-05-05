@@ -19,7 +19,7 @@ import traceback
 
 
 def get_html_link(target_url):
-    domain = "https://www.postgresql.org"
+    # domain = "https://www.postgresql.org"
     headers = ("User-Agent",
                "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36")
     opener = request.build_opener()

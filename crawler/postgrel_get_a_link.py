@@ -45,7 +45,8 @@ ret = re.findall(pattern, content)
 
 pattern_2 = '^/.*'
 
-new = [target_url+ re.findall(pattern_2,i)[0] for i in ret if re.findall(pattern_2,i)]
+# new = [target_url+ re.findall(pattern_2,i)[0] for i in ret if re.findall(pattern_2,i)]
+# print(new)
 
 new_urls = []
 for i in ret:

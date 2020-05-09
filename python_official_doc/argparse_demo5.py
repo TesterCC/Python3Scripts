@@ -11,36 +11,33 @@ https://docs.python.org/zh-cn/3/howto/argparse.html
 
 run in terminal:
 
-python argparse_demo4.py -h  
-python argparse_demo4.py 3
-python argparse_demo4.py -v 4
-python argparse_demo4.py -vv 4
+python argparse_demo5.py -h  
+python argparse_demo5.py 2 2
+python argparse_demo5.py -v 2 3 
+python argparse_demo5.py -vv 2 3
 
-在没有任何选项的情况下运行脚本不会在标准输出显示任何内容。这没有什么用处。
-
-第二行代码开始展现出 argparse 模块的作用。我们几乎什么也没有做，但已经得到一条很好的帮助信息。
-
---help 选项，也可缩写为 -h，是唯一一个可以直接使用的选项（即不需要指定该选项的内容）。指定任何内容都会导致错误。即便如此，我们也能直接得到一条有用的用法信息。
-
-结合位置参数和可选参数
+改进和扩展
 """
 
 import argparse
 
 parser = argparse.ArgumentParser()
 
+parser.add_argument("x", type=int, help="the base")
+parser.add_argument("y", type=int, help="the exponent")
 
-parser.add_argument("square", type=int, help="display a square of a given number")
 # 另一种动作 count，来数某一个可选参数出现了几次. 如果你不添加 -v 标志，这一标志的值会是 None。
-parser.add_argument("-v", "--verbose",action="count", default=0, help="increase output verbosity")
+parser.add_argument("-v", "--verbose", action="count", default=0, help="increase output verbosity")
 # 默认情况下如果一个可选参数没有被指定，它的值会是 None，并且它不能和整数值相比较
 
 args = parser.parse_args()
-answer = args.square ** 2
+answer = args.x ** args.y
 
-if args.verbose >= 2:       #  python argparse_demo3.py 4 -v 2
-    print("the squre of {} equals {}".format(args.square, answer))
-elif args.verbose == 1:     #  python argparse_demo3.py 4 -v 1
-    print("{}^2 == {}".format(args.square, answer))
+# 目前一直在使用详细级别来 更改 所显示的文本
+if args.verbose >= 2:  # python argparse_demo3.py 4 -v 2
+    print("{} to the power {} equals {}".format(args.x, args.y, answer))
+    print("Running '{}'".format(__file__))   # 增加详细现实信息
+elif args.verbose == 1:  # python argparse_demo3.py 4 -v 1
+    print("{}^{} == {}".format(args.x, args.y, answer))
 else:
     print(answer)

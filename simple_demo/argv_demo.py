@@ -17,6 +17,7 @@ python argv_demo.py -h
 python argv_demo.py -D -v
 python argv_demo.py -D -vv
 
+A demo for test python argparse
 """
 
 def get_html_a_link(target_url="https://www.postgresql.org"):

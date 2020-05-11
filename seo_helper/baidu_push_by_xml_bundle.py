@@ -7,21 +7,40 @@ import datetime
 import json
 import requests
 from bs4 import BeautifulSoup as BS
+from urllib.parse import urlparse
 
+# 注意定义logging
+import logging
+logging.basicConfig(level=logging.INFO,
+                    # format="%(asctime)s %(name)s %(levelname)s %(message)s",
+                    format="%(asctime)s %(levelname)s %(message)s",
+                    datefmt = '%Y-%m-%d  %H:%M:%S %a'    #注意月份和天数不要搞乱了，这里的格式化符与time模块相同
+                    )
 """
 auto push urls to baidu
+未完成
 """
 
+# TODO 先把python argparse文档学网，然后把这个脚本做成seo小工具，解析目标网站sitemap.xml然后上传到bdzz
+# 1.脚本稳定测试
+# 2.命令行参数设置和实现
+# 3.打包
+# 4.安装测试
+# 5.文档说明
 
 class PushHelper:
 
-    def __init__(self):
-        self.SITE_DOMAIN = "https://expo.huodongjia.com"
-        self.SITE_TOKEN = "F9o2j3CZvu4CwWRz"
+    def __init__(self, input_sitemap_url:str, site_token:str):
 
-        self.BD_PUSH_URL = 'http://data.zz.baidu.com/urls?site={}&token={}'.format(self.SITE_DOMAIN, self.SITE_TOKEN)
+        urlparse_info = urlparse(input_sitemap_url)
+        # print(urlparse_info)
 
-        self.SITEMAP_URL = 'https://expo.huodongjia.com/sitemap.xml'
+        self.SITE_DOMAIN = urlparse_info.netloc
+        self.SITE_TOKEN = site_token  # 百度站长平台获取
+
+        self.PUSH_URL = 'http://data.zz.baidu.com/urls?site={}&token={}'.format(self.SITE_DOMAIN, self.SITE_TOKEN)
+
+        self.SITEMAP_URL = input_sitemap_url
 
         self.user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:62.0) Gecko/20100101 Firefox/61.0'
 
@@ -57,11 +76,9 @@ class PushHelper:
         """
         parse site xml, extract site urls
 
-        https://expo.huodongjia.com/sitemap-index.xml
-        https://expo.huodongjia.com/sitemap-expo-info.xml
-        https://expo.huodongjia.com/sitemap-expo-cat.xml
-        https://expo.huodongjia.com/sitemap-expo-city.xml
-        https://expo.huodongjia.com/sitemap-expo-month.xml
+        https://xxx.com/sitemap-index.xml
+        https://xxx.com/sitemap-city.xml
+        https://xxx.com/sitemap-month.xml
         """
         xml_list = self.parse_xmls(self.SITEMAP_URL)
 
@@ -78,7 +95,10 @@ class PushHelper:
         need_push_urls = push_urls
         data = "\n".join(need_push_urls)
 
-        response = requests.post(self.BD_PUSH_URL, data=data, headers=self.headers)
+        try:
+            response = requests.post(self.PUSH_URL, data=data, headers=self.headers, timeout=7)
+        except RuntimeError as err:
+            print("Please check post data!!!\n")
 
         print(response.text)   # str
         # print(response.content)  # bytes
@@ -96,11 +116,11 @@ class PushHelper:
         need_push_urls.reverse()
         push_urls_list = [need_push_urls[i:i + bd_push_max] for i in range(0, len(need_push_urls), bd_push_max)]
 
-        # print(push_urls_list)
+        print("[+] Debug info: ",push_urls_list)
 
         for urls in push_urls_list:
-            #print(urls)
-            ret = push_helper.push_urls_to_bd(urls[:bd_push_max])
+            # print(urls[:bd_push_max])
+            ret = push_helper.push_urls_to_bd(urls[:bd_push_max])   # 如果超过了会报错
             print(ret)
             if ret < bd_push_max:
                 break
@@ -109,13 +129,14 @@ class PushHelper:
 
 
 if __name__ == '__main__':
-    push_helper = PushHelper()
+
+    push_helper = PushHelper("https://xxx.com/sitemap.xml","xxxxxxxxx")
     need_push_urls, length = push_helper.parse_sitemap()
 
     print("*"*77)
     # print(need_push_urls)
-    print(datetime.datetime.now())
-    print("total url length: {}".format(length))
+    logging.info(datetime.datetime.now())
+    logging.info("total url length: {}".format(length))
 
     push_helper.check2send(need_push_urls)
 

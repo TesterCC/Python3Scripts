@@ -11,17 +11,19 @@ https://docs.python.org/zh-cn/3/howto/argparse.html
 
 run in terminal:
 
-python argparse_demo5.py -h  
-python argparse_demo5.py 2 2
-python argparse_demo5.py -v 2 3 
-python argparse_demo5.py -vv 2 3
+python argparse_demo6.py -h  
+python argparse_demo6.py 2 2
+python argparse_demo6.py -v 2 3 
+python argparse_demo6.py -vv 2 3
 
-改进和扩展
+矛盾的选项
 """
 
 import argparse
 
 parser = argparse.ArgumentParser()
+
+# 第三个方法 add_mutually_exclusive_group()。 它允许我们指定彼此相互冲突的选项。
 
 parser.add_argument("x", type=int, help="the base")
 parser.add_argument("y", type=int, help="the exponent")

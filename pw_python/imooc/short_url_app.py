@@ -19,7 +19,7 @@ import os
 
 from flask import Flask,jsonify,render_template,request
 from flask_mysqldb import MySQL
-# from flask.ext.redis import FlaskRedis  # 可能是新安装包改了导入路径
+# from flask.ext.redis import FlaskRedis  # 新版本的安装包改了导入路径
 from flask_redis import FlaskRedis
 
 app = Flask(__name__)

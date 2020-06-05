@@ -13,6 +13,9 @@ lesson 4
 
 cd ~/Python3Demo/pw_python/algorithm
 pytest array_and_list.py
+
+ref:
+https://pegasuswang.github.io/python_data_structures_and_algorithms/02_%E6%95%B0%E7%BB%84%E5%92%8C%E5%88%97%E8%A1%A8/array_and_list/
 """
 
 from array import array

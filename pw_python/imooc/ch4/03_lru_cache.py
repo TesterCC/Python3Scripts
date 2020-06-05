@@ -41,7 +41,7 @@ class LRUCache:
     def get(self, key):
         if key in self.od:
             val = self.od[key]
-            self.od.move_to_end(key)   # 每次访问更新最新使用的key，把最近访问的放到最右边，表示最新
+            self.od.move_to_end(key)   # 每次访问更新最新使用的key，把最近访问的放到最右边，表示最新  左旧右新
             return val
         else:
             return -1
@@ -62,8 +62,6 @@ class LRUCache:
                 self.od.popitem(last=False) # 把最早的一个key给删除
 
 # 自己实现LRUCache，并编写单元测试
-
-
 
 if __name__ == "__main__":
     keys = ['python', 'go', 'java', 'php', 'c', 'javascript']

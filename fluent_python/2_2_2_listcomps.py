@@ -14,7 +14,7 @@ filter和map合起来能做的事情，列表推推导式也可以做到，且�
 import time
 
 def timeit(func):
-    def wrapper():
+    def wrapper(*args,**kwargs):
         start = time.clock()
         func()
         end = time.clock()

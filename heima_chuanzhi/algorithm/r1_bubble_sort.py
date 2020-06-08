@@ -42,13 +42,13 @@ import time
 import datetime
 
 
-# method 1  易理解，记不住就现写内层循环再写外层循环
+# method 1  易理解，记不住就现写内层循环再写外层循环,还是建议记忆这个，而且这个写法能做优化，可以扩展谈
 def bubble_sort(alist: list) -> list:
     # a = time.time()
     # b = datetime.datetime.now()
     n = len(alist)
     for j in range(n - 1):  # 外层循环控制要走多少次
-        for i in range(n - 1 - j):  # 内层循环控制从头走到尾比较  减去已排序过的数
+        for i in range(n - 1 - j):  # 内层循环控制从头走到尾比较  减去已排序过的数，关键记忆这个
             if alist[i] > alist[i + 1]:  # 如果第一个比第二个大（升序），就交换他们两个。
                 alist[i], alist[i + 1] = alist[i + 1], alist[i]
 
@@ -67,7 +67,7 @@ method 2思路
 # method 2  易记忆，且实际运行效率更高
 def bubble_sort_v2(alist: list) -> list:
     # a = time.time()
-    for j in range(len(alist) - 1, 0, -1):
+    for j in range(len(alist) - 1, 0, -1):   # 这里相较第一种做了优化
         # j表示每次遍历需要比较的次数，是逐渐减小的
         for i in range(j):
             if alist[i] > alist[i + 1]:  # 如果第一个比第二个大（升序），就交换他们两个。

@@ -5,7 +5,11 @@ __time__ = '2019-06-28 14:31'
 
 """
 P52  quick sort  快速排序
-时间复杂度: O(n*logn)
+
+最优、平均时间复杂度: O(n*logn)
+最坏时间复杂度: O(n^2)
+空间复杂度（辅助空间）：O(log n) ~ O(n)
+稳定性：不稳定
 
 遇到使用任何已知算法都无法解决的问题，可以使用分而治之（divide and conquer, D&C）思路来解决。
 D&C每次递归都必须缩小问题的规模。
@@ -14,7 +18,8 @@ D&C工作原理：
 1.找出简单的基线
 2.确定如何缩小问题的规模，使其符合基线条件
 
-
+提示：编写涉及数组的递归函数时，基线条件通常是数组为空或只包含一个元素。
+陷入困境时，请检查基线条件是否符合。
 """
 
 
@@ -25,9 +30,9 @@ def quick_sort(array):
         pivot = array[0]    # 取第一个列表元素为基准，递归条件
         less = [i for i in array[1:] if i <= pivot]    # 由所有小于等于基准值的元素组成的子数组
         greater = [j for j in array[1:] if j > pivot]  # 由所有大于基准值的元素组成的子数组
-        return quick_sort(less) + [pivot] + quick_sort(greater)  # [pivot]否则拼合报错
+        return quick_sort(less) + [pivot] + quick_sort(greater)  # 注意是[pivot]，否则拼合报错
 
-
+# 其实和上面那个是一样的
 def quick_sort_v2(array:list) -> list:
     if len(array) < 2:
         return array

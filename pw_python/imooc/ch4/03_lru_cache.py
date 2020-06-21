@@ -37,7 +37,7 @@ class LRUCache:
         self.od = OrderedDict()
         self.capacity = capacity
 
-    def get(self, key):
+    def get(self, key:str):
         if key in self.od:
             val = self.od[key]
             self.od.move_to_end(key)   # 每次访问更新最新使用的key，把最近访问的放到最右边，表示最新  左旧右新
@@ -45,7 +45,7 @@ class LRUCache:
         else:
             return -1
 
-    def put(self, key, value):
+    def put(self, key, value)->None:
         """更新key/value值
         分2种情况:
         1.如果key在od里，需要把它删除，然后重新赋值

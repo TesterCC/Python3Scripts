@@ -6,3 +6,9 @@
 
 ## Environment
 * Python 3.X + 3rd party libs, etc.
+
+---
+## Current Learn
+
+- [ ] Python Cookbook
+- [ ] Fluent Python 

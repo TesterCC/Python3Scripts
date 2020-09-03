@@ -19,6 +19,7 @@ print(tokyo)
 print(tokyo.coordinates)
 print(tokyo.population)
 
+# 2-10 具名元组的属性和方法
 print(City._fields)  # 包含这个类所有字段名称的元组
 
 LatLong = namedtuple('LatLong', 'lat long')
@@ -28,5 +29,5 @@ delhi = City._make(delhi_data)  # make()接受一个可迭代对象来生成这�
 
 print(delhi._asdict())  # 把具名元组以OrderedDict的形式返回
 
-for key,value in delhi._asdict().items():
-    print(key + ":" , value)
+for key, value in delhi._asdict().items():
+    print(key + ":", value)

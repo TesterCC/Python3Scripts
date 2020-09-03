@@ -4,7 +4,9 @@ __author__ = 'MFC'
 __time__ = '2020/6/16 12:27'
 
 """
+2.4.2
 2-11 对 对象 进行切片
+纯文本文件形式的收据以一行字符串的形式被解析
 """
 
 invoice = """
@@ -16,11 +18,9 @@ invoice = """
 SKU = slice(0, 6)
 
 DESCRIPTION = slice(6, 34)
-UNIT_PRICE = slice(34,50)
+UNIT_PRICE = slice(34, 50)
 ITEM_TOTAL = slice(50, None)
 
 line_items = invoice.split('\n')[2:]
 for item in line_items:
     print(item[UNIT_PRICE], item[DESCRIPTION])
-
-

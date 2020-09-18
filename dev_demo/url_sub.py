@@ -20,10 +20,10 @@ def change_host(url_list: list, pattern: str, host: str) -> list:
 
 if __name__ == '__main__':
     input_url_list = [
-        "http://10.0.4.141:8700/add_service/?ip=10.0.0.8&protocol=TCP&port=1433",
-        "http://10.0.4.141:8700/add_service/?ip=10.0.0.9&protocol=TCP&port=1433&monitor=true",
-        "http://10.0.4.141:8700/add_service/?ip=10.0.0.12&protocol=TCP&port=1433&monitor=false&offline=true",
-        "http://10.0.4.141:8700/add_service/?ip=10.0.0.13&port=3307&monitor=true&offline=true"
+        "http://10.0.4.141:8700/add_service/?ip=10.0.7.8&protocol=TCP&port=3306",
+        "http://10.0.4.141:8700/add_service/?ip=10.0.7.9&protocol=TCP&port=1433&monitor=true",
+        "http://10.0.4.141:8700/add_service/?ip=10.0.7.12&protocol=TCP&port=1433&monitor=false&offline=true",
+        "http://10.0.4.141:8700/add_service/?ip=10.0.7.13&port=3307&monitor=true&offline=true"
     ]
     ret = change_host(input_url_list, "10.0.4.141:8700/", "10.0.0.115/asset_api/")
     print(ret)

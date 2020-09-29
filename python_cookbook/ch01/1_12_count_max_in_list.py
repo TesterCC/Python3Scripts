@@ -17,7 +17,7 @@ words = ['test', 'look', 'into', 'my', 'eyes', 'look', 'into', 'you', 'understan
 
 from collections import Counter
 
-word_counts = Counter(words)
+word_counts = Counter(words)    # 好好看看Counter的源码
 
 # 找出出现频率最高得3个单词
 top_three = word_counts.most_common(3)

@@ -1,0 +1,4 @@
+{
+  "user_info": "./mapping/user_info.json",
+  "msg_code": "./mapping/msg_code.json"
+}

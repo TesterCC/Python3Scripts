@@ -25,7 +25,7 @@ def read_json(filename):
     :param filename:
     :return:
     '''
-    # 如果文件名不存在，处于安全考虑，直接返回 {}
+    # 如果文件名不存在，出于安全考虑，直接返回 {}
     json_obj = {}
 
     try:

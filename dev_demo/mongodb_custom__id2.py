@@ -8,7 +8,7 @@ import pymongo
 import time
 from threading import Thread
 
-# set custom _id 多线程
+# set custom _id 多进程 todo
 
 client = pymongo.MongoClient("mongodb://127.0.0.1:27017/")
 db = client["test_custom"]
@@ -20,7 +20,6 @@ _id_count_time = int(time.time())
 
 
 def insert_custom_id():
-    '''开发要用到，可以支持高并发写入'''
     global _id_count, _id_count_time
 
     # 处理并发的操作
@@ -39,13 +38,11 @@ def insert_custom_id():
 
 
 def multi_threading_query(count=10):
-    # 多线程主逻辑
+    # 多线程主
     # 创建 新增自定义_id 线程
     url_thread = Thread(target=insert_custom_id())
     # 详情线程组
     detail_thread = []
-
-    count -= 1  # 子线程减1，因为主线程也会加1
 
     for i in range(count):
         thread2 = Thread(target=insert_custom_id())
@@ -65,7 +62,7 @@ def multi_threading_query(count=10):
     for i in range(count):
         detail_thread[i].join()
 
-    print("total insert count: {}".format(count+1))
+    print("total insert count: {}".format(count))
 
 
 if __name__ == '__main__':
@@ -73,4 +70,4 @@ if __name__ == '__main__':
     # 写个多线程/多进程脚本测试下
     # insert count 主线程+子线程
     # 要提高效率，不要用多线程，而是要用多进程
-    multi_threading_query(count=3000)
+    multi_threading_query(count=300)

@@ -13,6 +13,15 @@ python 412_subdomain_scanner.py huodongjia.com 200
 todo:
 v2 多线程版
 v3 多进程版
+
+todo:
+current just https://www.bing.com/
+add search engine:
+https://www.baidu.com/
+https://www.so.com/
+https://www.sogou.com/
+
+https://quark.sm.cn/   mobile
 """
 
 import requests

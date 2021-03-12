@@ -31,7 +31,7 @@ Return the running sum of nums.
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 """
 
-
+# 这个解法很容易理解，运用了动态规划的思想
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
         ret = []
@@ -42,3 +42,11 @@ class Solution:
             ret.append(tmp)
 
         return ret
+
+# Python3取巧的解法： itertools accumulate函数
+# accumulate函数的功能是对传进来的iterable对象逐个进行某个操作（默认是累加）
+class Solution2:
+    def runningSum(self, nums: List[int]) -> List[int]:
+        from itertools import accumulate
+        return list(accumulate(nums))
+

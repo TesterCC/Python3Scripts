@@ -1,0 +1,39 @@
+{
+  "nodes": [
+    {
+      "id": "APT-Gholee",
+      "name": "APT-Gholee",
+      "type": "CA"
+    },
+    {
+      "id": "ba-252163",
+      "name": "Spear Phishing",
+      "type": "BA"
+    },
+    {
+      "id": "TopIDP-18950",
+      "name": "TopIDP-18950",
+      "type": "AE"
+    }
+  ],
+  "links": [
+    {
+      "id": "APT-Gholee:ba-252163",
+      "src": "APT-Gholee",
+      "dst": "ba-252163",
+      "tag": "contain"
+    },
+    {
+      "id": "APT-Gholee:ba-340550",
+      "src": "APT-Gholee",
+      "dst": "ba-340550",
+      "tag": "contain"
+    },
+    {
+      "id": "ba-252163:TopIDP-18950",
+      "src": "ba-252163",
+      "dst": "TopIDP-18950",
+      "tag": "instance"
+    }
+  ]
+}

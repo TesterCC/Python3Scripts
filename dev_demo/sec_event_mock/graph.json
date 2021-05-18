@@ -1,0 +1,424 @@
+{
+    "nodes":[
+        {
+            "id":"APT-Gholee",
+            "name":"APT-Gholee",
+            "type":"CA"
+        },
+        {
+            "id":"ba-252163",
+            "name":"Spear Phishing",
+            "type":"BA"
+        },
+        {
+            "id":"ba-340550",
+            "name":"Install New Service",
+            "type":"BA"
+        },
+        {
+            "id":"TopIDP-18950",
+            "name":"TopIDP-18950",
+            "type":"AE"
+        },
+        {
+            "id":"TopIDP-18951",
+            "name":"TopIDP-18951",
+            "type":"AE"
+        },
+        {
+            "id":"TopIDP-19742",
+            "name":"TopIDP-19742",
+            "type":"AE"
+        },
+        {
+            "id":"TopTVD-18951",
+            "name":"TopTVD-18951",
+            "type":"AE"
+        },
+        {
+            "id":"TopTVD-18950",
+            "name":"TopTVD-18950",
+            "type":"AE"
+        },
+        {
+            "id":"TopTVD-19742",
+            "name":"TopTVD-19742",
+            "type":"AE"
+        },
+        {
+            "id":"SANGFOR_IPS_12020600",
+            "name":"SANGFOR_IPS_12020600",
+            "type":"AE"
+        },
+        {
+            "id":"qianxin-skyeye-13798",
+            "name":"qianxin-skyeye-13798",
+            "type":"AE"
+        },
+        {
+            "id":"qianxin-skyeye-7444",
+            "name":"qianxin-skyeye-7444",
+            "type":"AE"
+        },
+        {
+            "id":"qianxin-skyeye-14111",
+            "name":"qianxin-skyeye-14111",
+            "type":"AE"
+        },
+        {
+            "id":"topsec-taw-80004",
+            "name":"topsec-taw-80004",
+            "type":"AE"
+        },
+        {
+            "id":"sangfor-IPS-12020600",
+            "name":"sangfor-IPS-12020600",
+            "type":"AE"
+        },
+        {
+            "id":"CVE-2006-2492",
+            "name":"CVE-2006-2492",
+            "type":"Vulnerability"
+        },
+        {
+            "id":"CVE-2017-8759",
+            "name":"CVE-2017-8759",
+            "type":"Vulnerability"
+        },
+        {
+            "id":"CVE-2016-7858",
+            "name":"CVE-2016-7858",
+            "type":"Vulnerability"
+        },
+        {
+            "id":"CVE-2007-5111",
+            "name":"CVE-2007-5111",
+            "type":"Vulnerability"
+        },
+        {
+            "id":"CVE-2016-1006",
+            "name":"CVE-2016-1006",
+            "type":"Vulnerability"
+        },
+        {
+            "id":"CWE-20",
+            "name":"Improper Input Validation",
+            "type":"Weakness"
+        },
+        {
+            "id":"CWE-94",
+            "name":"Improper Control of Generation of Code ('Code Injection')",
+            "type":"Weakness"
+        },
+        {
+            "id":"microsoft word 2003",
+            "name":"microsoft word 2003",
+            "type":"Software"
+        },
+        {
+            "id":"microsoft -net_framework 2.0 sp2",
+            "name":"microsoft -net_framework 2.0 sp2",
+            "type":"Software"
+        },
+        {
+            "id":"microsoft -net_framework 4.6",
+            "name":"microsoft -net_framework 4.6",
+            "type":"Software"
+        },
+        {
+            "id":"microsoft -net_framework 4.7",
+            "name":"microsoft -net_framework 4.7",
+            "type":"Software"
+        },
+        {
+            "id":"microsoft -net_framework 3.5.1",
+            "name":"microsoft -net_framework 3.5.1",
+            "type":"Software"
+        },
+        {
+            "id":"microsoft -net_framework 4.5.2",
+            "name":"microsoft -net_framework 4.5.2",
+            "type":"Software"
+        },
+        {
+            "id":"microsoft -net_framework 4.6.1",
+            "name":"microsoft -net_framework 4.6.1",
+            "type":"Software"
+        },
+        {
+            "id":"microsoft -net_framework 3.5",
+            "name":"microsoft -net_framework 3.5",
+            "type":"Software"
+        },
+        {
+            "id":"microsoft -net_framework 4.6.2",
+            "name":"microsoft -net_framework 4.6.2",
+            "type":"Software"
+        },
+        {
+            "id":"eb_design_pty_ltd ebcrypt",
+            "name":"eb_design_pty_ltd ebcrypt",
+            "type":"Software"
+        }
+    ],
+    "links":[
+        {
+            "id":"APT-Gholee:ba-252163",
+            "src":"APT-Gholee",
+            "dst":"ba-252163",
+            "tag":"contain"
+        },
+        {
+            "id":"APT-Gholee:ba-340550",
+            "src":"APT-Gholee",
+            "dst":"ba-340550",
+            "tag":"contain"
+        },
+        {
+            "id":"ba-252163:TopIDP-18950",
+            "src":"ba-252163",
+            "dst":"TopIDP-18950",
+            "tag":"instance"
+        },
+        {
+            "id":"ba-252163:TopIDP-18951",
+            "src":"ba-252163",
+            "dst":"TopIDP-18951",
+            "tag":"instance"
+        },
+        {
+            "id":"ba-252163:TopIDP-19742",
+            "src":"ba-252163",
+            "dst":"TopIDP-19742",
+            "tag":"instance"
+        },
+        {
+            "id":"ba-252163:TopTVD-18951",
+            "src":"ba-252163",
+            "dst":"TopTVD-18951",
+            "tag":"instance"
+        },
+        {
+            "id":"ba-252163:TopTVD-18950",
+            "src":"ba-252163",
+            "dst":"TopTVD-18950",
+            "tag":"instance"
+        },
+        {
+            "id":"ba-252163:TopTVD-19742",
+            "src":"ba-252163",
+            "dst":"TopTVD-19742",
+            "tag":"instance"
+        },
+        {
+            "id":"ba-252163:SANGFOR_IPS_12020600",
+            "src":"ba-252163",
+            "dst":"SANGFOR_IPS_12020600",
+            "tag":"instance"
+        },
+        {
+            "id":"ba-252163:qianxin-skyeye-13798",
+            "src":"ba-252163",
+            "dst":"qianxin-skyeye-13798",
+            "tag":"instance"
+        },
+        {
+            "id":"ba-252163:qianxin-skyeye-7444",
+            "src":"ba-252163",
+            "dst":"qianxin-skyeye-7444",
+            "tag":"instance"
+        },
+        {
+            "id":"ba-252163:qianxin-skyeye-14111",
+            "src":"ba-252163",
+            "dst":"qianxin-skyeye-14111",
+            "tag":"instance"
+        },
+        {
+            "id":"ba-252163:topsec-taw-80004",
+            "src":"ba-252163",
+            "dst":"topsec-taw-80004",
+            "tag":"instance"
+        },
+        {
+            "id":"ba-252163:sangfor-IPS-12020600",
+            "src":"ba-252163",
+            "dst":"sangfor-IPS-12020600",
+            "tag":"instance"
+        },
+        {
+            "id":"TopIDP-18950:CVE-2006-2492",
+            "src":"TopIDP-18950",
+            "dst":"CVE-2006-2492",
+            "tag":"exploit"
+        },
+        {
+            "id":"TopIDP-18951:CVE-2006-2492",
+            "src":"TopIDP-18951",
+            "dst":"CVE-2006-2492",
+            "tag":"exploit"
+        },
+        {
+            "id":"TopIDP-19742:CVE-2006-2492",
+            "src":"TopIDP-19742",
+            "dst":"CVE-2006-2492",
+            "tag":"exploit"
+        },
+        {
+            "id":"TopTVD-18951:CVE-2006-2492",
+            "src":"TopTVD-18951",
+            "dst":"CVE-2006-2492",
+            "tag":"exploit"
+        },
+        {
+            "id":"TopTVD-18950:CVE-2006-2492",
+            "src":"TopTVD-18950",
+            "dst":"CVE-2006-2492",
+            "tag":"exploit"
+        },
+        {
+            "id":"TopTVD-19742:CVE-2006-2492",
+            "src":"TopTVD-19742",
+            "dst":"CVE-2006-2492",
+            "tag":"exploit"
+        },
+        {
+            "id":"SANGFOR_IPS_12020600:CVE-2017-8759",
+            "src":"SANGFOR_IPS_12020600",
+            "dst":"CVE-2017-8759",
+            "tag":"exploit"
+        },
+        {
+            "id":"qianxin-skyeye-13798:CVE-2016-7858",
+            "src":"qianxin-skyeye-13798",
+            "dst":"CVE-2016-7858",
+            "tag":"exploit"
+        },
+        {
+            "id":"qianxin-skyeye-7444:CVE-2007-5111",
+            "src":"qianxin-skyeye-7444",
+            "dst":"CVE-2007-5111",
+            "tag":"exploit"
+        },
+        {
+            "id":"qianxin-skyeye-14111:CVE-2016-1006",
+            "src":"qianxin-skyeye-14111",
+            "dst":"CVE-2016-1006",
+            "tag":"exploit"
+        },
+        {
+            "id":"sangfor-IPS-12020600:CVE-2017-8759",
+            "src":"sangfor-IPS-12020600",
+            "dst":"CVE-2017-8759",
+            "tag":"exploit"
+        },
+        {
+            "id":"ba-252163:CVE-2006-2492",
+            "src":"ba-252163",
+            "dst":"CVE-2006-2492",
+            "tag":"exploit"
+        },
+        {
+            "id":"ba-252163:CVE-2017-8759",
+            "src":"ba-252163",
+            "dst":"CVE-2017-8759",
+            "tag":"exploit"
+        },
+        {
+            "id":"ba-252163:CVE-2016-7858",
+            "src":"ba-252163",
+            "dst":"CVE-2016-7858",
+            "tag":"exploit"
+        },
+        {
+            "id":"ba-252163:CVE-2007-5111",
+            "src":"ba-252163",
+            "dst":"CVE-2007-5111",
+            "tag":"exploit"
+        },
+        {
+            "id":"ba-252163:CVE-2016-1006",
+            "src":"ba-252163",
+            "dst":"CVE-2016-1006",
+            "tag":"exploit"
+        },
+        {
+            "id":"SANGFOR_IPS_12020600:CWE-20",
+            "src":"SANGFOR_IPS_12020600",
+            "dst":"CWE-20",
+            "tag":"use"
+        },
+        {
+            "id":"qianxin-skyeye-14111:CWE-94",
+            "src":"qianxin-skyeye-14111",
+            "dst":"CWE-94",
+            "tag":"use"
+        },
+        {
+            "id":"sangfor-IPS-12020600:CWE-20",
+            "src":"sangfor-IPS-12020600",
+            "dst":"CWE-20",
+            "tag":"use"
+        },
+        {
+            "id":"microsoft word 2003:CVE-2006-2492",
+            "src":"microsoft word 2003",
+            "dst":"CVE-2006-2492",
+            "tag":"hasVulnerability"
+        },
+        {
+            "id":"microsoft -net_framework 2.0 sp2:CVE-2017-8759",
+            "src":"microsoft -net_framework 2.0 sp2",
+            "dst":"CVE-2017-8759",
+            "tag":"hasVulnerability"
+        },
+        {
+            "id":"microsoft -net_framework 4.6:CVE-2017-8759",
+            "src":"microsoft -net_framework 4.6",
+            "dst":"CVE-2017-8759",
+            "tag":"hasVulnerability"
+        },
+        {
+            "id":"microsoft -net_framework 4.7:CVE-2017-8759",
+            "src":"microsoft -net_framework 4.7",
+            "dst":"CVE-2017-8759",
+            "tag":"hasVulnerability"
+        },
+        {
+            "id":"microsoft -net_framework 3.5.1:CVE-2017-8759",
+            "src":"microsoft -net_framework 3.5.1",
+            "dst":"CVE-2017-8759",
+            "tag":"hasVulnerability"
+        },
+        {
+            "id":"microsoft -net_framework 4.5.2:CVE-2017-8759",
+            "src":"microsoft -net_framework 4.5.2",
+            "dst":"CVE-2017-8759",
+            "tag":"hasVulnerability"
+        },
+        {
+            "id":"microsoft -net_framework 4.6.1:CVE-2017-8759",
+            "src":"microsoft -net_framework 4.6.1",
+            "dst":"CVE-2017-8759",
+            "tag":"hasVulnerability"
+        },
+        {
+            "id":"microsoft -net_framework 3.5:CVE-2017-8759",
+            "src":"microsoft -net_framework 3.5",
+            "dst":"CVE-2017-8759",
+            "tag":"hasVulnerability"
+        },
+        {
+            "id":"microsoft -net_framework 4.6.2:CVE-2017-8759",
+            "src":"microsoft -net_framework 4.6.2",
+            "dst":"CVE-2017-8759",
+            "tag":"hasVulnerability"
+        },
+        {
+            "id":"eb_design_pty_ltd ebcrypt:CVE-2007-5111",
+            "src":"eb_design_pty_ltd ebcrypt",
+            "dst":"CVE-2007-5111",
+            "tag":"hasVulnerability"
+        }
+    ]
+}

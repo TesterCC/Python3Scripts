@@ -34,6 +34,9 @@ def get_website_data():
             "class": item_class,
             "ip": get_random_wan_ip(),
             "protocol": random.choice(["https", "http"]),
+            "record_location": get_random_location(),
+            "value": random.choice(["高", "中", "低"]),
+            "create_time": get_random_create_time(),
         }
 
         ret.append(data)

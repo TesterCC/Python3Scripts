@@ -13,7 +13,6 @@ from dev_demo.sec_event_mock.sec_event_data import *
 
 
 def gen_graph():
-
     data = {}
 
     # 1.获取所有节点，存入node_list
@@ -27,12 +26,11 @@ def gen_graph():
     web_list = []
 
     for person in persons:
-
         p_node = {
             # common
             "id": "P:{}".format(compute__id()),
             "name": person.get('name'),
-            "type": "人",
+            "type": "user",
             "ip": person.get('ip'),
 
             # person 独有
@@ -55,7 +53,7 @@ def gen_graph():
             # common
             "id": "W:{}".format(compute__id()),
             "name": web.get("title"),
-            "type": "Web站点",
+            "type": "site",
             "ip": web.get("ip"),
 
             # person 独有
@@ -69,7 +67,9 @@ def gen_graph():
             "domain": web.get("domain"),
             "protocol": web.get("protocol"),
             "class": web.get("class"),
-
+            "create_time": web.get("create_time"),
+            "record_location": web.get("record_location"),
+            "value": web.get("value")
         }
         web_list.append(w_node)
 
@@ -87,11 +87,11 @@ def gen_graph():
 
     # 1 person to N Web
     for person in person_list[:60]:
-        for web in random.sample(web_list,3):
+        for web in random.sample(web_list, 3):
             link_d1 = {
-                "id":"{}-{}".format(person['id'],web['id']),
-                "src": person['id'],   # 连线源，子节点
-                "dst": web['id']       # 连线目的，父节点
+                "id": "{}-{}".format(person['id'], web['id']),
+                "src": person['id'],  # 连线源，子节点
+                "dst": web['id']  # 连线目的，父节点
             }
             link_list.append(link_d1)
 
@@ -99,12 +99,11 @@ def gen_graph():
     for person in person_list[60:]:
         web = random.choice(web_list)
         link_d2 = {
-            "id":"{}-{}".format(person['id'],web['id']),
-            "src": person['id'],   # 连线源，子节点
-            "dst": web['id']       # 连线目的，父节点
+            "id": "{}-{}".format(person['id'], web['id']),
+            "src": person['id'],  # 连线源，子节点
+            "dst": web['id']  # 连线目的，父节点
         }
         link_list.append(link_d2)
-
 
     # 2.2 绘制 相同 class 的 website 连线
     # 每个class中遍历到的第一个web为dst，其它均为src
@@ -119,9 +118,9 @@ def gen_graph():
         for c in class_list:
             if w.get("class") == c.get("class") and w.get("id") != c.get("id"):
                 link_d3 = {
-                "id":"{}-{}".format(w['id'],c['id']),
-                "src": w['id'],   # 连线源，子节点
-                "dst": c['id']       # 连线目的，父节点
+                    "id": "{}-{}".format(w['id'], c['id']),
+                    "src": w['id'],  # 连线源，子节点
+                    "dst": c['id']  # 连线目的，父节点
                 }
                 link_list.append(link_d3)
 
@@ -135,7 +134,8 @@ def gen_graph():
 
     print(data)
 
-    write_json("./graph_data0.json", data)
+    write_json("./graph_data3.json", data)
+
 
 if __name__ == '__main__':
     gen_graph()

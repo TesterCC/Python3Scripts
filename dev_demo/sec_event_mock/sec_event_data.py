@@ -127,7 +127,7 @@ def get_random_create_time():
 
 
 def get_random_title():
-    web_info_list = read_json("./website_node.json")
+    web_info_list = read_json("./website_node_v2.json")
     web_info = random.choice(web_info_list)
     return web_info['title']
 
@@ -183,4 +183,4 @@ if __name__ == '__main__':
     # print(get_random_name())
     # get_random_location()
     # print(get_random_title())
-    print(random_create_time())
+    print(get_random_create_time())

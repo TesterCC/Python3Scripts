@@ -25,4 +25,4 @@ def gen_analysis_json(count=1000):
 
 
 if __name__ == '__main__':
-    gen_analysis_json()
+    gen_analysis_json(count=10000)

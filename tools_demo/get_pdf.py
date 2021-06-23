@@ -12,7 +12,7 @@ def downloadPDF(url,filename):
     fp = open(filename, 'wb')
     fp.write(response.content)
     fp.close()
-    print(filename + ' has dowload succefully! \n')
+    print(filename + ' has download succefully! \n')
 
 if __name__ == '__main__':
     url = "https://www.t00ls.net/pdf.html?pdfid="

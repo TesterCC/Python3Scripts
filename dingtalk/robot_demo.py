@@ -7,7 +7,7 @@ AUTHOR: Yanxi Li
 import json
 import requests
 
-# ref: https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq
+# ref: https://developers.dingtalk.com/document/app/custom-robot-access/title-jfe-yo9-jl2  # 需要下载钉钉PC端
 
 robot_token = "your_dingtalk_robot"
 

@@ -113,7 +113,7 @@ if __name__ == '__main__':
     #    field_list = ['人文’,'科技','互联网','数码','社会']
 
     # field_list = ['OKR培训','OKR公开课','OKR']
-    field_list = ['区块链']
+    field_list = ['互联网']
     for field in field_list:
         name_1 = name_first(field)
         appid_list = get_appid(field, name_1)

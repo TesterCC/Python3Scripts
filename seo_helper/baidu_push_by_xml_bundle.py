@@ -21,7 +21,7 @@ auto push urls to baidu
 未完成
 """
 
-# TODO 先把python argparse文档学网，然后把这个脚本做成seo小工具，解析目标网站sitemap.xml然后上传到bdzz
+# TODO 先把python argparse文档学完，然后把这个脚本做成seo小工具，解析目标网站sitemap.xml然后上传到bdzz
 # 1.脚本稳定测试
 # 2.命令行参数设置和实现
 # 3.打包

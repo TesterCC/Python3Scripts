@@ -56,7 +56,7 @@ POST_DATAS = {
 def write_data_to_xls(cve_num, cve_tags, cve_info):
     cve_data = [[cve_num, cve_tags, cve_info]]
     index = len(cve_data)
-    workbook = xlrd.open_workbook("CVE.xls")
+    workbook = xlrd.open_workbook("CVE.xls")  # todo debug
     sheets = workbook.sheet_names()
     worksheet = workbook.sheet_by_name(sheets[0])
     rows_old = worksheet.nrows
@@ -156,4 +156,5 @@ def read_cve_num():
 
 
 if __name__ == '__main__':
-    read_cve_num()
+    # read_cve_num()
+    get_cve_result(" CVE-2018-10933")

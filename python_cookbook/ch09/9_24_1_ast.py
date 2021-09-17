@@ -21,6 +21,19 @@ print(ret1)
 
 exec('for i in range(7): print(i, end=" ")')
 
+
+print("print ex:")
+
 import ast
 
-ex = ast.parse()
+ex = ast.parse('2 + 3*4 + x', mode='eval')
+
+print(ex)
+
+# ast模块能被用来将Python源码编译城一个可被分析的抽象语法树（AST）
+print(ast.dump(ex))
+
+print("print top:")
+top = ast.parse("for i in range(10): print(i)", mode='exec')
+print(top)
+print(ast.dump(top))

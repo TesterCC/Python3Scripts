@@ -3,7 +3,7 @@
 DATE:   2021/7/26
 AUTHOR: TesterCC
 """
-
+# generate payload
 import hashlib
 
 def gen_hash256_id(text:str):

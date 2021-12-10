@@ -17,9 +17,13 @@ def gen_graph():
 
     # 1.获取所有节点，存入node_list
 
-    persons = read_json("./person_node_v2.json")
+
+    persons = read_json("./person_node_v5.json")   # 500
+    websites = read_json("./website_node_v3.json")
+
+    # persons = read_json("./person_node_v2.json")
     # print(type(persons), persons)
-    websites = read_json("./website_node_v2.json")
+    # websites = read_json("./website_node_v2.json")
     # print(type(websites), websites)
 
     person_list = []
@@ -80,14 +84,16 @@ def gen_graph():
     # 2.绘制所有连线
     link_list = []
 
-    print(person_list)
-    print(web_list)
+    # debug
+    print(len(person_list))
+    print(len(web_list))
 
     # 2.1 绘制 person 访问的 website 连线  每个人都有访问 1-N 个站点
 
+    count_index = len(person_list) // 4
     # 1 person to N Web
-    for person in person_list[:60]:
-        for web in random.sample(web_list, 3):
+    for person in person_list[:count_index]:
+        for web in random.sample(web_list, random.randint(5,10)):
             link_d1 = {
                 "id": "{}-{}".format(person['id'], web['id']),
                 "src": person['id'],  # 连线源，子节点
@@ -96,7 +102,7 @@ def gen_graph():
             link_list.append(link_d1)
 
     # 1 person to 1 Web
-    for person in person_list[60:]:
+    for person in person_list[count_index:]:
         web = random.choice(web_list)
         link_d2 = {
             "id": "{}-{}".format(person['id'], web['id']),
@@ -132,9 +138,9 @@ def gen_graph():
         "links_num": len(link_list)
     }
 
-    print(data)
+    # print(data)
 
-    write_json("./graph_data3.json", data)
+    write_json("./graph_data_{}.json".format(int(time.time())), data)
 
 
 if __name__ == '__main__':

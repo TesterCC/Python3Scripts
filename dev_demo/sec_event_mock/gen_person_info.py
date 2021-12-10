@@ -17,7 +17,7 @@ def gen_person_node_json(count=100):
         data = {
             "name": get_random_name(),
             "gender": random.choice(["男","女"]),
-            "age": "{}".format(random.randint(20,50)),
+            "age": "{}".format(random.randint(15,55)),
             "position": get_random_position(),
             "ip": get_random_wan_ip(),
             "location": get_random_location(),
@@ -27,8 +27,8 @@ def gen_person_node_json(count=100):
         ret.append(data)
 
     # print(ret)
-    write_json("./person_node_v2.json", ret)
+    write_json("./person_node_v5.json", ret)
 
 if __name__ == '__main__':
-    gen_person_node_json(count=200)
+    gen_person_node_json(count=500)
     # print(read_json("./person_node.json"))

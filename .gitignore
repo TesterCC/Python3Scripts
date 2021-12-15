@@ -26,3 +26,4 @@ crawler/*.txt
 draft_practice/
 readlog/
 readlog/*
+sec_event_mock/*.json

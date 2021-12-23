@@ -12,6 +12,10 @@ import bson
 sys.path.append('/opt/sensor')
 import sensor
 
+if len(sys.argv) > 1:
+    log_name = sys.argv[1]
+else:
+    log_name = "log_all"
 
 try:
     # unknown_log_path = '/opt/sensor/log_unknown'
@@ -151,7 +155,7 @@ def check_filter(ae):
 
 # 这里的data源自kafka，但是我要把log的来源改成文件读取
 # 1. get all backup log    sort merge  # todo要读其它文件改这里
-with open('/tmp/log_backup/log_all', 'r') as f:
+with open('/tmp/log_backup/{}'.format(log_name), 'r') as f:
     logs = f.readlines()
 
 # 2. convert backup log to ae
@@ -179,14 +183,14 @@ for log in logs:
 
         ae = None
         if check_convert_speed() == True:
-            ae = convert(log, log_time)
+            ae = convert(msg, log_time)
 
         if check_filter(ae) == False:
             kafka_producer = sensor.init_kafka_producer()
             kafka_producer.send(sensor.ae_topic, json.dumps(ae).encode('utf8'))
             # kafka_producer.flush()  # 可能有性能隐患
-            print(f"send success! \n{ae}")
-            time.sleep(0.1)
+            print("[*] ae: {}".format(ae))
+            time.sleep(0.1)   # 0.05 其实也行
             convert_count = 1
 
         # sensor log

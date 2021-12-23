@@ -8,8 +8,8 @@ DESC:   将同目录下多个日志文件合并导一个文件中
 import os
 
 # 日志所在目录
-path = r"/tmp/log_backup_test/"
-all_log_name = "all.log"
+path = r"/tmp/log_merge/"
+all_log_name = "log_all"
 
 # 获取文件夹下所有文件名称
 files = os.listdir(path)

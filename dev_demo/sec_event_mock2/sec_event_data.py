@@ -3,6 +3,8 @@
 DATE:   2021/5/18
 AUTHOR: Yanxi Li
 """
+import csv
+from collections import namedtuple
 import json
 import os
 import random
@@ -10,32 +12,39 @@ import time
 
 from urllib.parse import urlparse
 
-'''
-IPv4内网地址：
+# IP需要和公网国内IP对应，且有省份定位信息
 
-Class A 10.0.0.0-10.255.255.255
 
-默认子网掩码:255.0.0.0
+def read_ba_csv():
+    NAO_L4 = namedtuple("NAO_L4", "ba_id, ba_name,ba_zh_name,weight")
 
-Class B 172.16.0.0-172.31.255.255
+    nao_l4_list = []
+    for l4 in map(NAO_L4._make, csv.reader(open("./NAO-L4.csv", "r"))):
+        nao_l4_list.append({
+            "ba_id": l4.ba_id,
+            "ba_name": l4.ba_name,
+            "ba_zh_name": l4.ba_zh_name,
+            "weight": l4.weight
+        })
 
-默认子网掩码:255.240.0.0
+    return nao_l4_list
 
-Class C 192.168.0.0-192.168.255.255
-
-默认子网掩码:255.255.0.0
-'''
 
 # base data
-attack_type = ["异常登录", "系统漏洞攻击", "本地提权", "WEB攻击", "后门控制", "口令爆破", "拒绝服务攻击", "异常登录", "WebShell控制", "WEB扫描", "蠕虫病毒",
-               "僵尸网络", "中间人攻击", "应用层扫描", "APT攻击"]
+
+# attack_type = ["异常登录", "系统漏洞攻击", "本地提权", "WEB攻击", "后门控制", "口令爆破", "拒绝服务攻击", "异常登录", "WebShell控制", "WEB扫描", "蠕虫病毒",
+#                "僵尸网络", "中间人攻击", "应用层扫描", "APT攻击"]
+# use nao_l4_list
+nao_l4_list = read_ba_csv()
+attack_type = [i.get('ba_zh_name') for i in nao_l4_list]
 
 # print(len(attack_type))  # 14
 
-position = ["软件工程师", "Java开发工程师", "PHP开发工程师", "C/C++开发工程师", "Python开发工程师", ".NET开发工程师", "Ruby开发工程师", "Go开发工程师",
+position = ["软件架构设计师", "Java开发工程师", "PHP开发工程师", "C/C++开发工程师", "Python开发工程师", ".NET开发工程师", "Ruby开发工程师", "Go开发工程师",
             "大数据开发工程师 ", "Hadoop工程师", "爬虫开发工程师", "UI设计师", "视觉设计师", "特效设计师", "仿真应用工程师", "Android开发工程师", "iOS开发工程师",
-            "网络安全工程师", "安全研发工程师", "渗透测试工程师", "测试开发工程师", "Web前端开发", "HTML5开发工程师", "机器学习工程师", "深度学习工程师", "图像算法工程师",
-            "图像处理工程师", "语音识别工程师", "机器视觉工程师", "算法工程师", "产品经理", "项目经理"]
+            "网络工程师", "网络安全工程师", "安全研发工程师", "渗透测试工程师", "测试开发工程师", "Web前端开发", "HTML5开发工程师", "机器学习工程师", "深度学习工程师",
+            "图像算法工程师", "图像处理工程师", "语音识别工程师", "机器视觉工程师", "算法工程师", "产品经理", "项目经理", "NLP算法工程师", "Scrum Master", "数据库管理员",
+            "运维工程师"]
 
 location = []
 
@@ -45,7 +54,7 @@ def get_random_name():
     family_name_list = [i for i in family_name]
     given_name_list = ["平", "军", "可", "海涛", "海波", "海云", "秀英", "伟", "静", "娜", "婷婷", "娟", "敏", "秀兰", "俊杰", "刚", "磊", "洋",
                        "宏伟", "文", "桂英", "智勇", "国栋", "国栋", "国强", "国立", "建业", "志强", "志伟", "志坚", "云天", "云峰", "晓光", "文俊",
-                       "振业", "旭", "兰亭", "春秋", "汉华", "汉云", "朝阳", "宗盛", "波", "宁"]
+                       "振业", "旭", "兰亭", "春秋", "汉华", "汉云", "朝阳", "宗盛", "波", "宁", "彦", "文彬", "斌"]
     return random.choice(family_name_list) + random.choice(given_name_list)
 
 
@@ -74,16 +83,16 @@ def get_random_location():
 
 # ip data 避开 IPv4 的范围就行
 
-def get_random_wan_ip():
-    """生成随机外网地址
-    """
-    a = random.randint(11, 171)
-    b = random.randint(1, 254)
-    c = random.randint(1, 254)
-    d = random.randint(1, 254)
-    ip = "%d.%d.%d.%d" % (a, b, c, d)
-
-    return ip
+# def get_random_wan_ip():
+#     """生成随机外网地址
+#     """
+#     a = random.randint(11, 171)
+#     b = random.randint(1, 254)
+#     c = random.randint(1, 254)
+#     d = random.randint(1, 254)
+#     ip = "%d.%d.%d.%d" % (a, b, c, d)
+#
+#     return ip
 
 
 def get_random_attack_type():
@@ -110,6 +119,7 @@ def get_random_time():
     # print(date_str)
     return date_str
 
+
 def get_random_create_time():
     a1 = (2000, 1, 1, 0, 0, 0, 0, 0, 0)  # 设置开始日期时间元组（2000-1-1 00：00：00）
     a2 = (2006, 12, 31, 0, 0, 0, 0, 0, 0)  # 设置结束日期时间元组（2006-12-31 00：00：00）
@@ -126,7 +136,7 @@ def get_random_create_time():
     return date_str
 
 
-def get_random_title():
+def get_random_web_title():
     web_info_list = read_json("./website_node_v3.json")
     web_info = random.choice(web_info_list)
     return web_info['title']
@@ -145,7 +155,7 @@ def write_json(config_path, json_obj):
     with open(config_path, 'w', encoding="utf-8") as f:
         f.seek(0)
         f.truncate()
-        json.dump(json_obj, f, indent=4, ensure_ascii=False)
+        json.dump(json_obj, f, indent=4, ensure_ascii=False)   # ensure_ascii=False默认为True，导致写入json文件的中文会变成Unicode编码。json.dumps()方法会默认将其中unicode码以ascii编码的方式输入到string
     print("Write json file in: ", config_path)
 
 

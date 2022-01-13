@@ -21,7 +21,7 @@ def gen_analysis_json(count=1000):
 
         ret.append(data)
 
-    write_json("./analysis_data.json", ret)
+    write_json("./analysis_data_{}.json".format(int(time.time())), ret)
 
 
 if __name__ == '__main__':

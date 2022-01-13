@@ -42,7 +42,9 @@ def get_website_data():
         ret.append(data)
 
     print(ret)
-    write_json("./website_node_v3.json", ret)
+    # write_json("./website_node_v3.json", ret)
+    write_json(f"./website_node_{int(time.time())}.json", ret)
+
 
 
 # def gen_website_node_json(count=100):

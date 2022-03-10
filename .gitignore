@@ -27,3 +27,4 @@ draft_practice/
 readlog/
 readlog/*
 sec_event_mock/*.json
+sec_event_mock2/basic/GeoLite2-City.mmdb

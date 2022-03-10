@@ -1,0 +1,260 @@
+110285,ICMP Echo Request Ping,ICMP回显请求Ping,9
+110292,Host Discovery,主机发现,0
+110294,ICMP Address Mask Request,ICMP地址掩码请求,5
+110296,ICMP Information Request,ICMP信息请求,7
+110297,TCP ACK Ping,TCP确认Ping,0
+110298,UDP Ping  ,UDP Ping,0
+120034,HTTP Response Splitting,HTTP响应拆分,0
+120287,TCP SYN Scan ,TCP SYN扫描,0
+120293,Traceroute Route Enumeration,Traceroute路由枚举,0
+120295,Timestamp Request,时间戳请求,0
+120300,Port Scanning,端口扫描,10
+120301,TCP Connect Scan,TCP连接扫描,0
+120302,TCP FIN Scan,TCP FIN扫描,0
+120304,TCP Null Scan,TCP Null扫描,0
+120305,TCP ACK Scan,TCP ACK扫描,0
+120306,TCP Window Scan,TCP窗口扫描,0
+120307,TCP RPC Scan,TCP RPC扫描,0
+120308,UDP Scan,UDP扫描,6
+130006,Argument Injection,参数注入,3
+130010,Buffer Overflow via Environment Variables,环境变量的缓冲区溢出,0
+130095,WSDL Scanning,WSDL扫描,0
+130116,Excavation,信息挖掘,0
+130169,Footprinting,指纹攻击,3
+130224,Fingerprinting,指纹识别,0
+130310,Scanning for Vulnerable Software,扫描漏洞软件,0
+130312,Active OS Fingerprinting,操作系统指纹主动攻击,0
+130313,Passive OS Fingerprinting,操作系统指纹被动嗅探,0
+130472,Browser Fingerprinting,浏览器指纹,0
+130497,File Discovery,文件发现,0
+130529,Malware-Directed Internal Reconnaissance,恶意软件指导的内部侦察,0
+130541,Application Fingerprinting,应用指纹,0
+130580,Application Footprinting,应用指纹,0
+130581,Security Software Footprinting,安全软件指纹,0
+130639,Probe System Files,系统文件探测,0
+131001,Accessing Functionality Not Properly Constrained by ACLs,访问控制列表访问功能未被正确限制,0
+131113,API Manipulation,API篡改,0
+131126,Path Traversal ,路径遍历,0
+131127,Directory Indexing ,目录索引,0
+131131,Resource Leak Exposure,资源泄漏暴露,0
+131139,Relative Path Traversal,相对路径遍历,0
+131170,Web Application Fingerprinting,Web应用程序指纹,0
+131268,Audit Log Manipulation,审计日志篡改,0
+140020,Encryption Brute Forcing,加密暴力破解,8
+140028,Fuzzing,Fuzzing测试,0
+140055,Rainbow Table Password Cracking,Rainbow Table密码破解,0
+140097,Cryptanalysis,密码分析,0
+140155,Screen Temporary Files for Sensitive Information,通过屏幕临时文件获取敏感信息,0
+140167,White Box Reverse Engineering,白盒逆向工程,0
+140188,Reverse Engineering,逆向工程,0
+140189,Black Box Reverse Engineering,黑盒逆向工程,0
+140190,Reverse Engineer an Executable to Expose Assumed Hidden Functionality,对可执行文件进行反向工程以公开假定的隐藏功能,0
+140191,Read Sensitive Strings Within an Executable,读取可执行文件中的敏感字符串,0
+140192,Protocol Analysis,协议分析,0
+140215,Fuzzing and observing application log data/errors for application mapping,应用程序日志数据/错误Fuzzing测试和观察以进行应用程序映射,0
+140383,Harvesting Information via API Event Monitoring,通过API事件监控收集信息,0
+140506,Tapjacking,窃听,0
+140545,Pull Data from System Resources,目标恶意软件,0
+140546,Probe Application Memory,探测应用程序内存,0
+140551,Modify Existing Service,修改现有服务,0
+140568,Capture Credentials via Keylogger,键日志捕获凭证,0
+140569,Collect Data as Provided by Users,收集用户提供的数据,0
+140573,Process Footprinting,进程指纹,0
+140574,Services Footprinting,服务指纹,0
+140575,Account Footprinting,账户指纹,0
+140576,Group Permission Footprinting,组权限指纹,0
+140577,Owner Footprinting,拥有者指纹,0
+140637,Collect Data from Clipboard,从剪贴板收集数据,0
+140643,Identify Shared Files/Directories on System,系统中共享文件/目录发现,0
+140646,Peripheral Footprinting,计算机外围设备指纹收集,0
+140647,Collect Data from Registries,从注册表收集数据,0
+140648,Collect Data from Screen Capture,从屏幕截图收集数据,0
+210065,Sniff Application Code,应用代码嗅探,0
+210142,DNS Cache Poisoning,DNS缓存污染,0
+210157,Sniffing Attacks,嗅探攻击,0
+210158,Sniffing Network Traffic,网络流量嗅探,3
+210272,Protocol Manipulation,协议篡改,0
+210598,DNS Spoofing,DNS欺骗,0
+210651,Eavesdropping,窃听,0
+220031,Accessing/Intercepting/Modifying HTTP Cookies,访问/拦截/修改HTTP Cookie,0
+220094,Man in the Middle Attack,中间人攻击,0
+220102,Session Sidejacking,会话劫持,0
+220103,Clickjacking ,点击劫持,0
+220384,Application API Message Manipulation via Man-in-the-Middle,通过中间人对应用程序API消息进行篡改,0
+230002,Inducing Account Lockout,诱导帐户锁定,0
+230008,Buffer Overflow in an API Call,API调用中的缓冲区溢出,0
+230012,Choosing Message Identifier,选择消息标识符攻击,0
+230014,Client-side Injection-induced Buffer Overflow,客户端注入引起的缓冲区溢出,0
+230015,Command Delimiters,命令分隔符攻击,0
+230017,Using Malicious Files,恶意文件利用攻击,0
+230019,Embedding Scripts within Scripts,脚本嵌入脚本攻击,0
+230023,File Content Injection,文件内容注入,0
+230026,Leveraging Race Conditions,竞争条件泄露,0
+230035,Leverage Executable Code in Non-Executable Files,非可执行文件中的可执行代码泄露,0
+230036,Using Unpublished APIs,未发布的API利用攻击,0
+230038,Leveraging/Manipulating Configuration File Search Paths,泄露/操纵配置文件搜索路径,0
+230054,Query System for Information,信息查询系统,0
+230058,Restful Privilege Elevation,Restful特权提升,0
+230062,Cross Site Request Forgery,跨站请求伪造,3
+230085,AJAX Fingerprinting,AJAX指纹攻击,0
+230088,OS Command Injection,操作系统命令行注入,0
+230092,Forced Integer Overflow,强制整型溢出,0
+230100,Overflow Buffers,缓冲区溢出,3
+230124,Shared Data Manipulation,共享数据篡改,0
+230136,LDAP Injection,LDAP注入,0
+230138,Reflection Injection,反射注入,0
+230153,Input Data Manipulation,输入数据篡改,0
+230154,Resource Location Spoofing ,资源位置欺骗,0
+230159,Redirect Access to Libraries,重定向访问库,0
+230160,Exploit Script-Based APIs,基于脚本的API利用攻击,0
+230176,Configuration/Environment Manipulation0,配置/环境篡改,0
+230179,Calling Micro-Services Directly ,微服务直接调用攻击,0
+230180,Exploiting Incorrectly Configured Access Control Security Levels,错入访问控制安全级别配置利用攻击,0
+230221,XML External Entities Blowup,XML外部实体放大攻击,0
+230240,Resource Injection,资源注入,0
+230242,Code Injection,代码注入,0
+230248,Command Injection,命令注入,0
+220031,Accessing/Intercepting/Modifying HTTP Cookies,访问/拦截/修改HTTP Cookie,0
+220089,Pharming,域欺骗,0
+220094,Man in the Middle Attack,中间人攻击,0
+220102,Session Sidejacking,会话劫持,0
+220103,Clickjacking ,点击劫持,0
+220275,DNS Rebinding,DNS重新绑定,0
+220384,Application API Message Manipulation via Man-in-the-Middle,通过中间人对应用程序API消息进行篡改,0
+230002,Inducing Account Lockout,诱导帐户锁定,0
+230004,Using Alternative IP Address Encodings,使用备用IP地址编码,0
+230008,Buffer Overflow in an API Call,API调用中的缓冲区溢出,0
+230014,Client-side Injection-induced Buffer Overflow,客户端注入引起的缓冲区溢出,0
+230015,Command Delimiters,命令分隔符攻击,0
+230017,Using Malicious Files,恶意文件利用攻击,0
+230019,Embedding Scripts within Scripts,脚本嵌入脚本攻击,0
+230022,Exploiting Trust in Client,客户端信任利用攻击,0
+230023,File Content Injection,文件内容注入,0
+230035,Leverage Executable Code in Non-Executable Files,非可执行文件中的可执行代码泄露,0
+230036,Using Unpublished APIs,未发布的API利用攻击,0
+230038,Leveraging/Manipulating Configuration File Search Paths,泄露/操纵配置文件搜索路径,0
+230039,Manipulating Opaque Client-based Data Tokens,篡改模糊客户端数据令牌,0
+230054,Query System for Information,信息查询系统,0
+230057,Utilizing REST's Trust in the System Resource to Obtain Sensitive Data,利用REST对系统资源的信任来获取敏感数据,0
+230058,Restful Privilege Elevation,Restful特权提升,0
+230062,Cross Site Request Forgery,跨站请求伪造,0
+230068,Subvert Code-signing Facilities,代码签名工具破坏,0
+230077,Manipulating User-Controlled Variables,用户控制变量篡改,0
+230085,AJAX Fingerprinting,AJAX指纹攻击,0
+230088,OS Command Injection,操作系统命令行注入,0
+230092,Forced Integer Overflow,强制整型溢出,0
+230100,Overflow Buffers,缓冲区溢出,0
+230123,Buffer Manipulation,缓冲区篡改,0
+230124,Shared Data Manipulation,共享数据篡改,0
+230128,Integer Attacks,整数攻击,0
+230129,Pointer Manipulation,指针篡改,0
+230132,Symlink Attack  ,符号链接攻击,0
+230133,Try All Common Switches,所有常用开关尝试,0
+230135,Format String Injection,格式字符串注入,0
+230136,LDAP Injection,LDAP注入,0
+230138,Reflection Injection,反射注入,0
+230141,Cache Poisoning,缓存污染,0
+230145,Checksum Spoofing,校验和欺骗,0
+230146,XML Schema Poisoning,XML模式污染,0
+230153,Input Data Manipulation,输入数据篡改,0
+230154,Resource Location Spoofing ,资源位置欺骗,0
+230159,Redirect Access to Libraries,重定向访问库,0
+230160,Exploit Script-Based APIs,基于脚本的API利用攻击,0
+230165,File Manipulation,文件控制,0
+230166,Force the System to Reset Values,强制系统重置值,0
+230176,Configuration/Environment Manipulation0,配置/环境篡改,0
+230177,Create files with the same name as files protected with a higher classification,创建与更高级别保护的文件同名的文件,0
+230179,Calling Micro-Services Directly ,微服务直接调用攻击,0
+230180,Exploiting Incorrectly Configured Access Control Security Levels,错入访问控制安全级别配置利用攻击,0
+230181,Flash File Overlay,Flash文件覆盖,0
+230182,Flash Injection,Flash注入,0
+230183,IMAP/SMTP Command Injection,IMAP / SMTP命令注入,0
+230184,Software Integrity Attack,软件完整性攻击,0
+230196,Session Credential Falsification through Forging,会话凭证伪造,0
+230212,Functionality Misuse,功能滥用,0
+230221,XML External Entities Blowup,XML外部实体放大攻击,0
+230222,iFrame Overlay,iFrame覆盖,0
+230226,Session Credential Falsification through Manipulation,通过篡改进行会话凭证伪造,0
+230236,Catching exception throw/signal from privileged block,从特权块中捕获异常抛出/信号,0
+230237,Escaping a Sandbox by Calling Signed Code in Another Language,通过调用其他语言签名代码来逃避沙箱检测,0
+230240,Resource Injection,资源注入,0
+230242,Code Injection,代码注入,0
+230248,Command Injection,命令注入,0
+230250,XML Injection,XML注入,0
+230251,Local Code Inclusion,本地代码包含,0
+230253,Remote Code Inclusion,远程代码包含,0
+230261,Fuzzing for garnering other adjacent user/sensitive data,为获取其他相邻用户/敏感数据的Fuzzing测试,0
+230387,Navigation Remapping To Propagate Malicious Content,重定向到恶意内容,0
+230388,Application API Button Hijacking,应用程序API按钮劫持,0
+230389,Content Spoofing Via Application API Manipulation,通过应用程序API篡改进行内容欺骗,0
+230540,Overread Buffers,溢出缓冲区,0
+231007,Blind SQL Injection,SQL盲注,3
+231011,Cause Web Server Misclassification,导致Web服务器分类错误,0
+231033,HTTP Request Smuggling,HTTP请求Smuggling攻击,0
+231051,Poison Web Service Registry,Web服务注册表污染,0
+231064,Using Slashes and URL Encoding Combined to Bypass Validation Logic,基于斜杠和URL编码混合的验证逻辑绕过,0
+231066,SQL Injection,SQL注入,10
+231072,URL Encoding,URL编码攻击,0
+231073,User-Controlled Filename,用户控制文件名攻击,0
+231081,Web Logs Tampering,web日志篡改,0
+231083,XPath Injection,Xpath注入,0
+231084,XQuery Injection,Xquery注入,0
+231087,Forceful Browsing,强制浏览攻击,0
+231101,Server Side Include (SSI) Injection,SSL注入,0
+231105,HTTP Request Splitting,HTTP请求拆分攻击,0
+231108,Command Line Execution through SQL Injection,SQL注入执行命令行,7
+231109,Object Relational Mapping Injection,对象关系映射注入,0
+231110,SQL Injection through SOAP Parameter Tampering,基于SOAP参数篡改的SQL注入,0
+231120,Double Encoding,双重编码攻击,0
+231121,Exploit Test APIs,利用测试API,0
+231122,Privilege Abuse,特权滥用,0
+231137,Parameter Injection,参数注入,8
+231174,Flash Parameter Injection,Flash参数注入,0
+231175,Code Inclusion,代码包含攻击,0
+231193,PHP Remote File Inclusion,PHP远程文件包含,0
+231201,XML Entity Linking,XML实体链接,0
+231252,PHP Local File Inclusion,PHP本地文件包含,0
+231256,SOAP Array Overflow,SOAP数组溢出,0
+231460,HTTP Parameter Pollution (HPP),HTTP参数污染（HPP）,0
+232197,XML Entity Expansion,XML实体扩展攻击,0
+233125,Flooding ,洪水攻击,0
+233273,HTTP Response Smuggling,HTTP响应Smuggling攻击,0
+233469,HTTP DoS,HTTP DoS,0
+233482,TCP Flood ,TCP泛洪,3
+233486,UDP Flood ,UDP泛洪,0
+233487,ICMP Flood ,ICMP洪水攻击,0
+233488,HTTP Flood,HTTP洪水攻击,0
+240016,Dictionary-based Password Attack,基于字典的密码攻击,0
+240021,Exploitation of Trusted Credentials,信任凭证利用攻击,0
+240049,Password Brute Forcing,密码暴力破解,7
+240059,Session Credential Falsification through Prediction,通过预测伪造会话凭证,0
+240061,Session Fixation,会话固定攻击,0
+240070,Try Common or Default Usernames and Passwords,通用或默认用户名密码尝试,0
+240112,Brute Force,暴力破解,0
+240114,Authentication Abuse ,身份认证滥用,0
+240115,Authentication Bypass,身份认证绕过,0
+240473,Signature Spoof,签名欺骗,0
+240509,Kerberoasting,Kerberoasting攻击,0
+240555,Remote Services with Stolen Credentials,凭据被盗的远程服务,0
+240633,Token Impersonation,令牌模拟,0
+240510,SaaS User Request Forgery,SaaS用户请求伪造,0
+240555,Remote Services with Stolen Credentials,凭据被盗的远程服务,0
+240565,Password Spraying,密码喷洒攻击,0
+240600,Credential Stuffing,相同凭证攻击,0
+240633,Token Impersonation,令牌模拟,0
+240652,Use of Known Kerberos Credentials,通用Kerberos凭证攻击,0
+240653,Use of Known Windows Credentials,通用Windows凭证攻击,0
+251041,Using Meta-characters in E-mail Headers to Inject Malicious Payloads,在电子邮件标题中使用元字符来注入恶意有效载荷,0
+251134,Email Injection,邮件注入,0
+251194,Fake the Source of Data,伪造数据源,0
+252018,XSS Targeting Non-Script Elements,针对非脚本元素的XSS,0
+252032,XSS Through HTTP Query Strings,通过HTTP查询字符串XSS攻击,0
+252063,Cross-Site Scripting (XSS),跨站脚本（XSS）攻击,0
+252086,XSS Through HTTP Headers,基于HTTP头的XSS攻击,0
+252098,Phishing,网络钓鱼,4
+252111,JSON Hijacking (aka JavaScript Hijacking),JSON劫持,0
+252163,Spear Phishing,鱼叉式网络钓鱼,4
+252164,Mobile Phishing,移动网络钓鱼,0
+252471,Search Order Hijacking,搜索订单劫持,0
+252591,Reflected XSS,反射XSS,0
+252592,Stored XSS,存储XSS,3

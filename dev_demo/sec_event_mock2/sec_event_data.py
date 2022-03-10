@@ -19,7 +19,7 @@ def read_ba_csv():
     NAO_L4 = namedtuple("NAO_L4", "ba_id, ba_name,ba_zh_name,weight")
 
     nao_l4_list = []
-    for l4 in map(NAO_L4._make, csv.reader(open("./NAO-L4.csv", "r"))):
+    for l4 in map(NAO_L4._make, csv.reader(open("./NL4.csv", "r"))):
         nao_l4_list.append({
             "ba_id": l4.ba_id,
             "ba_name": l4.ba_name,

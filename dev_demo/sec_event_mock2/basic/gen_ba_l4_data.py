@@ -21,9 +21,9 @@ def write_attack_type_select():
     NAO_L4 = namedtuple("NAO_L4", "ba_id, ba_name,ba_zh_name,weight")
 
     nao_l4_list = []
-    # map1 = map(NAO_L4._make, csv.reader(open("NAO-L4.csv","r")))
+    # map1 = map(NAO_L4._make, csv.reader(open("NL4.csv","r")))
     # print("map: ", list(map1))
-    for l4 in map(NAO_L4._make, csv.reader(open("NAO-L4.csv","r"))):
+    for l4 in map(NAO_L4._make, csv.reader(open("NL4.csv","r"))):
         # print(l4.ba_id, l4.ba_zh_name)
         nao_l4_list.append({
             "ba_id": l4.ba_id,
@@ -43,9 +43,9 @@ def read_ba_csv():
     NAO_L4 = namedtuple("NAO_L4", "ba_id, ba_name,ba_zh_name,weight")
 
     nao_l4_list = []
-    # map1 = map(NAO_L4._make, csv.reader(open("NAO-L4.csv","r")))
+    # map1 = map(NAO_L4._make, csv.reader(open("NL4.csv","r")))
     # print("map: ", list(map1))
-    for l4 in map(NAO_L4._make, csv.reader(open("NAO-L4.csv","r"))):
+    for l4 in map(NAO_L4._make, csv.reader(open("NL4.csv","r"))):
         # print(l4.ba_id, l4.ba_zh_name)
         nao_l4_list.append({
             "ba_id": l4.ba_id,

@@ -1,0 +1,378 @@
+{
+    "top5_attack_type": [
+        {
+            "attack_type": "窃听",
+            "count": 112
+        },
+        {
+            "attack_type": "代码注入",
+            "count": 111
+        },
+        {
+            "attack_type": "LDAP注入",
+            "count": 110
+        },
+        {
+            "attack_type": "基于脚本的API利用攻击",
+            "count": 106
+        },
+        {
+            "attack_type": "诱导帐户锁定",
+            "count": 104
+        }
+    ],
+    "top5_src_area": [
+        {
+            "src": "北京",
+            "count": 2568
+        },
+        {
+            "src": "福建",
+            "count": 1618
+        },
+        {
+            "src": "广东",
+            "count": 1510
+        },
+        {
+            "src": "上海",
+            "count": 1172
+        },
+        {
+            "src": "香港",
+            "count": 700
+        }
+    ],
+    "top5_dst_area": [
+        {
+            "dst": "北京",
+            "count": 2511
+        },
+        {
+            "dst": "福建",
+            "count": 1602
+        },
+        {
+            "dst": "广东",
+            "count": 1525
+        },
+        {
+            "dst": "上海",
+            "count": 1115
+        },
+        {
+            "dst": "香港",
+            "count": 722
+        }
+    ],
+    "src_distribution": {
+        "area_count": 30,
+        "area_data": [
+            {
+                "src_area": "北京",
+                "count": 2568,
+                "percent": "21.43%"
+            },
+            {
+                "src_area": "福建",
+                "count": 1618,
+                "percent": "13.50%"
+            },
+            {
+                "src_area": "广东",
+                "count": 1510,
+                "percent": "12.60%"
+            },
+            {
+                "src_area": "上海",
+                "count": 1172,
+                "percent": "9.78%"
+            },
+            {
+                "src_area": "香港",
+                "count": 700,
+                "percent": "5.84%"
+            },
+            {
+                "src_area": "江苏",
+                "count": 699,
+                "percent": "5.83%"
+            },
+            {
+                "src_area": "浙江",
+                "count": 600,
+                "percent": "5.01%"
+            },
+            {
+                "src_area": "湖北",
+                "count": 306,
+                "percent": "2.55%"
+            },
+            {
+                "src_area": "山东",
+                "count": 293,
+                "percent": "2.44%"
+            },
+            {
+                "src_area": "天津",
+                "count": 269,
+                "percent": "2.24%"
+            },
+            {
+                "src_area": "河北",
+                "count": 245,
+                "percent": "2.04%"
+            },
+            {
+                "src_area": "辽宁",
+                "count": 243,
+                "percent": "2.03%"
+            },
+            {
+                "src_area": "贵州",
+                "count": 238,
+                "percent": "1.99%"
+            },
+            {
+                "src_area": "黑龙江",
+                "count": 173,
+                "percent": "1.44%"
+            },
+            {
+                "src_area": "河南",
+                "count": 151,
+                "percent": "1.26%"
+            },
+            {
+                "src_area": "安徽",
+                "count": 146,
+                "percent": "1.22%"
+            },
+            {
+                "src_area": "四川",
+                "count": 142,
+                "percent": "1.18%"
+            },
+            {
+                "src_area": "重庆",
+                "count": 124,
+                "percent": "1.03%"
+            },
+            {
+                "src_area": "湖南",
+                "count": 118,
+                "percent": "0.98%"
+            },
+            {
+                "src_area": "内蒙古",
+                "count": 107,
+                "percent": "0.89%"
+            },
+            {
+                "src_area": "山西",
+                "count": 93,
+                "percent": "0.78%"
+            },
+            {
+                "src_area": "陕西",
+                "count": 81,
+                "percent": "0.68%"
+            },
+            {
+                "src_area": "云南",
+                "count": 65,
+                "percent": "0.54%"
+            },
+            {
+                "src_area": "海南",
+                "count": 62,
+                "percent": "0.52%"
+            },
+            {
+                "src_area": "新疆",
+                "count": 57,
+                "percent": "0.48%"
+            },
+            {
+                "src_area": "江西",
+                "count": 56,
+                "percent": "0.47%"
+            },
+            {
+                "src_area": "广西",
+                "count": 52,
+                "percent": "0.43%"
+            },
+            {
+                "src_area": "西藏",
+                "count": 51,
+                "percent": "0.43%"
+            },
+            {
+                "src_area": "甘肃",
+                "count": 31,
+                "percent": "0.26%"
+            },
+            {
+                "src_area": "吉林",
+                "count": 15,
+                "percent": "0.13%"
+            }
+        ]
+    },
+    "dst_distribution": {
+        "area_count": 30,
+        "area_data": [
+            {
+                "dst_area": "北京",
+                "count": 2511,
+                "percent": "20.95%"
+            },
+            {
+                "dst_area": "福建",
+                "count": 1602,
+                "percent": "13.37%"
+            },
+            {
+                "dst_area": "广东",
+                "count": 1525,
+                "percent": "12.73%"
+            },
+            {
+                "dst_area": "上海",
+                "count": 1115,
+                "percent": "9.30%"
+            },
+            {
+                "dst_area": "香港",
+                "count": 722,
+                "percent": "6.03%"
+            },
+            {
+                "dst_area": "江苏",
+                "count": 688,
+                "percent": "5.74%"
+            },
+            {
+                "dst_area": "浙江",
+                "count": 623,
+                "percent": "5.20%"
+            },
+            {
+                "dst_area": "山东",
+                "count": 296,
+                "percent": "2.47%"
+            },
+            {
+                "dst_area": "天津",
+                "count": 287,
+                "percent": "2.40%"
+            },
+            {
+                "dst_area": "湖北",
+                "count": 285,
+                "percent": "2.38%"
+            },
+            {
+                "dst_area": "贵州",
+                "count": 267,
+                "percent": "2.23%"
+            },
+            {
+                "dst_area": "辽宁",
+                "count": 246,
+                "percent": "2.05%"
+            },
+            {
+                "dst_area": "河北",
+                "count": 233,
+                "percent": "1.94%"
+            },
+            {
+                "dst_area": "黑龙江",
+                "count": 193,
+                "percent": "1.61%"
+            },
+            {
+                "dst_area": "安徽",
+                "count": 147,
+                "percent": "1.23%"
+            },
+            {
+                "dst_area": "四川",
+                "count": 138,
+                "percent": "1.15%"
+            },
+            {
+                "dst_area": "河南",
+                "count": 128,
+                "percent": "1.07%"
+            },
+            {
+                "dst_area": "重庆",
+                "count": 125,
+                "percent": "1.04%"
+            },
+            {
+                "dst_area": "湖南",
+                "count": 120,
+                "percent": "1.00%"
+            },
+            {
+                "dst_area": "内蒙古",
+                "count": 96,
+                "percent": "0.80%"
+            },
+            {
+                "dst_area": "山西",
+                "count": 91,
+                "percent": "0.76%"
+            },
+            {
+                "dst_area": "陕西",
+                "count": 90,
+                "percent": "0.75%"
+            },
+            {
+                "dst_area": "海南",
+                "count": 86,
+                "percent": "0.72%"
+            },
+            {
+                "dst_area": "江西",
+                "count": 83,
+                "percent": "0.69%"
+            },
+            {
+                "dst_area": "云南",
+                "count": 77,
+                "percent": "0.64%"
+            },
+            {
+                "dst_area": "新疆",
+                "count": 61,
+                "percent": "0.51%"
+            },
+            {
+                "dst_area": "广西",
+                "count": 56,
+                "percent": "0.47%"
+            },
+            {
+                "dst_area": "西藏",
+                "count": 39,
+                "percent": "0.33%"
+            },
+            {
+                "dst_area": "甘肃",
+                "count": 39,
+                "percent": "0.33%"
+            },
+            {
+                "dst_area": "吉林",
+                "count": 14,
+                "percent": "0.12%"
+            }
+        ]
+    }
+}

@@ -1,0 +1,1562 @@
+[
+    {
+        "ba_id": "120300",
+        "ba_name": "Port Scanning",
+        "ba_zh_name": "端口扫描",
+        "weight": 10
+    },
+    {
+        "ba_id": "231066",
+        "ba_name": "SQL Injection",
+        "ba_zh_name": "SQL注入",
+        "weight": 10
+    },
+    {
+        "ba_id": "110285",
+        "ba_name": "ICMP Echo Request Ping",
+        "ba_zh_name": "ICMP回显请求Ping",
+        "weight": 9
+    },
+    {
+        "ba_id": "140020",
+        "ba_name": "Encryption Brute Forcing",
+        "ba_zh_name": "加密暴力破解",
+        "weight": 8
+    },
+    {
+        "ba_id": "231137",
+        "ba_name": "Parameter Injection",
+        "ba_zh_name": "参数注入",
+        "weight": 8
+    },
+    {
+        "ba_id": "110296",
+        "ba_name": "ICMP Information Request",
+        "ba_zh_name": "ICMP信息请求",
+        "weight": 7
+    },
+    {
+        "ba_id": "231108",
+        "ba_name": "Command Line Execution through SQL Injection",
+        "ba_zh_name": "SQL注入执行命令行",
+        "weight": 7
+    },
+    {
+        "ba_id": "240049",
+        "ba_name": "Password Brute Forcing",
+        "ba_zh_name": "密码暴力破解",
+        "weight": 7
+    },
+    {
+        "ba_id": "120308",
+        "ba_name": "UDP Scan",
+        "ba_zh_name": "UDP扫描",
+        "weight": 6
+    },
+    {
+        "ba_id": "110294",
+        "ba_name": "ICMP Address Mask Request",
+        "ba_zh_name": "ICMP地址掩码请求",
+        "weight": 5
+    },
+    {
+        "ba_id": "252098",
+        "ba_name": "Phishing",
+        "ba_zh_name": "网络钓鱼",
+        "weight": 4
+    },
+    {
+        "ba_id": "252163",
+        "ba_name": "Spear Phishing",
+        "ba_zh_name": "鱼叉式网络钓鱼",
+        "weight": 4
+    },
+    {
+        "ba_id": "130006",
+        "ba_name": "Argument Injection",
+        "ba_zh_name": "参数注入",
+        "weight": 3
+    },
+    {
+        "ba_id": "130169",
+        "ba_name": "Footprinting",
+        "ba_zh_name": "指纹攻击",
+        "weight": 3
+    },
+    {
+        "ba_id": "210158",
+        "ba_name": "Sniffing Network Traffic",
+        "ba_zh_name": "网络流量嗅探",
+        "weight": 3
+    },
+    {
+        "ba_id": "230062",
+        "ba_name": "Cross Site Request Forgery",
+        "ba_zh_name": "跨站请求伪造",
+        "weight": 3
+    },
+    {
+        "ba_id": "230100",
+        "ba_name": "Overflow Buffers",
+        "ba_zh_name": "缓冲区溢出",
+        "weight": 3
+    },
+    {
+        "ba_id": "231007",
+        "ba_name": "Blind SQL Injection",
+        "ba_zh_name": "SQL盲注",
+        "weight": 3
+    },
+    {
+        "ba_id": "233482",
+        "ba_name": "TCP Flood ",
+        "ba_zh_name": "TCP泛洪",
+        "weight": 3
+    },
+    {
+        "ba_id": "252592",
+        "ba_name": "Stored XSS",
+        "ba_zh_name": "存储XSS",
+        "weight": 3
+    },
+    {
+        "ba_id": "110292",
+        "ba_name": "Host Discovery",
+        "ba_zh_name": "主机发现",
+        "weight": 0
+    },
+    {
+        "ba_id": "110297",
+        "ba_name": "TCP ACK Ping",
+        "ba_zh_name": "TCP确认Ping",
+        "weight": 0
+    },
+    {
+        "ba_id": "110298",
+        "ba_name": "UDP Ping  ",
+        "ba_zh_name": "UDP Ping",
+        "weight": 0
+    },
+    {
+        "ba_id": "120034",
+        "ba_name": "HTTP Response Splitting",
+        "ba_zh_name": "HTTP响应拆分",
+        "weight": 0
+    },
+    {
+        "ba_id": "120287",
+        "ba_name": "TCP SYN Scan ",
+        "ba_zh_name": "TCP SYN扫描",
+        "weight": 0
+    },
+    {
+        "ba_id": "120293",
+        "ba_name": "Traceroute Route Enumeration",
+        "ba_zh_name": "Traceroute路由枚举",
+        "weight": 0
+    },
+    {
+        "ba_id": "120295",
+        "ba_name": "Timestamp Request",
+        "ba_zh_name": "时间戳请求",
+        "weight": 0
+    },
+    {
+        "ba_id": "120301",
+        "ba_name": "TCP Connect Scan",
+        "ba_zh_name": "TCP连接扫描",
+        "weight": 0
+    },
+    {
+        "ba_id": "120302",
+        "ba_name": "TCP FIN Scan",
+        "ba_zh_name": "TCP FIN扫描",
+        "weight": 0
+    },
+    {
+        "ba_id": "120304",
+        "ba_name": "TCP Null Scan",
+        "ba_zh_name": "TCP Null扫描",
+        "weight": 0
+    },
+    {
+        "ba_id": "120305",
+        "ba_name": "TCP ACK Scan",
+        "ba_zh_name": "TCP ACK扫描",
+        "weight": 0
+    },
+    {
+        "ba_id": "120306",
+        "ba_name": "TCP Window Scan",
+        "ba_zh_name": "TCP窗口扫描",
+        "weight": 0
+    },
+    {
+        "ba_id": "120307",
+        "ba_name": "TCP RPC Scan",
+        "ba_zh_name": "TCP RPC扫描",
+        "weight": 0
+    },
+    {
+        "ba_id": "130010",
+        "ba_name": "Buffer Overflow via Environment Variables",
+        "ba_zh_name": "环境变量的缓冲区溢出",
+        "weight": 0
+    },
+    {
+        "ba_id": "130095",
+        "ba_name": "WSDL Scanning",
+        "ba_zh_name": "WSDL扫描",
+        "weight": 0
+    },
+    {
+        "ba_id": "130116",
+        "ba_name": "Excavation",
+        "ba_zh_name": "信息挖掘",
+        "weight": 0
+    },
+    {
+        "ba_id": "130224",
+        "ba_name": "Fingerprinting",
+        "ba_zh_name": "指纹识别",
+        "weight": 0
+    },
+    {
+        "ba_id": "130310",
+        "ba_name": "Scanning for Vulnerable Software",
+        "ba_zh_name": "扫描漏洞软件",
+        "weight": 0
+    },
+    {
+        "ba_id": "130312",
+        "ba_name": "Active OS Fingerprinting",
+        "ba_zh_name": "操作系统指纹主动攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "130313",
+        "ba_name": "Passive OS Fingerprinting",
+        "ba_zh_name": "操作系统指纹被动嗅探",
+        "weight": 0
+    },
+    {
+        "ba_id": "130472",
+        "ba_name": "Browser Fingerprinting",
+        "ba_zh_name": "浏览器指纹",
+        "weight": 0
+    },
+    {
+        "ba_id": "130497",
+        "ba_name": "File Discovery",
+        "ba_zh_name": "文件发现",
+        "weight": 0
+    },
+    {
+        "ba_id": "130529",
+        "ba_name": "Malware-Directed Internal Reconnaissance",
+        "ba_zh_name": "恶意软件指导的内部侦察",
+        "weight": 0
+    },
+    {
+        "ba_id": "130541",
+        "ba_name": "Application Fingerprinting",
+        "ba_zh_name": "应用指纹",
+        "weight": 0
+    },
+    {
+        "ba_id": "130580",
+        "ba_name": "Application Footprinting",
+        "ba_zh_name": "应用指纹",
+        "weight": 0
+    },
+    {
+        "ba_id": "130581",
+        "ba_name": "Security Software Footprinting",
+        "ba_zh_name": "安全软件指纹",
+        "weight": 0
+    },
+    {
+        "ba_id": "130639",
+        "ba_name": "Probe System Files",
+        "ba_zh_name": "系统文件探测",
+        "weight": 0
+    },
+    {
+        "ba_id": "131001",
+        "ba_name": "Accessing Functionality Not Properly Constrained by ACLs",
+        "ba_zh_name": "访问控制列表访问功能未被正确限制",
+        "weight": 0
+    },
+    {
+        "ba_id": "131113",
+        "ba_name": "API Manipulation",
+        "ba_zh_name": "API篡改",
+        "weight": 0
+    },
+    {
+        "ba_id": "131126",
+        "ba_name": "Path Traversal ",
+        "ba_zh_name": "路径遍历",
+        "weight": 0
+    },
+    {
+        "ba_id": "131127",
+        "ba_name": "Directory Indexing ",
+        "ba_zh_name": "目录索引",
+        "weight": 0
+    },
+    {
+        "ba_id": "131131",
+        "ba_name": "Resource Leak Exposure",
+        "ba_zh_name": "资源泄漏暴露",
+        "weight": 0
+    },
+    {
+        "ba_id": "131139",
+        "ba_name": "Relative Path Traversal",
+        "ba_zh_name": "相对路径遍历",
+        "weight": 0
+    },
+    {
+        "ba_id": "131170",
+        "ba_name": "Web Application Fingerprinting",
+        "ba_zh_name": "Web应用程序指纹",
+        "weight": 0
+    },
+    {
+        "ba_id": "131268",
+        "ba_name": "Audit Log Manipulation",
+        "ba_zh_name": "审计日志篡改",
+        "weight": 0
+    },
+    {
+        "ba_id": "140028",
+        "ba_name": "Fuzzing",
+        "ba_zh_name": "Fuzzing测试",
+        "weight": 0
+    },
+    {
+        "ba_id": "140055",
+        "ba_name": "Rainbow Table Password Cracking",
+        "ba_zh_name": "Rainbow Table密码破解",
+        "weight": 0
+    },
+    {
+        "ba_id": "140097",
+        "ba_name": "Cryptanalysis",
+        "ba_zh_name": "密码分析",
+        "weight": 0
+    },
+    {
+        "ba_id": "140155",
+        "ba_name": "Screen Temporary Files for Sensitive Information",
+        "ba_zh_name": "通过屏幕临时文件获取敏感信息",
+        "weight": 0
+    },
+    {
+        "ba_id": "140167",
+        "ba_name": "White Box Reverse Engineering",
+        "ba_zh_name": "白盒逆向工程",
+        "weight": 0
+    },
+    {
+        "ba_id": "140188",
+        "ba_name": "Reverse Engineering",
+        "ba_zh_name": "逆向工程",
+        "weight": 0
+    },
+    {
+        "ba_id": "140189",
+        "ba_name": "Black Box Reverse Engineering",
+        "ba_zh_name": "黑盒逆向工程",
+        "weight": 0
+    },
+    {
+        "ba_id": "140190",
+        "ba_name": "Reverse Engineer an Executable to Expose Assumed Hidden Functionality",
+        "ba_zh_name": "对可执行文件进行反向工程以公开假定的隐藏功能",
+        "weight": 0
+    },
+    {
+        "ba_id": "140191",
+        "ba_name": "Read Sensitive Strings Within an Executable",
+        "ba_zh_name": "读取可执行文件中的敏感字符串",
+        "weight": 0
+    },
+    {
+        "ba_id": "140192",
+        "ba_name": "Protocol Analysis",
+        "ba_zh_name": "协议分析",
+        "weight": 0
+    },
+    {
+        "ba_id": "140215",
+        "ba_name": "Fuzzing and observing application log data/errors for application mapping",
+        "ba_zh_name": "应用程序日志数据/错误Fuzzing测试和观察以进行应用程序映射",
+        "weight": 0
+    },
+    {
+        "ba_id": "140383",
+        "ba_name": "Harvesting Information via API Event Monitoring",
+        "ba_zh_name": "通过API事件监控收集信息",
+        "weight": 0
+    },
+    {
+        "ba_id": "140506",
+        "ba_name": "Tapjacking",
+        "ba_zh_name": "窃听",
+        "weight": 0
+    },
+    {
+        "ba_id": "140545",
+        "ba_name": "Pull Data from System Resources",
+        "ba_zh_name": "目标恶意软件",
+        "weight": 0
+    },
+    {
+        "ba_id": "140546",
+        "ba_name": "Probe Application Memory",
+        "ba_zh_name": "探测应用程序内存",
+        "weight": 0
+    },
+    {
+        "ba_id": "140551",
+        "ba_name": "Modify Existing Service",
+        "ba_zh_name": "修改现有服务",
+        "weight": 0
+    },
+    {
+        "ba_id": "140568",
+        "ba_name": "Capture Credentials via Keylogger",
+        "ba_zh_name": "键日志捕获凭证",
+        "weight": 0
+    },
+    {
+        "ba_id": "140569",
+        "ba_name": "Collect Data as Provided by Users",
+        "ba_zh_name": "收集用户提供的数据",
+        "weight": 0
+    },
+    {
+        "ba_id": "140573",
+        "ba_name": "Process Footprinting",
+        "ba_zh_name": "进程指纹",
+        "weight": 0
+    },
+    {
+        "ba_id": "140574",
+        "ba_name": "Services Footprinting",
+        "ba_zh_name": "服务指纹",
+        "weight": 0
+    },
+    {
+        "ba_id": "140575",
+        "ba_name": "Account Footprinting",
+        "ba_zh_name": "账户指纹",
+        "weight": 0
+    },
+    {
+        "ba_id": "140576",
+        "ba_name": "Group Permission Footprinting",
+        "ba_zh_name": "组权限指纹",
+        "weight": 0
+    },
+    {
+        "ba_id": "140577",
+        "ba_name": "Owner Footprinting",
+        "ba_zh_name": "拥有者指纹",
+        "weight": 0
+    },
+    {
+        "ba_id": "140637",
+        "ba_name": "Collect Data from Clipboard",
+        "ba_zh_name": "从剪贴板收集数据",
+        "weight": 0
+    },
+    {
+        "ba_id": "140643",
+        "ba_name": "Identify Shared Files/Directories on System",
+        "ba_zh_name": "系统中共享文件/目录发现",
+        "weight": 0
+    },
+    {
+        "ba_id": "140646",
+        "ba_name": "Peripheral Footprinting",
+        "ba_zh_name": "计算机外围设备指纹收集",
+        "weight": 0
+    },
+    {
+        "ba_id": "140647",
+        "ba_name": "Collect Data from Registries",
+        "ba_zh_name": "从注册表收集数据",
+        "weight": 0
+    },
+    {
+        "ba_id": "140648",
+        "ba_name": "Collect Data from Screen Capture",
+        "ba_zh_name": "从屏幕截图收集数据",
+        "weight": 0
+    },
+    {
+        "ba_id": "210065",
+        "ba_name": "Sniff Application Code",
+        "ba_zh_name": "应用代码嗅探",
+        "weight": 0
+    },
+    {
+        "ba_id": "210142",
+        "ba_name": "DNS Cache Poisoning",
+        "ba_zh_name": "DNS缓存污染",
+        "weight": 0
+    },
+    {
+        "ba_id": "210157",
+        "ba_name": "Sniffing Attacks",
+        "ba_zh_name": "嗅探攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "210272",
+        "ba_name": "Protocol Manipulation",
+        "ba_zh_name": "协议篡改",
+        "weight": 0
+    },
+    {
+        "ba_id": "210598",
+        "ba_name": "DNS Spoofing",
+        "ba_zh_name": "DNS欺骗",
+        "weight": 0
+    },
+    {
+        "ba_id": "210651",
+        "ba_name": "Eavesdropping",
+        "ba_zh_name": "窃听",
+        "weight": 0
+    },
+    {
+        "ba_id": "220031",
+        "ba_name": "Accessing/Intercepting/Modifying HTTP Cookies",
+        "ba_zh_name": "访问/拦截/修改HTTP Cookie",
+        "weight": 0
+    },
+    {
+        "ba_id": "220094",
+        "ba_name": "Man in the Middle Attack",
+        "ba_zh_name": "中间人攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "220102",
+        "ba_name": "Session Sidejacking",
+        "ba_zh_name": "会话劫持",
+        "weight": 0
+    },
+    {
+        "ba_id": "220103",
+        "ba_name": "Clickjacking ",
+        "ba_zh_name": "点击劫持",
+        "weight": 0
+    },
+    {
+        "ba_id": "220384",
+        "ba_name": "Application API Message Manipulation via Man-in-the-Middle",
+        "ba_zh_name": "通过中间人对应用程序API消息进行篡改",
+        "weight": 0
+    },
+    {
+        "ba_id": "230002",
+        "ba_name": "Inducing Account Lockout",
+        "ba_zh_name": "诱导帐户锁定",
+        "weight": 0
+    },
+    {
+        "ba_id": "230008",
+        "ba_name": "Buffer Overflow in an API Call",
+        "ba_zh_name": "API调用中的缓冲区溢出",
+        "weight": 0
+    },
+    {
+        "ba_id": "230012",
+        "ba_name": "Choosing Message Identifier",
+        "ba_zh_name": "选择消息标识符攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230014",
+        "ba_name": "Client-side Injection-induced Buffer Overflow",
+        "ba_zh_name": "客户端注入引起的缓冲区溢出",
+        "weight": 0
+    },
+    {
+        "ba_id": "230015",
+        "ba_name": "Command Delimiters",
+        "ba_zh_name": "命令分隔符攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230017",
+        "ba_name": "Using Malicious Files",
+        "ba_zh_name": "恶意文件利用攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230019",
+        "ba_name": "Embedding Scripts within Scripts",
+        "ba_zh_name": "脚本嵌入脚本攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230023",
+        "ba_name": "File Content Injection",
+        "ba_zh_name": "文件内容注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "230026",
+        "ba_name": "Leveraging Race Conditions",
+        "ba_zh_name": "竞争条件泄露",
+        "weight": 0
+    },
+    {
+        "ba_id": "230035",
+        "ba_name": "Leverage Executable Code in Non-Executable Files",
+        "ba_zh_name": "非可执行文件中的可执行代码泄露",
+        "weight": 0
+    },
+    {
+        "ba_id": "230036",
+        "ba_name": "Using Unpublished APIs",
+        "ba_zh_name": "未发布的API利用攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230038",
+        "ba_name": "Leveraging/Manipulating Configuration File Search Paths",
+        "ba_zh_name": "泄露/操纵配置文件搜索路径",
+        "weight": 0
+    },
+    {
+        "ba_id": "230054",
+        "ba_name": "Query System for Information",
+        "ba_zh_name": "信息查询系统",
+        "weight": 0
+    },
+    {
+        "ba_id": "230058",
+        "ba_name": "Restful Privilege Elevation",
+        "ba_zh_name": "Restful特权提升",
+        "weight": 0
+    },
+    {
+        "ba_id": "230085",
+        "ba_name": "AJAX Fingerprinting",
+        "ba_zh_name": "AJAX指纹攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230088",
+        "ba_name": "OS Command Injection",
+        "ba_zh_name": "操作系统命令行注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "230092",
+        "ba_name": "Forced Integer Overflow",
+        "ba_zh_name": "强制整型溢出",
+        "weight": 0
+    },
+    {
+        "ba_id": "230124",
+        "ba_name": "Shared Data Manipulation",
+        "ba_zh_name": "共享数据篡改",
+        "weight": 0
+    },
+    {
+        "ba_id": "230136",
+        "ba_name": "LDAP Injection",
+        "ba_zh_name": "LDAP注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "230138",
+        "ba_name": "Reflection Injection",
+        "ba_zh_name": "反射注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "230153",
+        "ba_name": "Input Data Manipulation",
+        "ba_zh_name": "输入数据篡改",
+        "weight": 0
+    },
+    {
+        "ba_id": "230154",
+        "ba_name": "Resource Location Spoofing ",
+        "ba_zh_name": "资源位置欺骗",
+        "weight": 0
+    },
+    {
+        "ba_id": "230159",
+        "ba_name": "Redirect Access to Libraries",
+        "ba_zh_name": "重定向访问库",
+        "weight": 0
+    },
+    {
+        "ba_id": "230160",
+        "ba_name": "Exploit Script-Based APIs",
+        "ba_zh_name": "基于脚本的API利用攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230176",
+        "ba_name": "Configuration/Environment Manipulation0",
+        "ba_zh_name": "配置/环境篡改",
+        "weight": 0
+    },
+    {
+        "ba_id": "230179",
+        "ba_name": "Calling Micro-Services Directly ",
+        "ba_zh_name": "微服务直接调用攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230180",
+        "ba_name": "Exploiting Incorrectly Configured Access Control Security Levels",
+        "ba_zh_name": "错入访问控制安全级别配置利用攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230221",
+        "ba_name": "XML External Entities Blowup",
+        "ba_zh_name": "XML外部实体放大攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230240",
+        "ba_name": "Resource Injection",
+        "ba_zh_name": "资源注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "230242",
+        "ba_name": "Code Injection",
+        "ba_zh_name": "代码注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "230248",
+        "ba_name": "Command Injection",
+        "ba_zh_name": "命令注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "220031",
+        "ba_name": "Accessing/Intercepting/Modifying HTTP Cookies",
+        "ba_zh_name": "访问/拦截/修改HTTP Cookie",
+        "weight": 0
+    },
+    {
+        "ba_id": "220089",
+        "ba_name": "Pharming",
+        "ba_zh_name": "域欺骗",
+        "weight": 0
+    },
+    {
+        "ba_id": "220094",
+        "ba_name": "Man in the Middle Attack",
+        "ba_zh_name": "中间人攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "220102",
+        "ba_name": "Session Sidejacking",
+        "ba_zh_name": "会话劫持",
+        "weight": 0
+    },
+    {
+        "ba_id": "220103",
+        "ba_name": "Clickjacking ",
+        "ba_zh_name": "点击劫持",
+        "weight": 0
+    },
+    {
+        "ba_id": "220275",
+        "ba_name": "DNS Rebinding",
+        "ba_zh_name": "DNS重新绑定",
+        "weight": 0
+    },
+    {
+        "ba_id": "220384",
+        "ba_name": "Application API Message Manipulation via Man-in-the-Middle",
+        "ba_zh_name": "通过中间人对应用程序API消息进行篡改",
+        "weight": 0
+    },
+    {
+        "ba_id": "230002",
+        "ba_name": "Inducing Account Lockout",
+        "ba_zh_name": "诱导帐户锁定",
+        "weight": 0
+    },
+    {
+        "ba_id": "230004",
+        "ba_name": "Using Alternative IP Address Encodings",
+        "ba_zh_name": "使用备用IP地址编码",
+        "weight": 0
+    },
+    {
+        "ba_id": "230008",
+        "ba_name": "Buffer Overflow in an API Call",
+        "ba_zh_name": "API调用中的缓冲区溢出",
+        "weight": 0
+    },
+    {
+        "ba_id": "230014",
+        "ba_name": "Client-side Injection-induced Buffer Overflow",
+        "ba_zh_name": "客户端注入引起的缓冲区溢出",
+        "weight": 0
+    },
+    {
+        "ba_id": "230015",
+        "ba_name": "Command Delimiters",
+        "ba_zh_name": "命令分隔符攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230017",
+        "ba_name": "Using Malicious Files",
+        "ba_zh_name": "恶意文件利用攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230019",
+        "ba_name": "Embedding Scripts within Scripts",
+        "ba_zh_name": "脚本嵌入脚本攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230022",
+        "ba_name": "Exploiting Trust in Client",
+        "ba_zh_name": "客户端信任利用攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230023",
+        "ba_name": "File Content Injection",
+        "ba_zh_name": "文件内容注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "230035",
+        "ba_name": "Leverage Executable Code in Non-Executable Files",
+        "ba_zh_name": "非可执行文件中的可执行代码泄露",
+        "weight": 0
+    },
+    {
+        "ba_id": "230036",
+        "ba_name": "Using Unpublished APIs",
+        "ba_zh_name": "未发布的API利用攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230038",
+        "ba_name": "Leveraging/Manipulating Configuration File Search Paths",
+        "ba_zh_name": "泄露/操纵配置文件搜索路径",
+        "weight": 0
+    },
+    {
+        "ba_id": "230039",
+        "ba_name": "Manipulating Opaque Client-based Data Tokens",
+        "ba_zh_name": "篡改模糊客户端数据令牌",
+        "weight": 0
+    },
+    {
+        "ba_id": "230054",
+        "ba_name": "Query System for Information",
+        "ba_zh_name": "信息查询系统",
+        "weight": 0
+    },
+    {
+        "ba_id": "230057",
+        "ba_name": "Utilizing REST's Trust in the System Resource to Obtain Sensitive Data",
+        "ba_zh_name": "利用REST对系统资源的信任来获取敏感数据",
+        "weight": 0
+    },
+    {
+        "ba_id": "230058",
+        "ba_name": "Restful Privilege Elevation",
+        "ba_zh_name": "Restful特权提升",
+        "weight": 0
+    },
+    {
+        "ba_id": "230062",
+        "ba_name": "Cross Site Request Forgery",
+        "ba_zh_name": "跨站请求伪造",
+        "weight": 0
+    },
+    {
+        "ba_id": "230068",
+        "ba_name": "Subvert Code-signing Facilities",
+        "ba_zh_name": "代码签名工具破坏",
+        "weight": 0
+    },
+    {
+        "ba_id": "230077",
+        "ba_name": "Manipulating User-Controlled Variables",
+        "ba_zh_name": "用户控制变量篡改",
+        "weight": 0
+    },
+    {
+        "ba_id": "230085",
+        "ba_name": "AJAX Fingerprinting",
+        "ba_zh_name": "AJAX指纹攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230088",
+        "ba_name": "OS Command Injection",
+        "ba_zh_name": "操作系统命令行注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "230092",
+        "ba_name": "Forced Integer Overflow",
+        "ba_zh_name": "强制整型溢出",
+        "weight": 0
+    },
+    {
+        "ba_id": "230100",
+        "ba_name": "Overflow Buffers",
+        "ba_zh_name": "缓冲区溢出",
+        "weight": 0
+    },
+    {
+        "ba_id": "230123",
+        "ba_name": "Buffer Manipulation",
+        "ba_zh_name": "缓冲区篡改",
+        "weight": 0
+    },
+    {
+        "ba_id": "230124",
+        "ba_name": "Shared Data Manipulation",
+        "ba_zh_name": "共享数据篡改",
+        "weight": 0
+    },
+    {
+        "ba_id": "230128",
+        "ba_name": "Integer Attacks",
+        "ba_zh_name": "整数攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230129",
+        "ba_name": "Pointer Manipulation",
+        "ba_zh_name": "指针篡改",
+        "weight": 0
+    },
+    {
+        "ba_id": "230132",
+        "ba_name": "Symlink Attack  ",
+        "ba_zh_name": "符号链接攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230133",
+        "ba_name": "Try All Common Switches",
+        "ba_zh_name": "所有常用开关尝试",
+        "weight": 0
+    },
+    {
+        "ba_id": "230135",
+        "ba_name": "Format String Injection",
+        "ba_zh_name": "格式字符串注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "230136",
+        "ba_name": "LDAP Injection",
+        "ba_zh_name": "LDAP注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "230138",
+        "ba_name": "Reflection Injection",
+        "ba_zh_name": "反射注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "230141",
+        "ba_name": "Cache Poisoning",
+        "ba_zh_name": "缓存污染",
+        "weight": 0
+    },
+    {
+        "ba_id": "230145",
+        "ba_name": "Checksum Spoofing",
+        "ba_zh_name": "校验和欺骗",
+        "weight": 0
+    },
+    {
+        "ba_id": "230146",
+        "ba_name": "XML Schema Poisoning",
+        "ba_zh_name": "XML模式污染",
+        "weight": 0
+    },
+    {
+        "ba_id": "230153",
+        "ba_name": "Input Data Manipulation",
+        "ba_zh_name": "输入数据篡改",
+        "weight": 0
+    },
+    {
+        "ba_id": "230154",
+        "ba_name": "Resource Location Spoofing ",
+        "ba_zh_name": "资源位置欺骗",
+        "weight": 0
+    },
+    {
+        "ba_id": "230159",
+        "ba_name": "Redirect Access to Libraries",
+        "ba_zh_name": "重定向访问库",
+        "weight": 0
+    },
+    {
+        "ba_id": "230160",
+        "ba_name": "Exploit Script-Based APIs",
+        "ba_zh_name": "基于脚本的API利用攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230165",
+        "ba_name": "File Manipulation",
+        "ba_zh_name": "文件控制",
+        "weight": 0
+    },
+    {
+        "ba_id": "230166",
+        "ba_name": "Force the System to Reset Values",
+        "ba_zh_name": "强制系统重置值",
+        "weight": 0
+    },
+    {
+        "ba_id": "230176",
+        "ba_name": "Configuration/Environment Manipulation0",
+        "ba_zh_name": "配置/环境篡改",
+        "weight": 0
+    },
+    {
+        "ba_id": "230177",
+        "ba_name": "Create files with the same name as files protected with a higher classification",
+        "ba_zh_name": "创建与更高级别保护的文件同名的文件",
+        "weight": 0
+    },
+    {
+        "ba_id": "230179",
+        "ba_name": "Calling Micro-Services Directly ",
+        "ba_zh_name": "微服务直接调用攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230180",
+        "ba_name": "Exploiting Incorrectly Configured Access Control Security Levels",
+        "ba_zh_name": "错入访问控制安全级别配置利用攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230181",
+        "ba_name": "Flash File Overlay",
+        "ba_zh_name": "Flash文件覆盖",
+        "weight": 0
+    },
+    {
+        "ba_id": "230182",
+        "ba_name": "Flash Injection",
+        "ba_zh_name": "Flash注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "230183",
+        "ba_name": "IMAP/SMTP Command Injection",
+        "ba_zh_name": "IMAP / SMTP命令注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "230184",
+        "ba_name": "Software Integrity Attack",
+        "ba_zh_name": "软件完整性攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230196",
+        "ba_name": "Session Credential Falsification through Forging",
+        "ba_zh_name": "会话凭证伪造",
+        "weight": 0
+    },
+    {
+        "ba_id": "230212",
+        "ba_name": "Functionality Misuse",
+        "ba_zh_name": "功能滥用",
+        "weight": 0
+    },
+    {
+        "ba_id": "230221",
+        "ba_name": "XML External Entities Blowup",
+        "ba_zh_name": "XML外部实体放大攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "230222",
+        "ba_name": "iFrame Overlay",
+        "ba_zh_name": "iFrame覆盖",
+        "weight": 0
+    },
+    {
+        "ba_id": "230226",
+        "ba_name": "Session Credential Falsification through Manipulation",
+        "ba_zh_name": "通过篡改进行会话凭证伪造",
+        "weight": 0
+    },
+    {
+        "ba_id": "230236",
+        "ba_name": "Catching exception throw/signal from privileged block",
+        "ba_zh_name": "从特权块中捕获异常抛出/信号",
+        "weight": 0
+    },
+    {
+        "ba_id": "230237",
+        "ba_name": "Escaping a Sandbox by Calling Signed Code in Another Language",
+        "ba_zh_name": "通过调用其他语言签名代码来逃避沙箱检测",
+        "weight": 0
+    },
+    {
+        "ba_id": "230240",
+        "ba_name": "Resource Injection",
+        "ba_zh_name": "资源注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "230242",
+        "ba_name": "Code Injection",
+        "ba_zh_name": "代码注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "230248",
+        "ba_name": "Command Injection",
+        "ba_zh_name": "命令注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "230250",
+        "ba_name": "XML Injection",
+        "ba_zh_name": "XML注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "230251",
+        "ba_name": "Local Code Inclusion",
+        "ba_zh_name": "本地代码包含",
+        "weight": 0
+    },
+    {
+        "ba_id": "230253",
+        "ba_name": "Remote Code Inclusion",
+        "ba_zh_name": "远程代码包含",
+        "weight": 0
+    },
+    {
+        "ba_id": "230261",
+        "ba_name": "Fuzzing for garnering other adjacent user/sensitive data",
+        "ba_zh_name": "为获取其他相邻用户/敏感数据的Fuzzing测试",
+        "weight": 0
+    },
+    {
+        "ba_id": "230387",
+        "ba_name": "Navigation Remapping To Propagate Malicious Content",
+        "ba_zh_name": "重定向到恶意内容",
+        "weight": 0
+    },
+    {
+        "ba_id": "230388",
+        "ba_name": "Application API Button Hijacking",
+        "ba_zh_name": "应用程序API按钮劫持",
+        "weight": 0
+    },
+    {
+        "ba_id": "230389",
+        "ba_name": "Content Spoofing Via Application API Manipulation",
+        "ba_zh_name": "通过应用程序API篡改进行内容欺骗",
+        "weight": 0
+    },
+    {
+        "ba_id": "230540",
+        "ba_name": "Overread Buffers",
+        "ba_zh_name": "溢出缓冲区",
+        "weight": 0
+    },
+    {
+        "ba_id": "231011",
+        "ba_name": "Cause Web Server Misclassification",
+        "ba_zh_name": "导致Web服务器分类错误",
+        "weight": 0
+    },
+    {
+        "ba_id": "231033",
+        "ba_name": "HTTP Request Smuggling",
+        "ba_zh_name": "HTTP请求Smuggling攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "231051",
+        "ba_name": "Poison Web Service Registry",
+        "ba_zh_name": "Web服务注册表污染",
+        "weight": 0
+    },
+    {
+        "ba_id": "231064",
+        "ba_name": "Using Slashes and URL Encoding Combined to Bypass Validation Logic",
+        "ba_zh_name": "基于斜杠和URL编码混合的验证逻辑绕过",
+        "weight": 0
+    },
+    {
+        "ba_id": "231072",
+        "ba_name": "URL Encoding",
+        "ba_zh_name": "URL编码攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "231073",
+        "ba_name": "User-Controlled Filename",
+        "ba_zh_name": "用户控制文件名攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "231081",
+        "ba_name": "Web Logs Tampering",
+        "ba_zh_name": "web日志篡改",
+        "weight": 0
+    },
+    {
+        "ba_id": "231083",
+        "ba_name": "XPath Injection",
+        "ba_zh_name": "Xpath注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "231084",
+        "ba_name": "XQuery Injection",
+        "ba_zh_name": "Xquery注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "231087",
+        "ba_name": "Forceful Browsing",
+        "ba_zh_name": "强制浏览攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "231101",
+        "ba_name": "Server Side Include (SSI) Injection",
+        "ba_zh_name": "SSL注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "231105",
+        "ba_name": "HTTP Request Splitting",
+        "ba_zh_name": "HTTP请求拆分攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "231109",
+        "ba_name": "Object Relational Mapping Injection",
+        "ba_zh_name": "对象关系映射注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "231110",
+        "ba_name": "SQL Injection through SOAP Parameter Tampering",
+        "ba_zh_name": "基于SOAP参数篡改的SQL注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "231120",
+        "ba_name": "Double Encoding",
+        "ba_zh_name": "双重编码攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "231121",
+        "ba_name": "Exploit Test APIs",
+        "ba_zh_name": "利用测试API",
+        "weight": 0
+    },
+    {
+        "ba_id": "231122",
+        "ba_name": "Privilege Abuse",
+        "ba_zh_name": "特权滥用",
+        "weight": 0
+    },
+    {
+        "ba_id": "231174",
+        "ba_name": "Flash Parameter Injection",
+        "ba_zh_name": "Flash参数注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "231175",
+        "ba_name": "Code Inclusion",
+        "ba_zh_name": "代码包含攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "231193",
+        "ba_name": "PHP Remote File Inclusion",
+        "ba_zh_name": "PHP远程文件包含",
+        "weight": 0
+    },
+    {
+        "ba_id": "231201",
+        "ba_name": "XML Entity Linking",
+        "ba_zh_name": "XML实体链接",
+        "weight": 0
+    },
+    {
+        "ba_id": "231252",
+        "ba_name": "PHP Local File Inclusion",
+        "ba_zh_name": "PHP本地文件包含",
+        "weight": 0
+    },
+    {
+        "ba_id": "231256",
+        "ba_name": "SOAP Array Overflow",
+        "ba_zh_name": "SOAP数组溢出",
+        "weight": 0
+    },
+    {
+        "ba_id": "231460",
+        "ba_name": "HTTP Parameter Pollution (HPP)",
+        "ba_zh_name": "HTTP参数污染（HPP）",
+        "weight": 0
+    },
+    {
+        "ba_id": "232197",
+        "ba_name": "XML Entity Expansion",
+        "ba_zh_name": "XML实体扩展攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "233125",
+        "ba_name": "Flooding ",
+        "ba_zh_name": "洪水攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "233273",
+        "ba_name": "HTTP Response Smuggling",
+        "ba_zh_name": "HTTP响应Smuggling攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "233469",
+        "ba_name": "HTTP DoS",
+        "ba_zh_name": "HTTP DoS",
+        "weight": 0
+    },
+    {
+        "ba_id": "233486",
+        "ba_name": "UDP Flood ",
+        "ba_zh_name": "UDP泛洪",
+        "weight": 0
+    },
+    {
+        "ba_id": "233487",
+        "ba_name": "ICMP Flood ",
+        "ba_zh_name": "ICMP洪水攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "233488",
+        "ba_name": "HTTP Flood",
+        "ba_zh_name": "HTTP洪水攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "240016",
+        "ba_name": "Dictionary-based Password Attack",
+        "ba_zh_name": "基于字典的密码攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "240021",
+        "ba_name": "Exploitation of Trusted Credentials",
+        "ba_zh_name": "信任凭证利用攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "240059",
+        "ba_name": "Session Credential Falsification through Prediction",
+        "ba_zh_name": "通过预测伪造会话凭证",
+        "weight": 0
+    },
+    {
+        "ba_id": "240061",
+        "ba_name": "Session Fixation",
+        "ba_zh_name": "会话固定攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "240070",
+        "ba_name": "Try Common or Default Usernames and Passwords",
+        "ba_zh_name": "通用或默认用户名密码尝试",
+        "weight": 0
+    },
+    {
+        "ba_id": "240112",
+        "ba_name": "Brute Force",
+        "ba_zh_name": "暴力破解",
+        "weight": 0
+    },
+    {
+        "ba_id": "240114",
+        "ba_name": "Authentication Abuse ",
+        "ba_zh_name": "身份认证滥用",
+        "weight": 0
+    },
+    {
+        "ba_id": "240115",
+        "ba_name": "Authentication Bypass",
+        "ba_zh_name": "身份认证绕过",
+        "weight": 0
+    },
+    {
+        "ba_id": "240473",
+        "ba_name": "Signature Spoof",
+        "ba_zh_name": "签名欺骗",
+        "weight": 0
+    },
+    {
+        "ba_id": "240509",
+        "ba_name": "Kerberoasting",
+        "ba_zh_name": "Kerberoasting攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "240555",
+        "ba_name": "Remote Services with Stolen Credentials",
+        "ba_zh_name": "凭据被盗的远程服务",
+        "weight": 0
+    },
+    {
+        "ba_id": "240633",
+        "ba_name": "Token Impersonation",
+        "ba_zh_name": "令牌模拟",
+        "weight": 0
+    },
+    {
+        "ba_id": "240510",
+        "ba_name": "SaaS User Request Forgery",
+        "ba_zh_name": "SaaS用户请求伪造",
+        "weight": 0
+    },
+    {
+        "ba_id": "240555",
+        "ba_name": "Remote Services with Stolen Credentials",
+        "ba_zh_name": "凭据被盗的远程服务",
+        "weight": 0
+    },
+    {
+        "ba_id": "240565",
+        "ba_name": "Password Spraying",
+        "ba_zh_name": "密码喷洒攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "240600",
+        "ba_name": "Credential Stuffing",
+        "ba_zh_name": "相同凭证攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "240633",
+        "ba_name": "Token Impersonation",
+        "ba_zh_name": "令牌模拟",
+        "weight": 0
+    },
+    {
+        "ba_id": "240652",
+        "ba_name": "Use of Known Kerberos Credentials",
+        "ba_zh_name": "通用Kerberos凭证攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "240653",
+        "ba_name": "Use of Known Windows Credentials",
+        "ba_zh_name": "通用Windows凭证攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "251041",
+        "ba_name": "Using Meta-characters in E-mail Headers to Inject Malicious Payloads",
+        "ba_zh_name": "在电子邮件标题中使用元字符来注入恶意有效载荷",
+        "weight": 0
+    },
+    {
+        "ba_id": "251134",
+        "ba_name": "Email Injection",
+        "ba_zh_name": "邮件注入",
+        "weight": 0
+    },
+    {
+        "ba_id": "251194",
+        "ba_name": "Fake the Source of Data",
+        "ba_zh_name": "伪造数据源",
+        "weight": 0
+    },
+    {
+        "ba_id": "252018",
+        "ba_name": "XSS Targeting Non-Script Elements",
+        "ba_zh_name": "针对非脚本元素的XSS",
+        "weight": 0
+    },
+    {
+        "ba_id": "252032",
+        "ba_name": "XSS Through HTTP Query Strings",
+        "ba_zh_name": "通过HTTP查询字符串XSS攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "252063",
+        "ba_name": "Cross-Site Scripting (XSS)",
+        "ba_zh_name": "跨站脚本（XSS）攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "252086",
+        "ba_name": "XSS Through HTTP Headers",
+        "ba_zh_name": "基于HTTP头的XSS攻击",
+        "weight": 0
+    },
+    {
+        "ba_id": "252111",
+        "ba_name": "JSON Hijacking (aka JavaScript Hijacking)",
+        "ba_zh_name": "JSON劫持",
+        "weight": 0
+    },
+    {
+        "ba_id": "252164",
+        "ba_name": "Mobile Phishing",
+        "ba_zh_name": "移动网络钓鱼",
+        "weight": 0
+    },
+    {
+        "ba_id": "252471",
+        "ba_name": "Search Order Hijacking",
+        "ba_zh_name": "搜索订单劫持",
+        "weight": 0
+    },
+    {
+        "ba_id": "252591",
+        "ba_name": "Reflected XSS",
+        "ba_zh_name": "反射XSS",
+        "weight": 0
+    }
+]

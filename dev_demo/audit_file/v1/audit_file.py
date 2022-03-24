@@ -75,11 +75,11 @@ def monitor_la():
         run_shell(r"sed -i '$a\[include]' /etc/supervisord.conf")
         run_shell(r"sed -i '$a\files = /etc/supervisord.d/*.conf' /etc/supervisord.conf")
 
-    print(ret1,ret2,ret3,ret4)
+    print(ret1,ret2,ret3,ret4)  # for debug
     if (not ret1) or (not ret2) or (not ret3) or (not ret4):
         ret = run_shell("supervisorctl reload")
         if ret:
-            print(">>> monitor abnormal config, finish update ...")
+            print(">>> {} : monitor abnormal config, finish update ...".format(time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime())))
     else:
         # print("no error")
         pass

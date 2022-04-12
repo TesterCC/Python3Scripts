@@ -1,0 +1,2 @@
+server部署启动rsyslog，开启日志转发，用python脚本接收发来的syslog
+client用send syslog日志模拟发送syslog

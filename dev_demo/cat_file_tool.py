@@ -2,15 +2,21 @@
 """
 DATE:   2021/12/21
 AUTHOR: TesterCC
-DESC:   将同目录下多个日志文件合并导一个文件中
-knowledge maintain tools
+DESC:   将同目录下多个文件合并到一个文件中
+
 python3 cat_file_tool.py -o all.txt
-普通运维工具脚本function-based即可
 """
+'''
+knowledge maintain tools
+普通运维工具脚本function-based即可
+Linux/MacOS:
+cat_file_tool.py 和 要合并的文件最好在同一级。
+'''
 
 import os
 from optparse import OptionParser
 
+cur_file = os.path.split(__file__)[-1]
 
 def merge_file(dir,output_name):
     # 日志所在目录
@@ -19,6 +25,7 @@ def merge_file(dir,output_name):
 
     # 获取文件夹下所有文件名称
     files = os.listdir(path)
+    files= [i for i in files if i != cur_file]   # 以防直接把程序代码合并了。
     print(f'[*] total files count: {len(files)}')  # for debug
 
     # 遍历合并文件写入一个文件中, windows下需要调试路径

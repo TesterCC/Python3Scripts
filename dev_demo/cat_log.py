@@ -3,6 +3,7 @@
 DATE:   2021/12/21
 AUTHOR: TesterCC
 DESC:   将同目录下多个日志文件合并导一个文件中
+# draft
 """
 
 import os

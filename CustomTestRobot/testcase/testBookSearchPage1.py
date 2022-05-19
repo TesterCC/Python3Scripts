@@ -30,7 +30,7 @@ class TestSearchBookPage1(unittest.TestCase):
         # 断言下返回类型
         self.assertIsInstance(books, bytes)
 
-        # 强制将bytes类转成成dcit类型
+        # 强制将bytes类转成成dict类型
         # 这里运行时 可能会出现一些警告信息，不用理会
         books_dict = eval(str(books, encoding="utf-8"))
 

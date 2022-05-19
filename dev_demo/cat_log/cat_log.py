@@ -10,6 +10,7 @@ import os
 
 # 日志所在目录
 path = r"/tmp/log_merge/"
+# print(os.path.dirname(__file__))
 all_log_name = "log_all"
 
 # 获取文件夹下所有文件名称

@@ -19,6 +19,6 @@ from collections import Counter
 
 word_counts = Counter(words)    # 好好看看Counter的源码
 
-# 找出出现频率最高得3个单词
+# 找出出现频率最高得3个单词，即词频最高的
 top_three = word_counts.most_common(3)
 print(top_three)

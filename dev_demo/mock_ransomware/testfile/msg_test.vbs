@@ -1,0 +1,1 @@
+msgbox "WannaCry WannaCry WannaCry WannaCry"

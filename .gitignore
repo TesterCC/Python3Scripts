@@ -19,7 +19,6 @@ local_debug_config/*
 *.xls
 .coverage
 .DS_Store
-dev_draft/
 *.out
 t00ls_demo
 crawler/*.txt

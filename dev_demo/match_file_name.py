@@ -1,9 +1,9 @@
 # coding:utf-8
 
 import re
-files = ["request_set_parent_xxxxxxxxsda.json", "sub_tree.json", "GeneralNode"]
+files = ["request_set_abc_xxxxxxxxsda.json", "config.json", "TestABC"]
 
-pattern = r"^request_set_parent(.*).json$"
+pattern = r"^request_set_abc(.*).json$"
 
 
 for file in files:

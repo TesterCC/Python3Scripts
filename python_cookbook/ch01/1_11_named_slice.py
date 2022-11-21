@@ -34,8 +34,19 @@ print("="*18 + "demo2" + "="*18)
 
 # 如果你有一个切片对象 a，你可以分别调用它的 a.start, a.stop, a.step 属性来获取更多的信息.
 
-a = slice(5, 50, 3)
+a = slice(5, 50, 2)
 
 print(a.start)
 print(a.stop)
 print(a.step)
+
+
+print("="*18 + "demo3" + "="*18)
+# 还可以通过调用切片的indices(size)方法将它映射到一个确定大小的序列上，返回一个三元组(start, stop,step),
+# 所有值都会被合适的缩小以满足边界限制，从而避免出现IndexError异常。
+
+s = 'HelloWorld'
+print(a.indices(len(s)))
+
+for i in range(*a.indices(len(s))):
+    print(s[i])

@@ -19,7 +19,7 @@ target_url = "http://www.imooc.com/course/list"
 req = urllib.request.urlopen(target_url)
 buf = str(req.read())    # convert to str class, not recommand, download pic can not display
 
-# req.read()获取的是bytes,而req.findall()是查找string里的,可以用req.read().decode("utf-8")
+# notes.md.read()获取的是bytes,而req.findall()是查找string里的,可以用req.read().decode("utf-8")
 print(buf)
 
 

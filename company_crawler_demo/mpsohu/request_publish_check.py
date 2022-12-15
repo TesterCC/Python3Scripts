@@ -30,7 +30,7 @@ print(published_url)
 req = requests.get(published_url)
 print(req.status_code)
 
-# print(req.text)
+# print(notes.md.text)
 
 if u"活动家" in req.text:
     print("Published Success!")

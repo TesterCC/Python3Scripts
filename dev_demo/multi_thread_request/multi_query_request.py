@@ -101,8 +101,8 @@ def multi_threading_query(count=50, target_url=""):
 
 
 if __name__ == '__main__':
-    # req = get_cookie()
-    # resp = req.get("https://127.0.0.1/api/type_map/")
+    # notes.md = get_cookie()
+    # resp = notes.md.get("https://127.0.0.1/api/type_map/")
     # print(resp.json())
 
     # multi thread query

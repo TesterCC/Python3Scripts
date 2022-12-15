@@ -9,7 +9,7 @@ import requests
 爬亚马逊单页面(现在没有拦截)
 
 注意：
-print(req.encoding)结果显示ISO-8859-1
+print(notes.md.encoding)结果显示ISO-8859-1
 之所以会有ISO-8859-1这种编码是因为：
 requests会从服务器返回的响应头的 Content-Type 去获取字符集编码，如果content-type有charset字段那么requests才能正确识别编码，
 否则就使用默认的 ISO-8859-1. 一般那些不规范的页面往往有这样的问题. 

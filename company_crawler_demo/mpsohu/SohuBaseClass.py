@@ -162,9 +162,9 @@ class SohuBaseClass(object):
 
         # Save Draft and Get article_id
         # print("Start to test save draft, and get article id")
-        # req = self.session.post(post_draft_url, data=post_data, headers=header)
+        # notes.md = self.session.post(post_draft_url, data=post_data, headers=header)
         #
-        # article_id = req.text
+        # article_id = notes.md.text
         # print("Article id is {}".format(article_id))
 
         post_data = {

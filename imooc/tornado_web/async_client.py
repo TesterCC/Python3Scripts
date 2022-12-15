@@ -39,5 +39,5 @@ start = time.time()
 for i in range(N):
     requests.get(URL)
 
-print('req', time.time()-start)
+print('notes.md', time.time()-start)
 

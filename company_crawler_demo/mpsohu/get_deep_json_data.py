@@ -15,11 +15,11 @@ headers = {
 }
 
 req = requests.get(TARGET_URL, headers=headers, timeout=10).content
-# print(type(req))   # python2 str, python3 bytes
+# print(type(notes.md))   # python2 str, python3 bytes
 
 # the JSON object must be str, not 'bytes'
 req = req.decode("utf-8")  # str
-# print(type(req))
+# print(type(notes.md))
 
 # 将已编码的json字符串解码为Python对象
 req_dict = json.loads(req)

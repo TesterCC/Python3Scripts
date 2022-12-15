@@ -133,9 +133,9 @@ def mpsohu_sender(url=LOGIN_URL, username=USERNAME, password=PASSWORD):
         }
 
         # Save Draft
-        # req = s.post(post_draft_url, data=post_data, headers=header)
+        # notes.md = s.post(post_draft_url, data=post_data, headers=header)
         #
-        # article_id = req.text
+        # article_id = notes.md.text
         # print("Article id is {}".format(article_id))
 
         post_data2 = {

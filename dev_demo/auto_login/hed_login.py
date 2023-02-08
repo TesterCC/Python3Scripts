@@ -44,7 +44,16 @@ def open_network():
     print(f"[D] window_handles_list: {window_handles_list}")
 
     # driver.minimize_window()
-    print(f"get cookies info: \n{driver.get_cookies()}")
+    browser_cookie = driver.get_cookies()
+    print(f"get cookies info: \n{browser_cookie}")
+
+    for item in browser_cookie:
+        if item.get('expiry'):
+            delta_time = item.get('expiry') - int(time.time())
+            print(f"[D] {delta_time} second expired")
+        if item.get('fms_session'):
+            print(f"[D] fms_session: {item.get('fms_session')}")
+
     # for wh in window_handles_list:
     #     tmp_dict = dict()
     #     tmp_dict[wh] = driver.current_url
@@ -60,4 +69,6 @@ if __name__ == '__main__':
 
     while True:
         open_network()
-        time.sleep(3600 * 2)
+        time.sleep(3600 * 3)
+        # https://zohead.com/archives/wholeton-linux-client/
+        # 看起来也可以通过ws带fms_session不断刷新（方式相对优雅），不过实现上每隔固定时间直接重新登录一次更简易。

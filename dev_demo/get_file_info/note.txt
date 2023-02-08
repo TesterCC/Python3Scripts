@@ -1,0 +1,9 @@
+# build with Make file
+make ex3
+
+# manual compile cmd
+CFLAGS="-Wall -g" make ex3
+# -g add debugging symbol
+
+# run with gdb
+gdb ./ex3

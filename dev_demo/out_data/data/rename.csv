@@ -1,3 +1,4 @@
+name,cve_no
 Adobe Acrobat Reader任意代码执行漏洞,CVE-2023-21608
 Weblogic远程代码执行漏洞,CVE-2023-21839
 GoAnywhereMFT反序列化漏洞,CVE-2023-0669

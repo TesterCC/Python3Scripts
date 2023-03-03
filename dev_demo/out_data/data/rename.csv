@@ -1,0 +1,30 @@
+Adobe Acrobat Reader任意代码执行漏洞,CVE-2023-21608
+Weblogic远程代码执行漏洞,CVE-2023-21839
+GoAnywhereMFT反序列化漏洞,CVE-2023-0669
+Joomla未授权访问漏洞,CVE-2023-23752
+OpenSSH双重释放漏洞,CVE-2023-25136
+OpenEMR任意文件读取,CVE-2023-22974
+Sudoedit权限提升漏洞,CVE-2023-22809
+pyload代码执行漏洞,CVE-2023-0297
+linux权限提升漏洞,CVE-2023-0179
+Kardex Control Center代码执行漏洞,CVE-2023-22855
+Bonitasoft远程代码执行漏洞,CVE-2022-25237
+Webmin命令注入,CVE-2022-36446
+Atlassian Bitbucket命令注入,CVE-2022-36804
+GitLab命令注入漏洞,CVE-2022-2992
+Confluence OGNL注入漏洞,CVE-2022-26134
+Apache Commons Text代码注入漏洞,CVE-2022-42889
+Django SQL注入漏洞,CVE-2022-34265
+Apache Shiro认证绕过漏洞,CVE-2022-32532
+Spring Data MongoDB SpEL表达式注入漏洞,CVE-2022-22980
+Apache Commons Configuration代码,CVE-2022-33980
+ADTRAN SmartRG Router安全漏洞,CVE-2022-37661
+Spring Security认证绕过漏洞,CVE-2022-22978
+Zimbra任意文件上传漏洞,CVE-2022-27925
+Jira身份验证绕过漏洞,CVE-2022-0540
+Elementor远程命令执行漏洞,CVE-2022-1329
+Apache CouchDB访问控制错误漏洞,CVE-2022-24706
+WSO2 API Manager远程代码执行漏洞,CVE-2022-29464
+Spring Framework代码注入漏洞,CVE-2022-22965
+Spring Cloud Gateway远程代码执行漏洞,CVE-2022-22947
+Apache APISIX Dashboard命令执行漏洞,CVE-2022-24112

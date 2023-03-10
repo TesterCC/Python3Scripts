@@ -104,14 +104,17 @@ def get_new_body(src, dst, body):
 
 def main():
     fip = "192.168.100.2"
-    fkip = "192.168.100.3"  # if cannot use, change bfkip to local ip
-    reip = "192.168.100.6"
+    # fkip = "192.168.100.3"  # if cannot use, change bfkip to local ip
+    # reip = "192.168.100.6"
+    fkip = "10.10.1.131"  # if cannot use, change bfkip to local ip
+    reip = "10.10.1.132"
     breip = socket.inet_aton(reip)
     bfkip = socket.inet_aton(fkip)
     # dmac = b'\x00\x0c\x29\xb3\x04\xa1'
     # smac = b'\x00\x0c\x29\xf7\xe6\x48'
 
-    nic = 'wlan1'
+    # nic = 'wlan1'
+    nic = 'eth0'
     recv_s = socket.socket(socket.PF_PACKET, socket.SOCK_RAW, socket.htons(0x0800))  # ETH_P_IP
     recv_s.bind((nic, 0))
 

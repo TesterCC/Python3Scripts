@@ -58,9 +58,10 @@ def parse_packet(data):
         return None
 
     # udp
-    udp_data_len = len(input_data) - 8
+    data = ip_tuple[-1]
+    udp_data_len = len(data) - 8
     udp_fmt = '!2s2s2s2s%ds' % udp_data_len
-    udp_tuple = struct.unpack(udp_fmt, input_data)
+    udp_tuple = struct.unpack(udp_fmt, data)
 
     packet['sport'] = udp_tuple[0]
     packet['dport'] = udp_tuple[1]
@@ -68,7 +69,7 @@ def parse_packet(data):
     packet['checksum'] = udp_tuple[3]
     packet['udp_data'] = udp_tuple[4] if udp_data_len > 0 else b''
 
-    print(">>>>> udp parse:\n", packet)
+    # print(">> udp parse:\n", packet)
 
     # # ================
     # if packet['protocol'] != b'\x06':  # IP_P_TCP
@@ -132,9 +133,11 @@ def main():
         # print(pack)
         # print("------------")
         if pack["src"] == fip and pack["dst"] == fkip:
-            print("start:")
+            print(pack)
+            print("[D] start:")
             print(buf)
             _, phdr, body = struct.unpack("!14s20s%ds" % (len(buf) - 34), buf)
+            print(fkip, reip, body)  # debug
             body = get_new_body(fkip, reip, body)
 
             # change dst mac

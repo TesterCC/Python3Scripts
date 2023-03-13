@@ -69,7 +69,8 @@ def parse_packet(data):
     packet['tcp_data_len'] = tcp_data_len
 
     return packet
- 
+
+
 def get_new_body(src, dst, body):
     protocol = b'\x00\x06'
     blen = struct.pack("!H", len(body))

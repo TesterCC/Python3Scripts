@@ -6,7 +6,6 @@ import time
 import threading
 
 
-# correct one, can tran B->C success
 def compute_checksum(data):
     # padding
     if len(data) % 2 == 1:
@@ -60,64 +59,38 @@ def parse_packet(data):
         return None
 
     # udp
-    data = ip_tuple[-1]
     udp_data_len = len(data) - 8
     udp_fmt = '!2s2s2s2s%ds' % udp_data_len
     udp_tuple = struct.unpack(udp_fmt, data)
 
+    # print("*"*33)
+    # print(udp_tuple)
+    # print("*"*33)
     packet['sport'] = udp_tuple[0]
     packet['dport'] = udp_tuple[1]
     packet['len'] = udp_tuple[2]
     packet['checksum'] = udp_tuple[3]
     packet['udp_data'] = udp_tuple[4] if udp_data_len > 0 else b''
 
-    # print(">> udp parse:\n", packet)
-
-    # # ================
-    # if packet['protocol'] != b'\x06':  # IP_P_TCP
-    #     return None
-
-    # # tcp
-    # data = ip_tuple[-1]
-    # tcp_header_len = (int(data[12]) >> 4) * 4
-    # tcp_option_len = tcp_header_len - 20
-    # tcp_data_len = len(data) - tcp_header_len
-    # tcp_fmt = '!2s2s4s4sss2s2s2s%ds%ds' % (tcp_option_len, tcp_data_len)
-    # tcp_tuple = struct.unpack(tcp_fmt, data)
-    #
-    # packet['sport'] = tcp_tuple[0]
-    # packet['dport'] = tcp_tuple[1]
-    # packet['seq_num'] = tcp_tuple[2]
-    # packet['ack_num'] = tcp_tuple[3]
-    # packet['flags'] = tcp_tuple[5]
-    # packet['tcp_data_len'] = tcp_data_len
-
     return packet
 
 
 def get_new_body(src, dst, body):
-    # tcp
-    protocol = b'\x00\x06'
+    protocol = b'\x00\x11'
     blen = struct.pack("!H", len(body))
     bsrc = socket.inet_aton(src)
     bdst = socket.inet_aton(dst)
     checksum_data = bsrc + bdst + protocol + blen + body[:16] + b"\x00\x00" + body[18:]
     bchecksum = struct.pack("!H", compute_checksum(checksum_data))
     return body[:16] + bchecksum + body[18:]
+    # blen = struct.pack("!H", len(body))
+    # bsrc = socket.inet_aton(src)
+    # bdst = socket.inet_aton(dst)
+    # checksum_data = bsrc + bdst + protocol + blen + body
+    # return body
 
 
-def get_new_body_v2(src, dst, body):
-    # udp
-    protocol = b'\x00\x11'
-    blen = struct.pack("!H", len(body))
-    bsrc = socket.inet_aton(src)
-    bdst = socket.inet_aton(dst)
-    checksum_data = bsrc + bdst + protocol + blen + body[:6] + b"\x00\x00" + body[8:]
-    bchecksum = struct.pack("!H", compute_checksum(checksum_data))
-    return body[:6] + bchecksum + body[8:]
-
-
-def parse_udp_packet_debug(data):
+def parse_udp_packet(data):
     data['smac'] = ':'.join('{:02x}'.format(x) for x in data['smac'])  # 将MAC地址转换为字符串，格式为 xx:xx:xx:xx:xx:xx
     data['dmac'] = ':'.join('{:02x}'.format(x) for x in data['dmac'])
 
@@ -167,17 +140,16 @@ def main():
         # print(pack)
         # print("------------")
         if pack["src"] == fip and pack["dst"] == fkip:
-            # print(pack)
-            parse_udp_packet_debug(pack)
+            print(pack)
+            print("~" * 66)
+            parse_udp_packet(pack)
             print("[D] start:")
             print(buf)
-            print("-" * 66)
-
-            # udp transit, 14s Ether  20s IP
+            print("-"*66)
             _, phdr, body = struct.unpack("!14s20s%ds" % (len(buf) - 34), buf)
-            body = get_new_body_v2(fkip, reip, body)
+            print(fkip, reip, body)  # debug
+            body = get_new_body(fkip, reip, body)
 
-            print(">>" * 33)
             # change dst mac
             newpack = phdr[:10] + b"\x00\x00" + phdr[12:-8] + bfkip + breip
             checksum = struct.pack("!H", compute_checksum(newpack))
@@ -187,21 +159,6 @@ def main():
             print(bpack)
             send_fd.sendto(bpack, (reip, dst_port))
             # buf = send_fd.recvfrom(buf_len)
-
-            # # tcp ref
-            # _, phdr, body = struct.unpack("!14s20s%ds" % (len(buf) - 34), buf)
-            # # print(fkip, reip, body)  # debug
-            # body = get_new_body(fkip, reip, body)
-            #
-            # # change dst mac
-            # newpack = phdr[:10] + b"\x00\x00" + phdr[12:-8] + bfkip + breip
-            # checksum = struct.pack("!H", compute_checksum(newpack))
-            # dst_port = struct.unpack("<H", body[2:4])[0]
-            # # bpack = dmac + smac + eth[12:] + phdr[:10] + checksum + phdr[12:-4] + breip + body
-            # bpack = phdr[:10] + checksum + phdr[12:-8] + bfkip + breip + body
-            # print(bpack)
-            # send_fd.sendto(bpack, (reip, dst_port))
-            # # buf = send_fd.recvfrom(buf_len)
 
 
 if __name__ == "__main__":

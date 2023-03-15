@@ -54,7 +54,7 @@ def parse_packet(data):
     packet['src'] = socket.inet_ntoa(ip_tuple[8])
     packet['dst'] = socket.inet_ntoa(ip_tuple[9])
 
-    # todo 从这里开始修改，应该判断IP_P_UDP，UDP数据包的协议号是17，但在传输时它是通过IP协议来进行封装和传输的，因此在这里应该使用IP_P_UDP的值0x11来进行匹配。
+    # 判断IP_P_UDP，UDP数据包的协议号是17，但在传输时它是通过IP协议来进行封装和传输的，因此在这里应该使用IP_P_UDP的值0x11来进行匹配。
     # see parse_pcap.py
     if packet['protocol'] != b'\x11':  # IP_P_UDP
         return None
@@ -72,25 +72,6 @@ def parse_packet(data):
     packet['udp_data'] = udp_tuple[4] if udp_data_len > 0 else b''
 
     # print(">> udp parse:\n", packet)
-
-    # # ================
-    # if packet['protocol'] != b'\x06':  # IP_P_TCP
-    #     return None
-
-    # # tcp
-    # data = ip_tuple[-1]
-    # tcp_header_len = (int(data[12]) >> 4) * 4
-    # tcp_option_len = tcp_header_len - 20
-    # tcp_data_len = len(data) - tcp_header_len
-    # tcp_fmt = '!2s2s4s4sss2s2s2s%ds%ds' % (tcp_option_len, tcp_data_len)
-    # tcp_tuple = struct.unpack(tcp_fmt, data)
-    #
-    # packet['sport'] = tcp_tuple[0]
-    # packet['dport'] = tcp_tuple[1]
-    # packet['seq_num'] = tcp_tuple[2]
-    # packet['ack_num'] = tcp_tuple[3]
-    # packet['flags'] = tcp_tuple[5]
-    # packet['tcp_data_len'] = tcp_data_len
 
     return packet
 
@@ -186,22 +167,6 @@ def main():
             bpack = phdr[:10] + checksum + phdr[12:-8] + bfkip + breip + body
             print(bpack)
             send_fd.sendto(bpack, (reip, dst_port))
-            # buf = send_fd.recvfrom(buf_len)
-
-            # # tcp ref
-            # _, phdr, body = struct.unpack("!14s20s%ds" % (len(buf) - 34), buf)
-            # # print(fkip, reip, body)  # debug
-            # body = get_new_body(fkip, reip, body)
-            #
-            # # change dst mac
-            # newpack = phdr[:10] + b"\x00\x00" + phdr[12:-8] + bfkip + breip
-            # checksum = struct.pack("!H", compute_checksum(newpack))
-            # dst_port = struct.unpack("<H", body[2:4])[0]
-            # # bpack = dmac + smac + eth[12:] + phdr[:10] + checksum + phdr[12:-4] + breip + body
-            # bpack = phdr[:10] + checksum + phdr[12:-8] + bfkip + breip + body
-            # print(bpack)
-            # send_fd.sendto(bpack, (reip, dst_port))
-            # # buf = send_fd.recvfrom(buf_len)
 
 
 if __name__ == "__main__":

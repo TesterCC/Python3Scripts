@@ -3,28 +3,41 @@ import socket
 import sys
 import threading
 import time
+from Crypto.Cipher import AES
+
+# v5: support AES Cipher
+
+def _unpad(data):
+    # decrypt use
+    padding_len = data[-1]
+    return data[:-padding_len]
 
 
-# https://blog.csdn.net/qq_40177015/article/details/112402889
+def aes_decrypt(key, encrypted_data):
+    aes = AES.new(key, AES.MODE_ECB)
+    decrypted_data = aes.decrypt(encrypted_data)
+    return _unpad(decrypted_data)
 
 
-def receiver(address, port):
+def receiver(host, port):
     count = 0
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    server_addr = (address, port)
+    server_addr = (host, port)
     s.bind(server_addr)
 
-    print(f'[D] Bind UDP at {address}:{port}')
+    print(f'[D] Bind UDP at {host}:{port}')
 
     received_size = 0
     while True:
         if count == 0:
             data, client_addr = s.recvfrom(4096)
             print('connected from %s:%s' % client_addr)
+            data = aes_decrypt(key, data)
             # Record the start time of the receiver running
             start = time.time()
             f = open(data, 'wb')
         data, client_addr = s.recvfrom(4096)
+        data = aes_decrypt(key, data)
         if str(data) != "b'end'":
             received_size += len(data)
             f.write(data)
@@ -47,10 +60,11 @@ def receiver(address, port):
 
 if __name__ == '__main__':
     if len(sys.argv) == 3:
-        address = sys.argv[1]
+        host = sys.argv[1]
         port = sys.argv[2]
+        key = bytes("wirelesspost2023", encoding="utf-8")
     else:
         print("usage: python3 % ip port" % sys.argv[0])
         sys.exit(-1)
 
-    receiver(address, int(port))
+    receiver(host, int(port))

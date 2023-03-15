@@ -6,7 +6,7 @@ from time import sleep
 BUFFER_SIZE = 32 * 1024
 
 # 要发送的文件和接收端地址
-fn_path = ""
+fn_path = input("输入要发送的文件路径：")
 address = ("192.168.100.3", 9999)
 
 '''
@@ -64,19 +64,19 @@ def sendto(fn_path):
 def recv_ack():
     """用来接收确认信息的线程函数"""
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.bind(('', 7788))
+    sock.bind(('0.0.0.0', 9999))
 
     # 如果所有分块都确认过，就结束循环
     while positions:
         # 预期收到确认包1234_ack
-        data, _ = sock.recvfrom(1024)
+        data, _ = sock.recvfrom(BUFFER_SIZE)
         pos = int(data.split(b'_')[0])
         if pos in positions:
             positions.remove(pos)
 
     # 确认对方收到文件名，并已接收全部数据
     while file_name:
-        data, _ = sock.recvfrom(1024)
+        data, _ = sock.recvfrom(BUFFER_SIZE)
         fn = data.split(b'_')[0]
         if fn in file_name:
             file_name.remove(fn)
@@ -84,7 +84,7 @@ def recv_ack():
 
 
 if __name__ == '__main__':
-    t1=Thread(target=sendto,args=(fn_path,))
+    t1 = Thread(target=sendto, args=(fn_path,))
     t1.start()
 
     e = Event()
@@ -97,4 +97,3 @@ if __name__ == '__main__':
     # 等待发送线程和接收确认线程都结束
     t2.join()
     t1.join()
-

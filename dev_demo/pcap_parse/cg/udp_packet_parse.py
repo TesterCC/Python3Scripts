@@ -1,5 +1,6 @@
 import ipaddress
 
+
 def parse_udp_packet(data):
     data['smac'] = ':'.join('{:02x}'.format(x) for x in data['smac'])  # 将MAC地址转换为字符串，格式为 xx:xx:xx:xx:xx:xx
     data['dmac'] = ':'.join('{:02x}'.format(x) for x in data['dmac'])
@@ -17,6 +18,7 @@ def parse_udp_packet(data):
     data['checksum'] = data['checksum'].hex()  # 将UDP校验和转换为16进制字符串
 
     data['udp_data'] = data['udp_data'].decode('utf-8')
+
 
 if __name__ == '__main__':
     parse_udp_packet()

@@ -5,7 +5,7 @@ import socket
 import struct
 import traceback
 
-
+# standard ref
 # parse_eth
 # parse_arp
 # parse_ip
@@ -127,6 +127,8 @@ def parse_udp(data):
     udp_packet = {}
 
     udp_data_len = len(data) - 8
+    # 2s refer to 2 bytes， UDP packet first 8 bytes, 16bits == 2bytes (1bytes = 8bits, here 2bytes)
+    # udp src port 16bits (2bytes), udp dst port 16bits (2bytes), udp length 16bits (2bytes), udp checksum 16bits (2bytes)
     udp_fmt = '!2s2s2s2s%ds' % udp_data_len
     udp_tuple = struct.unpack(udp_fmt, data)
 

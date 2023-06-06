@@ -133,8 +133,10 @@ for packet in filter_packet_list:
 
 # 输出清理后的数据
 for item in ret:
+    item.pop('sport')
+    item.pop('dport')
     item['sports'] = list(set(item['sports']))
     item['dports'] = list(set(item['dports']))
 
 print(len(ret), ret)
-# [{'protocol': 'tcp', 'sip': '172.16.2.99', 'dip': '172.16.3.99', 'sport': 41696, 'dport': 82, 'sports': [41696, 41698, 41700], 'dports': [82]}, {'protocol': 'tcp', 'sip': '172.16.3.99', 'dip': '172.16.4.99', 'sport': 41698, 'dport': 81, 'sports': [41696, 41698, 41700], 'dports': [81]}, {'protocol': 'tcp', 'sip': '172.16.3.100', 'dip': '172.16.3.99', 'sport': 41700, 'dport': 82, 'sports': [41696, 41698, 41700], 'dports': [82]}, {'protocol': 'tcp', 'sip': '172.16.4.100', 'dip': '172.16.4.99', 'sport': 41700, 'dport': 81, 'sports': [41698, 41700], 'dports': [81]}, {'protocol': 'tcp', 'sip': '172.16.1.99', 'dip': '172.16.2.99', 'sport': 41696, 'dport': 83, 'sports': [41696], 'dports': [83]}, {'protocol': 'tcp', 'sip': '172.16.2.100', 'dip': '172.16.2.99', 'sport': 41696, 'dport': 83, 'sports': [41696], 'dports': [83]}, {'protocol': 'tcp', 'sip': '172.16.5.100', 'dip': '172.16.5.99', 'sport': 41696, 'dport': 80, 'sports': [41696], 'dports': [80]}, {'protocol': 'tcp', 'sip': '172.16.4.99', 'dip': '172.16.5.99', 'sport': 41696, 'dport': 80, 'sports': [41696], 'dports': [80]}]
+# 8 [{'protocol': 'tcp', 'sip': '172.16.2.99', 'dip': '172.16.3.99', 'sports': [41696, 41698, 41700], 'dports': [82]}, {'protocol': 'tcp', 'sip': '172.16.3.99', 'dip': '172.16.4.99', 'sports': [41696, 41698, 41700], 'dports': [81]}, {'protocol': 'tcp', 'sip': '172.16.3.100', 'dip': '172.16.3.99', 'sports': [41696, 41698, 41700], 'dports': [82]}, {'protocol': 'tcp', 'sip': '172.16.4.100', 'dip': '172.16.4.99', 'sports': [41698, 41700], 'dports': [81]}, {'protocol': 'tcp', 'sip': '172.16.1.99', 'dip': '172.16.2.99', 'sports': [41696], 'dports': [83]}, {'protocol': 'tcp', 'sip': '172.16.2.100', 'dip': '172.16.2.99', 'sports': [41696], 'dports': [83]}, {'protocol': 'tcp', 'sip': '172.16.5.100', 'dip': '172.16.5.99', 'sports': [41696], 'dports': [80]}, {'protocol': 'tcp', 'sip': '172.16.4.99', 'dip': '172.16.5.99', 'sports': [41696], 'dports': [80]}]

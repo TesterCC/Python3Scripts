@@ -7,7 +7,7 @@ AUTHOR: Yanxi Li
 import requests
 from bs4 import BeautifulSoup
 
-from dev_demo.sec_event_mock.sec_event_data import *
+from dup_merge_data.sec_event_mock.sec_event_data import *
 
 
 def get_website_data():

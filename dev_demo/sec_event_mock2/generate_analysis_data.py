@@ -4,7 +4,7 @@ DATE:   2021/5/18
 AUTHOR: Yanxi Li
 """
 from collections import namedtuple
-from dev_demo.sec_event_mock2.sec_event_data import *
+from dup_merge_data.sec_event_mock2.sec_event_data import *
 
 
 # 按照新蓝湖设计图构造数据，最后要写入json文件，方便后面做统计

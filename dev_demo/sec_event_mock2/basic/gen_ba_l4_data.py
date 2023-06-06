@@ -12,7 +12,7 @@ from collections import namedtuple
 
 import csv
 
-from dev_demo.sec_event_mock2.sec_event_data import write_json
+from dup_merge_data.sec_event_mock2.sec_event_data import write_json
 
 def write_attack_type_select():
     """

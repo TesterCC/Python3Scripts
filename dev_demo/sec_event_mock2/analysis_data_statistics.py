@@ -19,7 +19,7 @@ AUTHOR: TesterCC
 # get_dst_distribution 目的地区分布
 # get_top5_attack_type 攻击类型TOP5
 
-from dev_demo.sec_event_mock2.sec_event_data import read_json, write_json
+from dup_merge_data.sec_event_mock2.sec_event_data import read_json, write_json
 
 data = read_json("./analysis_data.json")  # list, 12000
 

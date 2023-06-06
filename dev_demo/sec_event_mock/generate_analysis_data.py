@@ -4,7 +4,7 @@ DATE:   2021/5/18
 AUTHOR: Yanxi Li
 """
 
-from dev_demo.sec_event_mock.sec_event_data import *
+from dup_merge_data.sec_event_mock.sec_event_data import *
 
 # right data
 

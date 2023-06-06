@@ -4,7 +4,7 @@ DATE:   2022/1/13
 AUTHOR: TesterCC
 """
 from collections import namedtuple
-from dev_demo.sec_event_mock2.sec_event_data import *
+from dup_merge_data.sec_event_mock2.sec_event_data import *
 
 area_select_ret = []
 def write_ip_area_select():

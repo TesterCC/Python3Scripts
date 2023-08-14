@@ -2,6 +2,8 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+# official docs:
+# https://fastapi.tiangolo.com/tutorial/first-steps/
 # default docs:
 # swagger http://127.0.0.1:8000/docs
 # redoc http://127.0.0.1:8000/redoc
@@ -10,3 +12,4 @@ app = FastAPI()
 @app.get("/")
 async def root():
     return {"message": "Hello World -- by FastAPI!"}
+

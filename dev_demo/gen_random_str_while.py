@@ -25,7 +25,7 @@ def get_unique_key():
         if unique_key not in db_keys:
             check_flag = False
         time.sleep(0.05)
-        count +=1
+        count += 1
         print(count)
     return unique_key
 

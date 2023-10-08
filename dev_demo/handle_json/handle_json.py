@@ -29,7 +29,10 @@ class JsonChecker:
                         line_data = json.loads(line)
                         data.append(line_data)
 
-            print(f"[D] txt json data: {data}")
+            updated_data = [{'sip': item['src_addr'], 'sport': item['src_port'], 'dip': item['dst_addr'],
+                             'dport': item['dst_port'], 'protocol': item['protocol']} for item in data]
+            print(f"[D] txt all json data: {data}")
+            print(f"[D] replace json data: {updated_data}")
 
     # @staticmethod
     # def json_info_monitor():

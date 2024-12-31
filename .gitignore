@@ -1,5 +1,7 @@
 .idea/
 __pycache__/
+.coverage
+.DS_Store
 *.py[cod]
 *.so
 *.egg
@@ -17,8 +19,6 @@ imooc/celery_learning/celery_app/celeryconfig.py
 local_debug_config/*
 *.xlsx
 *.xls
-.coverage
-.DS_Store
 *.out
 t00ls_demo
 crawler/*.txt
@@ -28,6 +28,4 @@ readlog/*
 sec_event_mock/*.json
 sec_event_mock2/basic/GeoLite2-City.mmdb
 localdev/
-dev_demo/mock_display_docker/
-dev_draft/pdf_split/output/
-wireless_parse/*
+.venv_py3script

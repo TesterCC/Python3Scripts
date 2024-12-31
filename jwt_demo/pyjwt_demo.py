@@ -9,9 +9,8 @@ from jwt import exceptions
 
 # ref: https://jwt.io/ jwt揭秘
 
-SALT = '@#$$2423523lkjklad#@#$_32344'
+SALT ='@#$$2423523lkjklad#@#$_32344'
 print(f"SALT length: {len(SALT)}")
-
 
 def create_token():
     # build header
@@ -41,12 +40,11 @@ def create_token():
     #     }
     # }
 
-    result = jwt.encode(payload, key=SALT, algorithm="HS256", headers=headers).decode('utf-8')
+    result = jwt.encode(payload,key=SALT,algorithm="HS256",headers=headers).decode('utf-8')
     return result
-
 
 if __name__ == '__main__':
     token = create_token()
 
-    print(f"generate token length:{len(token)}")  # HS256 150+
+    print(f"generate token length:{len(token)}")    # HS256 150+
     print(f'Token is:\n{token}')

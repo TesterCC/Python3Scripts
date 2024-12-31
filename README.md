@@ -7,6 +7,12 @@
 ## Environment
 * Python 3.X + 3rd party libs, etc.
 
+## Build venv
+
+```shell
+python3 -m venv .venv_py3script
+```
+
 ---
 ## Current Learn
 

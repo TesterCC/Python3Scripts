@@ -23,5 +23,16 @@ def extractfile_7z(zip_file_path, pwd, unzip_file_path="./"):
         print(f"[E] {err}")
 
 
+def extractfile_7z_v2(zip_file_path, pwd, unzip_file_path="./"):
+    os.makedirs(unzip_file_path, exist_ok=True)
+    try:
+        with py7zr.SevenZipFile(zip_file_path, "r", password=pwd) as f:
+            f.extractall(unzip_file_path)
+
+    except Exception as err:
+        print(f"[E] {err}")
+
+
 if __name__ == '__main__':
-    extractfile_7z("./export_task.7z", "B17F24026D40949C", "./unziptest")
+    # extractfile_7z("./export_task.7z", "B17F24026D40949C", "./unziptest")
+    extractfile_7z_v2("./export_task.7z", "B17F24026D40949C", "./unziptest2")

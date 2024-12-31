@@ -1,0 +1,22 @@
+FastAPI notes:
+
+0.Requirements
+Python 3.7+
+
+1.Installation
+
+pip install fastapi -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+pip install "uvicorn[standard]" -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+2.Lesson
+Video: https://www.imooc.com/learn/1299
+Doc: https://geek-docs.com/fastapi/fastapi-tutorials/
+
+3.Official
+Documentation: https://fastapi.tiangolo.com/zh/tutorial/
+Source Code: https://github.com/tiangolo/fastapi
+
+4.launch
+write code in main.py, then run command: uvicorn main:app --reload

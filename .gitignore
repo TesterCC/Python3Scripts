@@ -28,3 +28,6 @@ readlog/*
 sec_event_mock/*.json
 sec_event_mock2/basic/GeoLite2-City.mmdb
 localdev/
+dev_demo/mock_display_docker/
+dev_draft/pdf_split/output/
+wireless_parse/*

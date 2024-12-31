@@ -2,6 +2,7 @@
 __pycache__/
 .coverage
 .DS_Store
+._.DS_Store
 *.py[cod]
 *.so
 *.egg
@@ -28,4 +29,4 @@ readlog/*
 sec_event_mock/*.json
 sec_event_mock2/basic/GeoLite2-City.mmdb
 localdev/
-.venv_py3script
+.venv_py3script/

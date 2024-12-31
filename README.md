@@ -13,6 +13,11 @@
 python3 -m venv .venv_py3script
 ```
 
+## Install 3rd Libs
+```shell
+pip install python-nmap pymongo paramiko -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+```
+
 ---
 ## Current Learn
 

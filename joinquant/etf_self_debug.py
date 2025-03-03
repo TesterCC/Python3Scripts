@@ -1,11 +1,23 @@
+# 导入函数库
+from jqdata import *
+from jqfactor import Factor, calc_factors
+import datetime
 import numpy as np
-import pandas as pd
-import math
+
+'''
+ETF动量趋势轮动
+
+里面有几个品种黄金、纳指、创业板、沪深300、科创板，
+为什么选这几个？因为前提是宽基，另外相关性要小，这样才有可能涨跌不同步
+豆粕和黄金是一个性质的，所以不用同时加入轮动, 如果加豆粕，就把黄金从列表中删除
+#record(豆粕 = round(df.loc['159985.XSHE'], 2))
+'''
 
 
+# 策略初始化
 def initialize(context):
     g.etf_pool = ['518880.XSHG', '513100.XSHG', '159915.XSHE', '510300.XSHG', '588080.XSHG']
-    g.m_days = 20
+    g.m_days = 25  # or 24
     g.top_n = 2
     set_benchmark('000300.XSHG')
     set_order_cost(OrderCost(open_tax=0, close_tax=0, open_commission=0.0003, close_commission=0.0003), type='fund')
@@ -13,6 +25,7 @@ def initialize(context):
     run_daily(trade, time='9:40')
 
 
+# 可以将买入和卖出操作单独用 def buy() 和 def sell()实现，也可以把操作逻辑都写到def trade()中
 def trade(context):
     current_data = get_current_data()
     for etf in g.etf_pool:
@@ -23,16 +36,33 @@ def trade(context):
     buy_list = rank_list[:g.top_n]
 
     # 卖出不在买入列表中的持仓
-    for etf in context.portfolio.positions:
-        if etf not in buy_list:
+    # 获取动量最高的一只ETF（经过调整后）
+    target_num = 1
+    target_list = get_rank(g.etf_pool)[:target_num]
+    # 卖出不在目标列表中的持仓
+    hold_list = list(context.portfolio.positions)
+    for etf in hold_list:
+        if etf not in target_list:
             order_target_value(etf, 0)
+            print('[D] Today 卖出' + str(etf))
+        else:
+            print('[D] Today 继续持有' + str(etf))
 
     # 买入逻辑
-    if buy_list:
-        weight = 1.0 / len(buy_list)
-        cash_per_etf = context.portfolio.total_value * weight
-        for etf in buy_list:
-            order_target_value(etf, cash_per_etf)
+    # 获取动量最高的一只ETF（经过调整后）
+    target_num = 1
+    target_list = get_rank(g.etf_pool)[:target_num]
+
+    print(f"[D] today fund: {target_list[0]}")
+
+    # 买入目标列表中的ETF
+    hold_list = list(context.portfolio.positions)
+    if len(hold_list) < target_num:
+        value = context.portfolio.available_cash / (target_num - len(hold_list))
+        for etf in target_list:
+            if context.portfolio.positions[etf].total_amount == 0:
+                order_target_value(etf, value)
+                print('买入' + str(etf))
 
 
 def get_rank(etf_pool):

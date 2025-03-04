@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 # shellcode basic
 # python3实现字符串转ascii码, 再转成hex
+# go demo: str2hex.go
 s = "/bin/sh"
 
 # ['0x2f', '0x62', '0x69', '0x6e', '0x2f', '0x73', '0x68']

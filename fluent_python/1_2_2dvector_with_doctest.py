@@ -9,7 +9,7 @@ P51-53 1-2-1  模拟数值类型 二维向量加法和doctest  Python 3.4
 
 # API遇到abs则返回向量的模
 
-from math import hypot
+from math_demo import hypot
 
 
 class Vector:

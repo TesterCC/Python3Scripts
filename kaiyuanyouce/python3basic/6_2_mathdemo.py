@@ -7,7 +7,7 @@
 https://mp.weixin.qq.com/s?__biz=MzI0NDQ5NzYxNg==&mid=2247484016&idx=2&sn=f16f4b5accfdb85e258f1819f4779eb6&scene=19#wechat_redirect
 '''
 
-import math
+import math_demo
 import cmath
 import random
 
@@ -31,7 +31,7 @@ if __name__ == '__main__':
     print(pow(y, 2))
 
     # 返回平方根
-    print(math.sqrt(y))
+    print(math_demo.sqrt(y))
 
     print(u"常用随机函数")
     a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]

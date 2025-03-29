@@ -7,7 +7,7 @@
 
 import time
 
-from math import sqrt
+from math_demo import sqrt
 
 
 def is_prime(n):

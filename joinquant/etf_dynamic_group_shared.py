@@ -4,7 +4,7 @@ from jqdata import *
 
 import numpy as np
 import pandas as pd
-import math
+import math_demo
 
 
 # 初始化函数
@@ -46,7 +46,7 @@ def get_rank(etf_pool):
         y = df['log'] = np.log(df.close)
         x = df['num'] = np.arange(df.log.size)
         slope, intercept = np.polyfit(x, y, 1)
-        annualized_returns = math.pow(math.exp(slope), 250) - 1
+        annualized_returns = math_demo.pow(math_demo.exp(slope), 250) - 1
         r_squared = 1 - (sum((y - (slope * x + intercept)) ** 2) / ((len(y) - 1) * np.var(y, ddof=1)))
         score = annualized_returns * r_squared
         score_list.append(score)

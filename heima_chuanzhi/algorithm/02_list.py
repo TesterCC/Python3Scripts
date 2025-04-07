@@ -9,6 +9,8 @@ __time__ = '18/1/22 16:23'
 Python内置类型性能分析
 timeit模块可以用来测试一小段Python代码的执行速度
 
+ref: https://www.bilibili.com/video/BV1p441167Wc?p=6
+
 list的操作测试
 """
 
@@ -93,9 +95,10 @@ print("t5 list extend():", timer5.timeit(1000))
 
 # 28s 向对列头部添加最慢，因为是由列表的数据存储方式决定。
 timer6 = Timer("t6()", "from __main__ import t6")
-print("t6 list insert():", timer6.timeit(1000))
+print("t6 list insert():", timer6.timeit(1000))   # 13.399
 
 # list = list + [i]直接添加元素   # 最慢，177s
 timer7 = Timer("t7()", "from __main__ import t7")
-print("t7 list = list + [i]:", timer7.timeit(1000))
+print("t7 list = list + [i]:", timer7.timeit(1000))  # 69.37
 
+# 向list头部添加比向尾部添加慢得多

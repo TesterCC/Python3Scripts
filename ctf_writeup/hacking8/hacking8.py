@@ -14,7 +14,7 @@ ref: https://www.bilibili.com/video/BV1u5411J7Th
 穷举即可
 # Q4: in hacking8_v2.py
 """
-import math_demo
+import math
 import time
 
 x = 12345678910
@@ -63,7 +63,7 @@ option = ['+','-','*','/']
 
 eq = '1%s2%s3%s4%s5%s6%s7%s8%s9'
 
-try_counts = math_demo.pow(4, 8)
+try_counts = math.pow(4, 8)
 
 st = time.time()
 for i in range(0, int(try_counts)):

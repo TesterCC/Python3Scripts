@@ -11,6 +11,8 @@ __time__ = '18/1/22 17:41'
      
 Python List pop()方法
 函数用于移除列表中的一个元素（默认最后一个元素），并且返回该元素的值。
+
+ref: https://www.bilibili.com/video/BV1p441167Wc?p=6
 """
 
 from timeit import Timer

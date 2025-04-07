@@ -1,0 +1,40 @@
+使用Cython将 Python 代码编译为 C 扩展模块
+
+Cython是一个将 Python 代码转换为 C 代码并编译成 Python 扩展模块的工具，能提高代码的执行效率。
+
+pip install Cython
+pip install setuptools
+
+1.编写 Cython 代码：创建一个.pyx文件, 如：print_module.pyx
+2.编写setup.py文件：用于配置编译信息，示例如下：
+
+# setup.py
+from setuptools import setup
+from Cython.Build import cythonize
+
+setup(
+    name='print_module',
+    ext_modules=cythonize('print_module.pyx'),
+)
+
+3.编译代码：在项目根目录下执行以下命令进行编译：
+python3 setup.py --inplace
+
+这将生成一个.so（在 Linux 系统上）或.pyd（在 Windows 系统上）文件。
+
+还会生成print_module.c文件，so或pyd文件在build目录下
+
+macos下是：print_module.cpython-313-darwin.so
+复制更名为：print_module.so
+
+使用编译后的模块：在 Python 代码中直接import使用：
+
+import print_module
+
+result = print_module.add_numbers(4, 6)
+print(result)   # 10
+
+r2 = print_module.print_hello("abcdef")
+print(r2)       # Hello abcdef by Python3
+
+print(print_module.NAME)  # CUSTOM MODULE

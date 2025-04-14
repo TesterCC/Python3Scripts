@@ -12,6 +12,15 @@ http://blog.csdn.net/mrlevo520/article/details/77829204
 1.先从数列中取出一个数作为基准数。
 2.分区过程，将比这个数大的数全放到它的右边，小于或等于它的数全放到它的左边。
 3.再对左右区间重复第二步，直到各区间只有一个数。
+
+时间复杂度：
+最坏时间复杂度：O(N^2)
+平均时间复杂度：O(nlogn)
+
+不稳定排序（选择排序也是不稳定的）
+
+空间复杂度：
+O(logn)
 """
 
 # 快排 分片的思想+递归的思想，这是取了第一个array[0]为基准值
@@ -22,7 +31,7 @@ def quick_sort(array):
     if len(array) < 2:
         return array
     else:
-        pivot = array[0]     # 取第一个列表元素为基准值
+        pivot = array[0]     # 取第一个列表元素为基准值，也可以取array[-1]最后一个，但范围对应要改成：array[:-1]
         less = [i for i in array[1:] if i < pivot]
         greater = [j for j in array[1:] if j >= pivot]   # 不考虑等于情况的话 List4有bug
         return quick_sort(less) + [pivot] + quick_sort(greater)     # [pivot] 否则拼合报错

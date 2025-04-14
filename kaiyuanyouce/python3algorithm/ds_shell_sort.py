@@ -33,10 +33,10 @@ def timelog(func):
     def wrappedfunc(*args, **kwargs):
         print("%s was called..." % func.__name__)
         start_time = time.time()  # current time
-        re = func(*args, **kwargs)
+        ret = func(*args, **kwargs)
         end_time = time.time()    # end time
         print("run times: %f seconds" % (end_time - start_time))
-        return re
+        return ret
     return wrappedfunc
 
 
@@ -100,6 +100,7 @@ if __name__ == '__main__':
 
     # 打印排序结果
     print("排序完成的结果：")
+    # fixme 结果好像有点问题
     print(sorted_data)
 
 

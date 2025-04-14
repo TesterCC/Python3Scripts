@@ -3,6 +3,7 @@
 # __author__ = 'TesterCC'
 # __time__   = '17/9/29 18:50'
 
+from typing import List
 '''
 https://leetcode.com/problems/two-sum/description/
 1. Two Sum
@@ -20,20 +21,21 @@ return [0, 1].
 一个数组里面找两个数加和为指定数。注意要求返回的是数字所在的index。另外要注意每个数只能用一次。
 
 So:这道题的解题思路很简单，利用python中的字典记录记录下每个元素出现的位置，也就是其他语言中的哈希表。
+
+# 基本解法，暴力法，不优雅，推荐1_two_sum2.py的hash表解法
 '''
 
-from typing import List
 
-class Solution(object):
+class Solution:
+    # time complexity: O(N^2)
+    # space complexity: O(1)
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        hashtable = dict()
-        for i,x in enumerate(nums):
-            if target - x in hashtable:
-                return [hashtable[target-x], i]  # 返回的是对应数字的索引
-            hashtable[x]=i
-            # hashtable[nums[i]]=i # 也可以
+        n = len(nums)
+        for i in range(n):
+            for j in range(i+1, n):
+                if nums[i] + nums[j] == target:
+                    return [i,j]
         return []
-
 
 
 if __name__ == '__main__':

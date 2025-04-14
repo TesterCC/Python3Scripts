@@ -18,16 +18,16 @@ https://zh.wikipedia.org/wiki/冒泡排序#Python
 """
 
 
-def bubble_sort(relist):
-    len_list = len(relist)
+def bubble_sort(nums):
+    len_list = len(nums)
     if len_list <= 1:
-        return relist
+        return nums
     else:
         for i in range(len_list-1, 0, -1):   # 降序叙排列,从大到小
             for j in range(i):
-                if relist[j] > relist[j+1]:         # 如果第一个比第二个大（正序）
-                    relist[j], relist[j+1] = relist[j+1], relist[j]       # 就交换他们两个的位置
-        return relist
+                if nums[j] > nums[j+1]:         # 如果第一个比第二个大（正序）
+                    nums[j], nums[j+1] = nums[j+1], nums[j]       # 就交换他们两个的位置
+        return nums
 
 
 if __name__ == '__main__':

@@ -31,27 +31,27 @@ def generator():
     return random_data
 
 
-def insert_sort(data_list):
+def insert_sort(arr):
     """
     插入排序
-    :param data_list:
+    :param arr:
     """
     # 序列长度
-    length = len(data_list)
+    n = len(arr)
 
-    # 当前需要排序的元素(data_list[i])，跟已经排序好的最后一个元素比较(data_list[i-1]==data_list[j])
-    for i in range(1, length):
-        key = data_list[i]    # 当前需要排序的元素
+    # 当前需要排序的元素(arr[i])，跟已经排序好的最后一个元素比较(arr[i-1]==arr[j])
+    for i in range(1, n):
+        key = arr[i]    # 当前需要排序的元素
         j = i - 1
         while j >= 0:
             # 比较，进行插入排序
-            if data_list[j] > key:
-                data_list[j+1] = data_list[j]
-                data_list[j] = key
+            if arr[j] > key:
+                arr[j+1] = arr[j]
+                arr[j] = key
             # j = j-1
             j -= 1
 
-    return data_list
+    return arr
 
 
 if __name__ == '__main__':

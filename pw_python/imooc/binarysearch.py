@@ -24,7 +24,7 @@ def binary_search(array, target):
     return -1
 
 
-def test():
+def test_binary_search():
     """
     如何设计测试用例: (等价类划分)
     - 正常值功能测试

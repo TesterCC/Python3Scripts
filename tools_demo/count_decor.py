@@ -12,10 +12,10 @@ Python2 Python3通用
 
 
 def count_runtime(func):
-    def fi(*args, **kwargs):
+    def fn(*args, **kwargs):
         s = time.time()
         res = func(*args, **kwargs)
         print('[+]>>>>>>> RUN TIME: <%s> : %s' % (func.__name__, time.time() - s))
         return res
 
-    return fi
+    return fn

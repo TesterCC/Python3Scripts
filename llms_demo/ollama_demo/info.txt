@@ -1,0 +1,27 @@
+git repo:
+https://github.com/ollama/ollama
+
+official website:
+https://ollama.com/
+
+# install ollama python lib
+pip install ollama
+
+ollama simple demo from chatgpt
+ollama python lib demo from gemini advanced 2.5 pro
+
+# suggestion
+
+- 使用 ollama Python 库是首选，因为它封装了 API 调用的细节，代码更简洁，更易于维护，并且能更好地处理流式响应和错误。
+- 如果由于某些原因不能使用该库，或者需要进行非常底层的 HTTP 定制，可以使用 requests 库。
+- 始终进行错误处理，以应对网络问题、API 错误或模型未找到等情况。
+- 对于需要上下文的对话，请使用聊天 (ollama.chat 或 /api/chat 端点) 并维护消息历史记录。
+
+
+# ref
+
+- 查阅 Ollama 的官方文档以获取最新的 API 端点和功能信息：
+https://github.com/ollama/ollama/blob/main/docs/api.md
+
+- 查看 ollama Python库的文档：
+https://github.com/ollama/ollama-python

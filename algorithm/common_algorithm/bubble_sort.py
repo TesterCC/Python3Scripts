@@ -38,7 +38,7 @@ def bubble_sort(nums):
         for i in range(len_list-1):
             # i：是外层循环的计数器，代表当前正在进行第几轮排序。每一轮排序结束后，就会有一个元素被排到正确的位置。
             for j in range(len_list-i-1):    # j为列表下标，每轮剩下的最后一个元素必然是最小的
-                if nums[j] > nums[j+1]:         # 如果第一个比第二个大（正序，升序）
+                if nums[j] > nums[j+1]:         # 如果第一个比第二个大（正序，升序）; 用>升序，用<降序.这里之所以 n-1 还需要 减去 i 是因为每一轮冒泡最大的元素都会冒泡到最后，无需再比较
                     nums[j], nums[j+1] = nums[j+1], nums[j]       # 就交换他们两个的位置
         return nums
 

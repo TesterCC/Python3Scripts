@@ -1,0 +1,5 @@
+git repo:
+https://github.com/ollama/ollama
+
+official website:
+https://ollama.com/

@@ -1,0 +1,13 @@
+{
+  "version": "1.123.0",
+  "results": [],
+  "errors": [],
+  "paths": {
+    "scanned": [
+      "/opt/static_code_checker/sample1/01_command_injection.php",
+      "/opt/static_code_checker/sample1/02_information_disclosure.php"
+    ],
+    "skipped": []
+  },
+  "skipped_rules": []
+}

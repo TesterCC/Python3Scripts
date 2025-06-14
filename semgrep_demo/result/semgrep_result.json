@@ -1,0 +1,1921 @@
+{
+  "version": "1.123.0",
+  "results": [
+    {
+      "check_id": "semgrep-rules0.lang.security.injection.tainted-exec",
+      "path": "/opt/static_code_checker/sample0/01_command_injection.php",
+      "start": {
+        "line": 3,
+        "col": 1,
+        "offset": 36
+      },
+      "end": {
+        "line": 3,
+        "col": 23,
+        "offset": 58
+      },
+      "extra": {
+        "message": "User input is passed to a function that executes a shell command. This can lead to remote code execution.",
+        "metadata": {
+          "cwe": [
+            "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+          ],
+          "category": "security",
+          "technology": [
+            "php"
+          ],
+          "owasp": [
+            "A03:2021 - Injection"
+          ],
+          "references": [
+            "https://owasp.org/Top10/A03_2021-Injection"
+          ],
+          "subcategory": [
+            "vuln"
+          ],
+          "impact": "HIGH",
+          "likelihood": "MEDIUM",
+          "confidence": "MEDIUM"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "semgrep-rules0.lang.security.tainted-exec",
+      "path": "/opt/static_code_checker/sample0/01_command_injection.php",
+      "start": {
+        "line": 3,
+        "col": 1,
+        "offset": 36
+      },
+      "end": {
+        "line": 3,
+        "col": 23,
+        "offset": 58
+      },
+      "extra": {
+        "message": "Executing non-constant commands. This can lead to command injection. You should use `escapeshellarg()` when using command.",
+        "metadata": {
+          "cwe": [
+            "CWE-94: Improper Control of Generation of Code ('Code Injection')"
+          ],
+          "references": [
+            "https://www.stackhawk.com/blog/php-command-injection/",
+            "https://brightsec.com/blog/code-injection-php/",
+            "https://www.acunetix.com/websitesecurity/php-security-2/"
+          ],
+          "category": "security",
+          "technology": [
+            "php"
+          ],
+          "owasp": [
+            "A03:2021 - Injection"
+          ],
+          "cwe2022-top25": true,
+          "subcategory": [
+            "vuln"
+          ],
+          "likelihood": "HIGH",
+          "impact": "HIGH",
+          "confidence": "MEDIUM"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "semgrep-rules0.lang.security.exec-use",
+      "path": "/opt/static_code_checker/sample0/01_command_injection.php",
+      "start": {
+        "line": 3,
+        "col": 1,
+        "offset": 36
+      },
+      "end": {
+        "line": 3,
+        "col": 24,
+        "offset": 59
+      },
+      "extra": {
+        "message": "Executing non-constant commands. This can lead to command injection.",
+        "metadata": {
+          "cwe": [
+            "CWE-94: Improper Control of Generation of Code ('Code Injection')"
+          ],
+          "references": [
+            "https://github.com/FloeDesignTechnologies/phpcs-security-audit/blob/master/Security/Sniffs/BadFunctions/SystemExecFunctionsSniff.php"
+          ],
+          "category": "security",
+          "technology": [
+            "php"
+          ],
+          "owasp": [
+            "A03:2021 - Injection"
+          ],
+          "cwe2022-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "HIGH",
+          "confidence": "LOW"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "semgrep-rules0.lang.security.phpinfo-use",
+      "path": "/opt/static_code_checker/sample0/02_information_disclosure.php",
+      "start": {
+        "line": 3,
+        "col": 1,
+        "offset": 39
+      },
+      "end": {
+        "line": 3,
+        "col": 11,
+        "offset": 49
+      },
+      "extra": {
+        "message": "The 'phpinfo' function may reveal sensitive information about your environment.",
+        "metadata": {
+          "cwe": [
+            "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor"
+          ],
+          "references": [
+            "https://www.php.net/manual/en/function.phpinfo",
+            "https://github.com/FloeDesignTechnologies/phpcs-security-audit/blob/master/Security/Sniffs/BadFunctions/PhpinfosSniff.php"
+          ],
+          "category": "security",
+          "technology": [
+            "php"
+          ],
+          "owasp": [
+            "A01:2021 - Broken Access Control"
+          ],
+          "cwe2021-top25": true,
+          "subcategory": [
+            "vuln"
+          ],
+          "likelihood": "MEDIUM",
+          "impact": "MEDIUM",
+          "confidence": "MEDIUM"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "semgrep-rules0.lang.security.injection.echoed-request",
+      "path": "/opt/static_code_checker/sample0/03_xss.php",
+      "start": {
+        "line": 4,
+        "col": 1,
+        "offset": 50
+      },
+      "end": {
+        "line": 4,
+        "col": 30,
+        "offset": 79
+      },
+      "extra": {
+        "message": "`Echo`ing user input risks cross-site scripting vulnerability. You should use `htmlentities()` when showing data to users.",
+        "fix": "echo htmlentities(\"<p>\" . $input . \"</p>\");",
+        "metadata": {
+          "technology": [
+            "php"
+          ],
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection"
+          ],
+          "category": "security",
+          "references": [
+            "https://www.php.net/manual/en/function.htmlentities.php",
+            "https://www.php.net/manual/en/reserved.variables.request.php",
+            "https://www.php.net/manual/en/reserved.variables.post.php",
+            "https://www.php.net/manual/en/reserved.variables.get.php",
+            "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "vuln"
+          ],
+          "likelihood": "MEDIUM",
+          "impact": "MEDIUM",
+          "confidence": "MEDIUM"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "semgrep-rules0.lang.security.php-ssrf",
+      "path": "/opt/static_code_checker/sample0/04_ssrf.php",
+      "start": {
+        "line": 3,
+        "col": 1,
+        "offset": 21
+      },
+      "end": {
+        "line": 4,
+        "col": 37,
+        "offset": 78
+      },
+      "extra": {
+        "message": "The web server receives a URL or similar request from an upstream component and retrieves the contents of this URL, but it does not sufficiently ensure that the request is being sent to the expected destination. Dangerous function file_get_contents with payload $_GET['url']",
+        "metadata": {
+          "references": [
+            "https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html"
+          ],
+          "license": "Commons Clause License Condition v1.0[LGPL-2.1-only]",
+          "cwe": [
+            "CWE-918: Server-Side Request Forgery (SSRF)"
+          ],
+          "category": "security",
+          "technology": [
+            "php"
+          ],
+          "owasp": [
+            "A10:2021 - Server-Side Request Forgery (SSRF)"
+          ],
+          "cwe2022-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "HIGH",
+          "confidence": "LOW"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "semgrep-rules0.lang.security.injection.tainted-filename",
+      "path": "/opt/static_code_checker/sample0/04_ssrf.php",
+      "start": {
+        "line": 4,
+        "col": 31,
+        "offset": 72
+      },
+      "end": {
+        "line": 4,
+        "col": 35,
+        "offset": 76
+      },
+      "extra": {
+        "message": "File name based on user input risks server-side request forgery.",
+        "metadata": {
+          "technology": [
+            "php"
+          ],
+          "category": "security",
+          "cwe": [
+            "CWE-918: Server-Side Request Forgery (SSRF)"
+          ],
+          "owasp": [
+            "A10:2021 - Server-Side Request Forgery (SSRF)"
+          ],
+          "references": [
+            "https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "vuln"
+          ],
+          "impact": "MEDIUM",
+          "likelihood": "MEDIUM",
+          "confidence": "MEDIUM"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "semgrep-rules0.lang.security.injection.echoed-request",
+      "path": "/opt/static_code_checker/sample0/04_ssrf.php",
+      "start": {
+        "line": 5,
+        "col": 1,
+        "offset": 79
+      },
+      "end": {
+        "line": 5,
+        "col": 16,
+        "offset": 94
+      },
+      "extra": {
+        "message": "`Echo`ing user input risks cross-site scripting vulnerability. You should use `htmlentities()` when showing data to users.",
+        "fix": "echo htmlentities($response);",
+        "metadata": {
+          "technology": [
+            "php"
+          ],
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection"
+          ],
+          "category": "security",
+          "references": [
+            "https://www.php.net/manual/en/function.htmlentities.php",
+            "https://www.php.net/manual/en/reserved.variables.request.php",
+            "https://www.php.net/manual/en/reserved.variables.post.php",
+            "https://www.php.net/manual/en/reserved.variables.get.php",
+            "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "vuln"
+          ],
+          "likelihood": "MEDIUM",
+          "impact": "MEDIUM",
+          "confidence": "MEDIUM"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "semgrep-rules0.lang.security.exec-use",
+      "path": "/opt/static_code_checker/sample0/05_sql_injection.php",
+      "start": {
+        "line": 200,
+        "col": 9,
+        "offset": 3058
+      },
+      "end": {
+        "line": 200,
+        "col": 77,
+        "offset": 3126
+      },
+      "extra": {
+        "message": "Executing non-constant commands. This can lead to command injection.",
+        "metadata": {
+          "cwe": [
+            "CWE-94: Improper Control of Generation of Code ('Code Injection')"
+          ],
+          "references": [
+            "https://github.com/FloeDesignTechnologies/phpcs-security-audit/blob/master/Security/Sniffs/BadFunctions/SystemExecFunctionsSniff.php"
+          ],
+          "category": "security",
+          "technology": [
+            "php"
+          ],
+          "owasp": [
+            "A03:2021 - Injection"
+          ],
+          "cwe2022-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "HIGH",
+          "confidence": "LOW"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "semgrep-rules0.lang.security.exec-use",
+      "path": "/opt/static_code_checker/sample0/05_sql_injection.php",
+      "start": {
+        "line": 212,
+        "col": 9,
+        "offset": 3250
+      },
+      "end": {
+        "line": 212,
+        "col": 74,
+        "offset": 3315
+      },
+      "extra": {
+        "message": "Executing non-constant commands. This can lead to command injection.",
+        "metadata": {
+          "cwe": [
+            "CWE-94: Improper Control of Generation of Code ('Code Injection')"
+          ],
+          "references": [
+            "https://github.com/FloeDesignTechnologies/phpcs-security-audit/blob/master/Security/Sniffs/BadFunctions/SystemExecFunctionsSniff.php"
+          ],
+          "category": "security",
+          "technology": [
+            "php"
+          ],
+          "owasp": [
+            "A03:2021 - Injection"
+          ],
+          "cwe2022-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "HIGH",
+          "confidence": "LOW"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "semgrep-rules0.lang.security.exec-use",
+      "path": "/opt/static_code_checker/sample0/05_sql_injection.php",
+      "start": {
+        "line": 237,
+        "col": 9,
+        "offset": 3661
+      },
+      "end": {
+        "line": 237,
+        "col": 83,
+        "offset": 3735
+      },
+      "extra": {
+        "message": "Executing non-constant commands. This can lead to command injection.",
+        "metadata": {
+          "cwe": [
+            "CWE-94: Improper Control of Generation of Code ('Code Injection')"
+          ],
+          "references": [
+            "https://github.com/FloeDesignTechnologies/phpcs-security-audit/blob/master/Security/Sniffs/BadFunctions/SystemExecFunctionsSniff.php"
+          ],
+          "category": "security",
+          "technology": [
+            "php"
+          ],
+          "owasp": [
+            "A03:2021 - Injection"
+          ],
+          "cwe2022-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "HIGH",
+          "confidence": "LOW"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "semgrep-rules0.lang.security.ldap-bind-without-password",
+      "path": "/opt/static_code_checker/sample0/06_ldap_injection.php",
+      "start": {
+        "line": 6,
+        "col": 13,
+        "offset": 95
+      },
+      "end": {
+        "line": 6,
+        "col": 33,
+        "offset": 115
+      },
+      "extra": {
+        "message": "Detected anonymous LDAP bind. This permits anonymous users to execute LDAP statements. Consider enforcing authentication for LDAP.",
+        "metadata": {
+          "references": [
+            "https://www.php.net/manual/en/function.ldap-bind.php"
+          ],
+          "cwe": [
+            "CWE-287: Improper Authentication"
+          ],
+          "owasp": [
+            "A02:2017 - Broken Authentication",
+            "A07:2021 - Identification and Authentication Failures"
+          ],
+          "category": "security",
+          "technology": [
+            "php"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "LOW",
+          "confidence": "LOW"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "semgrep-rules0.lang.security.ldap-bind-without-password",
+      "path": "/opt/static_code_checker/sample0/06_ldap_injection.php",
+      "start": {
+        "line": 9,
+        "col": 1,
+        "offset": 160
+      },
+      "end": {
+        "line": 9,
+        "col": 33,
+        "offset": 192
+      },
+      "extra": {
+        "message": "Detected anonymous LDAP bind. This permits anonymous users to execute LDAP statements. Consider enforcing authentication for LDAP.",
+        "metadata": {
+          "references": [
+            "https://www.php.net/manual/en/function.ldap-bind.php"
+          ],
+          "cwe": [
+            "CWE-287: Improper Authentication"
+          ],
+          "owasp": [
+            "A02:2017 - Broken Authentication",
+            "A07:2021 - Identification and Authentication Failures"
+          ],
+          "category": "security",
+          "technology": [
+            "php"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "LOW",
+          "confidence": "LOW"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "semgrep-rules0.lang.security.ldap-bind-without-password",
+      "path": "/opt/static_code_checker/sample0/06_ldap_injection.php",
+      "start": {
+        "line": 12,
+        "col": 1,
+        "offset": 233
+      },
+      "end": {
+        "line": 12,
+        "col": 33,
+        "offset": 265
+      },
+      "extra": {
+        "message": "Detected anonymous LDAP bind. This permits anonymous users to execute LDAP statements. Consider enforcing authentication for LDAP.",
+        "metadata": {
+          "references": [
+            "https://www.php.net/manual/en/function.ldap-bind.php"
+          ],
+          "cwe": [
+            "CWE-287: Improper Authentication"
+          ],
+          "owasp": [
+            "A02:2017 - Broken Authentication",
+            "A07:2021 - Identification and Authentication Failures"
+          ],
+          "category": "security",
+          "technology": [
+            "php"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "LOW",
+          "confidence": "LOW"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "semgrep-rules0.lang.security.ldap-bind-without-password",
+      "path": "/opt/static_code_checker/sample0/06_ldap_injection.php",
+      "start": {
+        "line": 15,
+        "col": 1,
+        "offset": 306
+      },
+      "end": {
+        "line": 15,
+        "col": 37,
+        "offset": 342
+      },
+      "extra": {
+        "message": "Detected anonymous LDAP bind. This permits anonymous users to execute LDAP statements. Consider enforcing authentication for LDAP.",
+        "metadata": {
+          "references": [
+            "https://www.php.net/manual/en/function.ldap-bind.php"
+          ],
+          "cwe": [
+            "CWE-287: Improper Authentication"
+          ],
+          "owasp": [
+            "A02:2017 - Broken Authentication",
+            "A07:2021 - Identification and Authentication Failures"
+          ],
+          "category": "security",
+          "technology": [
+            "php"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "LOW",
+          "confidence": "LOW"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "semgrep-rules0.lang.security.ldap-bind-without-password",
+      "path": "/opt/static_code_checker/sample0/06_ldap_injection.php",
+      "start": {
+        "line": 20,
+        "col": 1,
+        "offset": 401
+      },
+      "end": {
+        "line": 20,
+        "col": 29,
+        "offset": 429
+      },
+      "extra": {
+        "message": "Detected anonymous LDAP bind. This permits anonymous users to execute LDAP statements. Consider enforcing authentication for LDAP.",
+        "metadata": {
+          "references": [
+            "https://www.php.net/manual/en/function.ldap-bind.php"
+          ],
+          "cwe": [
+            "CWE-287: Improper Authentication"
+          ],
+          "owasp": [
+            "A02:2017 - Broken Authentication",
+            "A07:2021 - Identification and Authentication Failures"
+          ],
+          "category": "security",
+          "technology": [
+            "php"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "LOW",
+          "confidence": "LOW"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "semgrep-rules0.lang.security.ldap-bind-without-password",
+      "path": "/opt/static_code_checker/sample0/06_ldap_injection.php",
+      "start": {
+        "line": 25,
+        "col": 1,
+        "offset": 496
+      },
+      "end": {
+        "line": 25,
+        "col": 29,
+        "offset": 524
+      },
+      "extra": {
+        "message": "Detected anonymous LDAP bind. This permits anonymous users to execute LDAP statements. Consider enforcing authentication for LDAP.",
+        "metadata": {
+          "references": [
+            "https://www.php.net/manual/en/function.ldap-bind.php"
+          ],
+          "cwe": [
+            "CWE-287: Improper Authentication"
+          ],
+          "owasp": [
+            "A02:2017 - Broken Authentication",
+            "A07:2021 - Identification and Authentication Failures"
+          ],
+          "category": "security",
+          "technology": [
+            "php"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "LOW",
+          "confidence": "LOW"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    }
+  ],
+  "errors": [],
+  "paths": {
+    "scanned": [
+      "/opt/static_code_checker/sample0/01_command_injection.php",
+      "/opt/static_code_checker/sample0/02_information_disclosure.php",
+      "/opt/static_code_checker/sample0/03_xss.php",
+      "/opt/static_code_checker/sample0/04_ssrf.php",
+      "/opt/static_code_checker/sample0/05_sql_injection.php",
+      "/opt/static_code_checker/sample0/06_ldap_injection.php",
+      "/opt/static_code_checker/sample0/07_xml_injection.php",
+      "/opt/static_code_checker/sample0/08_hardcoded_password.php"
+    ]
+  },
+  "time": {
+    "rules": [
+      "semgrep-rules0.doctrine.security.audit.doctrine-orm-dangerous-query",
+      "semgrep-rules0.doctrine.security.audit.doctrine-dbal-dangerous-query",
+      "semgrep-rules0.symfony.security.audit.symfony-non-literal-redirect",
+      "semgrep-rules0.symfony.security.audit.symfony-csrf-protection-disabled",
+      "semgrep-rules0.symfony.security.audit.symfony-permissive-cors",
+      "semgrep-rules0.wordpress-plugins.security.audit.wp-ajax-no-auth-and-auth-hooks-audit",
+      "semgrep-rules0.wordpress-plugins.security.audit.wp-csrf-audit",
+      "semgrep-rules0.wordpress-plugins.security.audit.wp-sql-injection-audit",
+      "semgrep-rules0.wordpress-plugins.security.audit.wp-command-execution-audit",
+      "semgrep-rules0.wordpress-plugins.security.audit.wp-authorisation-checks-audit",
+      "semgrep-rules0.wordpress-plugins.security.audit.wp-file-manipulation-audit",
+      "semgrep-rules0.wordpress-plugins.security.audit.wp-php-object-injection-audit",
+      "semgrep-rules0.wordpress-plugins.security.audit.wp-open-redirect-audit",
+      "semgrep-rules0.wordpress-plugins.security.audit.wp-code-execution-audit",
+      "semgrep-rules0.wordpress-plugins.security.audit.wp-file-download-audit",
+      "semgrep-rules0.wordpress-plugins.security.audit.wp-file-inclusion-audit",
+      "semgrep-rules0.laravel.security.laravel-sql-injection",
+      "semgrep-rules0.laravel.security.laravel-cookie-http-only",
+      "semgrep-rules0.laravel.security.laravel-cookie-null-domain",
+      "semgrep-rules0.laravel.security.laravel-cookie-same-site",
+      "semgrep-rules0.laravel.security.laravel-unsafe-validator",
+      "semgrep-rules0.laravel.security.laravel-dangerous-model-construction",
+      "semgrep-rules0.laravel.security.laravel-active-debug-code",
+      "semgrep-rules0.laravel.security.laravel-blade-form-missing-csrf",
+      "semgrep-rules0.laravel.security.laravel-cookie-secure-set",
+      "semgrep-rules0.laravel.security.laravel-api-route-sql-injection",
+      "semgrep-rules0.laravel.security.laravel-cookie-long-timeout",
+      "semgrep-rules0.lang.security.curl-ssl-verifypeer-off",
+      "semgrep-rules0.lang.security.php-ssrf",
+      "semgrep-rules0.lang.security.mb-ereg-replace-eval",
+      "semgrep-rules0.lang.security.base-convert-loses-precision",
+      "semgrep-rules0.lang.security.backticks-use",
+      "semgrep-rules0.lang.security.exec-use",
+      "semgrep-rules0.lang.security.redirect-to-request-uri",
+      "semgrep-rules0.lang.security.unlink-use",
+      "semgrep-rules0.lang.security.extract-user-data",
+      "semgrep-rules0.lang.security.mcrypt-use",
+      "semgrep-rules0.lang.security.tainted-exec",
+      "semgrep-rules0.lang.security.weak-crypto",
+      "semgrep-rules0.lang.security.php-permissive-cors",
+      "semgrep-rules0.lang.security.file-inclusion",
+      "semgrep-rules0.lang.security.phpinfo-use",
+      "semgrep-rules0.lang.security.md5-loose-equality",
+      "semgrep-rules0.lang.security.ftp-use",
+      "semgrep-rules0.lang.security.eval-use",
+      "semgrep-rules0.lang.security.ldap-bind-without-password",
+      "semgrep-rules0.lang.security.assert-use",
+      "semgrep-rules0.lang.security.unserialize-use",
+      "semgrep-rules0.lang.security.openssl-cbc-static-iv",
+      "semgrep-rules0.lang.security.md5-used-as-password",
+      "semgrep-rules0.lang.security.injection.tainted-sql-string",
+      "semgrep-rules0.lang.security.injection.tainted-callable",
+      "semgrep-rules0.lang.security.injection.tainted-url-host",
+      "semgrep-rules0.lang.security.injection.echoed-request",
+      "semgrep-rules0.lang.security.injection.tainted-exec",
+      "semgrep-rules0.lang.security.injection.tainted-session",
+      "semgrep-rules0.lang.security.injection.tainted-object-instantiation",
+      "semgrep-rules0.lang.security.injection.tainted-filename",
+      "semgrep-rules0.lang.security.injection.printed-request",
+      "semgrep-rules0.lang.security.audit.openssl-decrypt-validate",
+      "semgrep-rules0.lang.security.audit.assert-use-audit"
+    ],
+    "rules_parse_time": 0.07072210311889648,
+    "profiling_times": {
+      "config_time": 8.609333038330078,
+      "core_time": 0.6749961376190186,
+      "ignores_time": 0.00020813941955566406,
+      "total_time": 9.284965038299561
+    },
+    "targets": [
+      {
+        "path": "/opt/static_code_checker/sample0/05_sql_injection.php",
+        "num_bytes": 4050,
+        "match_times": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.006078958511352539,
+          0.0,
+          0.0,
+          0.00026416778564453125,
+          0.00037407875061035156,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parse_times": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.013957977294921875,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "run_time": 0.051132917404174805
+      },
+      {
+        "path": "/opt/static_code_checker/sample0/08_hardcoded_password.php",
+        "num_bytes": 1770,
+        "match_times": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.00013899803161621094,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.003231048583984375,
+          0.0,
+          0.0,
+          8.916854858398438e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.00011491775512695312,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.00018596649169921875,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parse_times": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          9.5367431640625e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.1920928955078125e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.012511014938354492,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "run_time": 0.05205798149108887
+      },
+      {
+        "path": "/opt/static_code_checker/sample0/07_xml_injection.php",
+        "num_bytes": 1071,
+        "match_times": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0024101734161376953,
+          0.0,
+          0.0,
+          6.198883056640625e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.00030994415283203125,
+          0.0,
+          0.0,
+          0.00032401084899902344,
+          0.00041294097900390625,
+          0.0,
+          0.00040984153747558594,
+          0.00031113624572753906,
+          0.0003230571746826172,
+          0.0,
+          0.0
+        ],
+        "parse_times": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          9.5367431640625e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.024480819702148438,
+          0.0,
+          0.0
+        ],
+        "run_time": 0.08239603042602539
+      },
+      {
+        "path": "/opt/static_code_checker/sample0/06_ldap_injection.php",
+        "num_bytes": 776,
+        "match_times": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.005815982818603516,
+          0.0,
+          0.0,
+          5.5789947509765625e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.00028896331787109375,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parse_times": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.011455059051513672,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "run_time": 0.05480599403381348
+      },
+      {
+        "path": "/opt/static_code_checker/sample0/04_ssrf.php",
+        "num_bytes": 98,
+        "match_times": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0021820068359375,
+          0.0,
+          0.0,
+          3.695487976074219e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          7.605552673339844e-05,
+          0.0,
+          0.0,
+          9.393692016601562e-05,
+          7.605552673339844e-05,
+          0.0,
+          8.797645568847656e-05,
+          0.00014901161193847656,
+          7.987022399902344e-05,
+          0.0,
+          0.0
+        ],
+        "parse_times": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          9.5367431640625e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.1920928955078125e-06,
+          0.0,
+          0.010640144348144531,
+          0.0,
+          0.0
+        ],
+        "run_time": 0.03367304801940918
+      },
+      {
+        "path": "/opt/static_code_checker/sample0/03_xss.php",
+        "num_bytes": 83,
+        "match_times": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0023169517517089844,
+          0.0,
+          0.0,
+          3.4809112548828125e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          7.200241088867188e-05,
+          0.0,
+          0.0,
+          9.298324584960938e-05,
+          6.008148193359375e-05,
+          0.0,
+          6.008148193359375e-05,
+          0.0,
+          6.890296936035156e-05,
+          0.0,
+          0.0
+        ],
+        "parse_times": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          9.5367431640625e-07,
+          0.0,
+          9.5367431640625e-07,
+          0.0,
+          0.012696981430053711,
+          0.0,
+          0.0
+        ],
+        "run_time": 0.04359292984008789
+      },
+      {
+        "path": "/opt/static_code_checker/sample0/01_command_injection.php",
+        "num_bytes": 63,
+        "match_times": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0022940635681152344,
+          0.0,
+          0.0,
+          2.002716064453125e-05,
+          3.600120544433594e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          6.29425048828125e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.00015497207641601562,
+          0.0,
+          0.0,
+          5.2928924560546875e-05,
+          6.389617919921875e-05,
+          0.0,
+          5.1021575927734375e-05,
+          0.0,
+          6.508827209472656e-05,
+          0.0,
+          0.0
+        ],
+        "parse_times": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          9.5367431640625e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.01317596435546875,
+          0.0,
+          0.0
+        ],
+        "run_time": 0.0484621524810791
+      },
+      {
+        "path": "/opt/static_code_checker/sample0/02_information_disclosure.php",
+        "num_bytes": 53,
+        "match_times": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0032210350036621094,
+          0.0,
+          0.0,
+          4.291534423828125e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.193450927734375e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parse_times": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0067119598388671875,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "run_time": 0.019543886184692383
+      }
+    ],
+    "total_bytes": 7964,
+    "max_memory_bytes": 111275136
+  },
+  "skipped_rules": []
+}

@@ -6,6 +6,15 @@ import time
 
 scan_target = r"D:\ws_python\Python3Scripts\dev_demo\tempfile_demo\files"
 
+"""
+把tokei.toml写到 /root/.config 目录下可以全局生效。
+而且这样就不用担心 /root/.config/tokei.toml 干扰其它指定目录的文件检测了。
+
+ref:
+https://github.com/XAMPPRocky/tokei/issues/944
+"""
+
+
 # 在try块之前创建临时文件
 
 # with tempfile.NamedTemporaryFile(mode='w', suffix='.toml', dir=scan_target) as f:

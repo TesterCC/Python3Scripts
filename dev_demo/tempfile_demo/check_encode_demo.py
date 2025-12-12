@@ -10,6 +10,9 @@ ref: 有其它方案值得学习
 https://yuanbao.tencent.com/chat/naQivTmsDa/1cf96c2b-69a8-41d9-b50c-337fd6985388
 
 pip install chardet -i https://mirrors.aliyun.com/pypi/simple/
+
+今日解析文件编码处理 todo
+https://yuanbao.tencent.com/chat/naQivTmsDa/e1b1c164-c97f-4340-90b1-0b6634c31d5a
 """
 
 import chardet
@@ -31,6 +34,7 @@ def read_file_smart(file_path, default_encoding='utf-8'):
         if encoding == 'UTF-8-SIG':
             # 这样确实可以将GBK格式的python文件中的中文注释还原出来
             return raw_data.decode('utf-8-sig').encode('gbk', errors='ignore').decode('utf-8', errors='ignore')
+            # return raw_data.decode('utf-8-sig').encode('utf-8-sig', errors='ignore').decode('utf-8', errors='ignore')
         else:
             return raw_data.decode(encoding)
     except UnicodeDecodeError:

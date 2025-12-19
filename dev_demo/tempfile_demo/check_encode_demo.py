@@ -28,7 +28,7 @@ def read_file_smart(file_path, default_encoding='utf-8'):
     detected = chardet.detect(raw_data)
     encoding = detected['encoding'] if detected['confidence'] > 0.7 else default_encoding
 
-    print(f"encoding: {encoding}")
+    print(f"detect encoding: {encoding}")   # debug
 
     try:
         if encoding == 'UTF-8-SIG':
@@ -49,11 +49,20 @@ def read_file_smart(file_path, default_encoding='utf-8'):
 
 
 # 使用示例
-content = read_file_smart("files/gbk_demo/ssh_burst.py")
-print(content)   # encoding: UTF-8-SIG
+# content = read_file_smart("files/gbk_demo/ssh_burst.py")
+# print(content)   # encoding: UTF-8-SIG
 
 # content2 = read_file_smart("files/utf_demo/ssh_burst.py")
 # print(content2)  # encoding: utf-8
+
+# content3 = read_file_smart("files/gb18030_demo/ssh_burst.py")
+# print(content3)  # encoding: GB2312
+
+# 这种格式semgrep检测貌似有问题，待验证
+# content4 = read_file_smart("files/utf16_demo/ssh_burst.py")
+# print(content4)  # encoding: UTF-16  # utf16-be
+
+
 
 
 ## utf-8-sig处理方式

@@ -1,0 +1,832 @@
+{
+    "content": [
+        {
+            "id": "162819184936624128",
+            "name": "C/C++默认规则",
+            "code": "NUWA_CORE",
+            "language": "C/C++",
+            "checkerCount": 152,
+            "builtIn": true,
+            "tags": [
+                "核心规则"
+            ],
+            "toolType": "Nuwa",
+            "description": "C/C++质量缺陷规则集，主要包含内存安全、未初始化变量、空指针解引用、资源泄露、除零错误、逻辑错误、性能等代码检测规则",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "171201556627062784",
+            "name": "C/C++安全规则",
+            "code": "NUWA_SECURITY_CXX",
+            "language": "C/C++",
+            "checkerCount": 67,
+            "builtIn": true,
+            "tags": [
+                "核心规则"
+            ],
+            "toolType": "Nuwa",
+            "description": "C/C++安全漏洞规则集，主要包含注入攻击、命令执行、硬编码、格式字符串漏洞等安全相关代码检测规则",
+            "createdAt": "2024-07-19 19:41:51",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "162819184953401344",
+            "name": "C/C++扩展规则",
+            "code": "NUWA_CORE_EXT",
+            "language": "C/C++",
+            "checkerCount": 44,
+            "builtIn": true,
+            "tags": [
+                "核心规则"
+            ],
+            "toolType": "Nuwa",
+            "description": "C/C++扩展规则集，主要包含默认规则、安全规则以外的缺陷，包括死锁、竞态条件、魔数、不安全函数调用等扩展性代码检测规则",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "162819184705937408",
+            "name": "Java默认规则",
+            "code": "NUWA_CORE_JAVA",
+            "language": "Java",
+            "checkerCount": 363,
+            "builtIn": true,
+            "tags": [
+                "核心规则"
+            ],
+            "toolType": "Nuwa",
+            "description": "Java默认规则集，主要包含空指针解引用、资源泄露、安全漏洞等代码检测规则",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "220088264584077312",
+            "name": "Kotlin默认规则",
+            "code": "NUWA_CORE_KOTLIN",
+            "language": "Kotlin",
+            "checkerCount": 55,
+            "builtIn": true,
+            "tags": [
+                "核心规则"
+            ],
+            "toolType": "Nuwa",
+            "description": "Kotlin默认规则集",
+            "createdAt": "2024-12-01 17:20:11",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "220088264651186176",
+            "name": "Golang默认规则",
+            "code": "NUWA_CORE_GO",
+            "language": "Go",
+            "checkerCount": 37,
+            "builtIn": true,
+            "tags": [
+                "核心规则"
+            ],
+            "toolType": "Nuwa",
+            "description": "Go默认规则集",
+            "createdAt": "2024-12-01 17:20:11",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "264310471132319744",
+            "name": "C#默认规则",
+            "code": "NUWA_CORE_CSHARP",
+            "language": "C#",
+            "checkerCount": 413,
+            "builtIn": true,
+            "tags": [
+                "核心规则"
+            ],
+            "toolType": "Nuwa",
+            "description": "C#默认规则集",
+            "createdAt": "2025-04-02 18:03:26",
+            "updatedAt": "2025-08-08 14:09:23"
+        },
+        {
+            "id": "220088264667963392",
+            "name": "Python默认规则",
+            "code": "NUWA_CORE_PYTHON",
+            "language": "Python",
+            "checkerCount": 130,
+            "builtIn": true,
+            "tags": [
+                "核心规则"
+            ],
+            "toolType": "Nuwa",
+            "description": "Python默认规则集",
+            "createdAt": "2024-12-01 17:20:11",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "246182811441037312",
+            "name": "JavaScript默认规则",
+            "code": "NUWA_CORE_JAVASCRIPT",
+            "language": "Javascript",
+            "checkerCount": 155,
+            "builtIn": true,
+            "tags": [
+                "核心规则"
+            ],
+            "toolType": "Nuwa",
+            "description": "JavaScript默认规则集",
+            "createdAt": "2025-02-11 17:30:36",
+            "updatedAt": "2025-08-08 14:09:23"
+        },
+        {
+            "id": "246182811571060736",
+            "name": "TypeScript默认规则",
+            "code": "NUWA_CORE_TYPESCRIPT",
+            "language": "Typescript",
+            "checkerCount": 155,
+            "builtIn": true,
+            "tags": [
+                "核心规则"
+            ],
+            "toolType": "Nuwa",
+            "description": "TypeScript默认规则集",
+            "createdAt": "2025-02-11 17:30:36",
+            "updatedAt": "2025-08-08 14:09:24"
+        },
+        {
+            "id": "235576485552205824",
+            "name": "YAML编码规范",
+            "code": "NUWA_CORE_YAML",
+            "language": "YAML",
+            "checkerCount": 29,
+            "builtIn": true,
+            "tags": [
+                "核心规则"
+            ],
+            "toolType": "Nuwa",
+            "description": "YAML编码规范",
+            "createdAt": "2025-01-13 11:04:50",
+            "updatedAt": "2025-08-08 14:09:24"
+        },
+        {
+            "id": "245007857244835840",
+            "name": "XML编码规范",
+            "code": "NUWA_CORE_XML",
+            "language": "XML",
+            "checkerCount": 56,
+            "builtIn": true,
+            "tags": [
+                "核心规则"
+            ],
+            "toolType": "Nuwa",
+            "description": "XML编码规范",
+            "createdAt": "2025-02-08 11:41:45",
+            "updatedAt": "2025-08-08 14:09:24"
+        },
+        {
+            "id": "256388435798003712",
+            "name": "鸿蒙ArkTS编码规范",
+            "code": "NUWA_CORE_ARKTS",
+            "language": "ArkTS",
+            "checkerCount": 167,
+            "builtIn": true,
+            "tags": [
+                "核心规则"
+            ],
+            "toolType": "Nuwa",
+            "description": "鸿蒙ArkTS语言编码规范",
+            "createdAt": "2025-03-11 21:24:06",
+            "updatedAt": "2025-08-08 14:09:24"
+        },
+        {
+            "id": "305161784283914240",
+            "name": "阿里巴巴P3C-Java编码规范",
+            "code": "P3C_JAVA",
+            "language": "Java",
+            "checkerCount": 56,
+            "builtIn": true,
+            "tags": [
+                "P3C"
+            ],
+            "toolType": "PMD",
+            "description": "阿里巴巴P3C Java编码规范",
+            "createdAt": "2025-07-24 11:31:58",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "202989151685967872",
+            "name": "CWE Top 25安全漏洞-C/C++语言(2023)",
+            "code": "CWE_TOP_25_2023_CXX",
+            "language": "C/C++",
+            "checkerCount": 47,
+            "builtIn": true,
+            "tags": [
+                "CWE Top 25"
+            ],
+            "toolType": "Nuwa",
+            "description": "2023年最具威胁的25种安全漏洞",
+            "createdAt": "2024-10-15 12:54:25",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "202989151715328000",
+            "name": "CWE Top 25安全漏洞-Java语言(2023)",
+            "code": "CWE_TOP_25_2023_JAVA",
+            "language": "Java",
+            "checkerCount": 52,
+            "builtIn": true,
+            "tags": [
+                "CWE Top 25"
+            ],
+            "toolType": "Nuwa",
+            "description": "2023年最具威胁的25种安全漏洞",
+            "createdAt": "2024-10-15 12:54:25",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "202989151769853952",
+            "name": "OWASP十大常见漏洞-C/C++语言(2021)",
+            "code": "OWASP_TOP_10_2021_CXX",
+            "language": "C/C++",
+            "checkerCount": 22,
+            "builtIn": true,
+            "tags": [
+                "OWASP Top10"
+            ],
+            "toolType": "Nuwa",
+            "description": "2021年OWASP十大常见漏洞",
+            "createdAt": "2024-10-15 12:54:25",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "202989151799214080",
+            "name": "OWASP十大常见漏洞-Java语言(2021)",
+            "code": "OWASP_TOP_10_2021_JAVA",
+            "language": "Java",
+            "checkerCount": 110,
+            "builtIn": true,
+            "tags": [
+                "OWASP Top10"
+            ],
+            "toolType": "Nuwa",
+            "description": "2021年OWASP十大常见漏洞",
+            "createdAt": "2024-10-15 12:54:25",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "202989151727910912",
+            "name": "CWE-658 C语言缺陷库",
+            "code": "CWE_658_C",
+            "language": "C/C++",
+            "checkerCount": 100,
+            "builtIn": true,
+            "tags": [
+                "CWE缺陷视图"
+            ],
+            "toolType": "Nuwa",
+            "description": "CWE-658 C语言缺陷库",
+            "createdAt": "2024-10-15 12:54:25",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "202989151744688128",
+            "name": "CWE-659 C++语言缺陷库",
+            "code": "CWE_659_C_PLUS_PLUS",
+            "language": "C/C++",
+            "checkerCount": 151,
+            "builtIn": true,
+            "tags": [
+                "CWE缺陷视图"
+            ],
+            "toolType": "Nuwa",
+            "description": "CWE-659 C++语言缺陷库",
+            "createdAt": "2024-10-15 12:54:25",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "162819185020510208",
+            "name": "AUTOSAR C++14编码指南",
+            "code": "AUTOSAR CPP14",
+            "language": "C/C++",
+            "checkerCount": 328,
+            "builtIn": true,
+            "tags": [
+                "AUTOSAR编码规范"
+            ],
+            "toolType": "Nuwa",
+            "description": "AUTOSAR C++14规则集",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "162819184970178560",
+            "name": "MISRA C++2008编码规范",
+            "code": "MISRA CPP-2008",
+            "language": "C/C++",
+            "checkerCount": 193,
+            "builtIn": true,
+            "tags": [
+                "MISRA编码规范"
+            ],
+            "toolType": "Nuwa",
+            "description": "MISRA C++ 2008规则集",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "162819184986955776",
+            "name": "MISRA C++2023编码规范",
+            "code": "MISRA CPP-2023",
+            "language": "C/C++",
+            "checkerCount": 142,
+            "builtIn": true,
+            "tags": [
+                "MISRA编码规范"
+            ],
+            "toolType": "Nuwa",
+            "description": "MISRA C++ 2023规则集",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "162819185003732992",
+            "name": "MISRA C-2012编码规范",
+            "code": "MISRA C-2012",
+            "language": "C/C++",
+            "checkerCount": 208,
+            "builtIn": true,
+            "tags": [
+                "MISRA编码规范"
+            ],
+            "toolType": "Nuwa",
+            "description": "MISRA C 2012规则集",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "311666774425931776",
+            "name": "MISRA C-2023编码规范",
+            "code": "MISRA C-2023",
+            "language": "C/C++",
+            "checkerCount": 207,
+            "builtIn": true,
+            "tags": [
+                "MISRA编码规范"
+            ],
+            "toolType": "Nuwa",
+            "description": "MISRA C 2023规则集 (由MISRA C 2012规则集扩展而来)",
+            "createdAt": "2025-08-11 10:20:29",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "317552897443848192",
+            "name": "MISRA C-2025编码规范",
+            "code": "MISRA C-2025",
+            "language": "C/C++",
+            "checkerCount": 209,
+            "builtIn": true,
+            "tags": [
+                "MISRA编码规范"
+            ],
+            "toolType": "Nuwa",
+            "description": "MISRA C 2025规则集",
+            "createdAt": "2025-08-27 16:09:50",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "162819185033093120",
+            "name": "CERT C语言安全编程规范",
+            "code": "CERT-C",
+            "language": "C/C++",
+            "checkerCount": 78,
+            "builtIn": true,
+            "tags": [
+                "CERT编码规范"
+            ],
+            "toolType": "Nuwa",
+            "description": "CERT Secure Coding Standard — C语言安全编程规范",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "162819185049870336",
+            "name": "CERT C++语言安全编程规范",
+            "code": "CERT-CPP",
+            "language": "C/C++",
+            "checkerCount": 24,
+            "builtIn": true,
+            "tags": [
+                "CERT编码规范"
+            ],
+            "toolType": "Nuwa",
+            "description": "CERT Secure Coding Standard — C++语言安全编程规范",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "171201557092630528",
+            "name": "GB/T 34943-2017 C/C++语言源代码漏洞测试规范",
+            "code": "GBT34943-2017",
+            "language": "C/C++",
+            "checkerCount": 32,
+            "builtIn": true,
+            "tags": [
+                "国标编码规范"
+            ],
+            "toolType": "Nuwa",
+            "description": "GB/T 34943-2017 C/C++ 语言源代码漏洞测试规范",
+            "createdAt": "2024-07-19 19:41:51",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "171201557109407744",
+            "name": "GB/T 34944-2017 Java语言源代码漏洞测试规范",
+            "code": "GBT34944-2017",
+            "language": "Java",
+            "checkerCount": 42,
+            "builtIn": true,
+            "tags": [
+                "国标编码规范"
+            ],
+            "toolType": "Nuwa",
+            "description": "GB/T 34944-2017 Java 语言源代码漏洞测试规范",
+            "createdAt": "2024-07-19 19:41:51",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "176397650906714112",
+            "name": "GJB 8114-2013 C/C++语言编程安全子集",
+            "code": "GJB8114-2013",
+            "language": "C/C++",
+            "checkerCount": 202,
+            "builtIn": true,
+            "tags": [
+                "国军标编码规范"
+            ],
+            "toolType": "Nuwa",
+            "description": "GJB 8114-2013 C/C++语言编程安全子集",
+            "createdAt": "2024-08-03 03:49:17",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "162819185062453248",
+            "name": "GJB 5369-2005航天型号软件C语言安全子集",
+            "code": "GJB5369-2005",
+            "language": "C/C++",
+            "checkerCount": 122,
+            "builtIn": true,
+            "tags": [
+                "国军标编码规范"
+            ],
+            "toolType": "Nuwa",
+            "description": "GJB 5369-2005航天型号软件C语言安全子集",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:16:20"
+        },
+        {
+            "id": "320714112158183424",
+            "name": "航天器C语言软件编程约定",
+            "code": "SPACECRAFT C-2014",
+            "language": "C/C++",
+            "checkerCount": 91,
+            "builtIn": true,
+            "tags": [
+                "国军标编码规范"
+            ],
+            "toolType": "Nuwa",
+            "description": "航天器C语言软件编程约定2014版",
+            "createdAt": "2025-09-05 09:31:22",
+            "updatedAt": "2025-09-09 14:39:16"
+        },
+        {
+            "id": "162819185226031104",
+            "name": "SonarQube Java质量缺陷",
+            "code": "SQB_JAVA",
+            "language": "Java",
+            "checkerCount": 307,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "SQB",
+            "description": "SonarQube Java语言质量缺陷规则集",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:31:23"
+        },
+        {
+            "id": "181225416596389888",
+            "name": "SonarQube Java编码规范",
+            "code": "SQB_JAVA_CODE_SMELL",
+            "language": "Java",
+            "checkerCount": 429,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "SQB",
+            "description": "SonarQube Java语言编码规范，比如代码坏味道",
+            "createdAt": "2024-08-16 11:33:06",
+            "updatedAt": "2025-09-05 09:31:23"
+        },
+        {
+            "id": "253474019850846208",
+            "name": "SonarQube Kotlin质量缺陷",
+            "code": "SQB_KOTLIN",
+            "language": "Kotlin",
+            "checkerCount": 202,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "SQB",
+            "description": "SonarQube Kotlin语言质量缺陷规则集",
+            "createdAt": "2025-03-03 20:23:15",
+            "updatedAt": "2025-09-05 09:31:23"
+        },
+        {
+            "id": "253474020077338624",
+            "name": "SonarQube Go质量缺陷",
+            "code": "SQB_GO",
+            "language": "Go",
+            "checkerCount": 99,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "SQB",
+            "description": "SonarQube Go语言质量缺陷规则集",
+            "createdAt": "2025-03-03 20:23:15",
+            "updatedAt": "2025-09-05 09:31:23"
+        },
+        {
+            "id": "253474020421271552",
+            "name": "SonarQube Python质量缺陷",
+            "code": "SQB_PYTHON",
+            "language": "Python",
+            "checkerCount": 347,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "SQB",
+            "description": "SonarQube Python语言质量缺陷规则集",
+            "createdAt": "2025-03-03 20:23:15",
+            "updatedAt": "2025-09-05 09:31:23"
+        },
+        {
+            "id": "162819185238614016",
+            "name": "SonarQube JavaScript质量缺陷",
+            "code": "SQB_JAVASCRIPT",
+            "language": "Javascript",
+            "checkerCount": 498,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "SQB",
+            "description": "SonarQube JavaScript语言编码规则集",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:31:23"
+        },
+        {
+            "id": "162819185251196928",
+            "name": "SonarQube TypeScript质量缺陷",
+            "code": "SQB_TYPESCRIPT",
+            "language": "Typescript",
+            "checkerCount": 498,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "SQB",
+            "description": "SonarQube TypeScript语言编码规则集",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:31:23"
+        },
+        {
+            "id": "162819185309917184",
+            "name": "SonarQube C#质量缺陷",
+            "code": "SQB_CSHARP",
+            "language": "C#",
+            "checkerCount": 484,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "SQB",
+            "description": "SonarQube C#语言质量缺陷规则集",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:31:23"
+        },
+        {
+            "id": "234466042401783808",
+            "name": "SonarQube C#编码规范",
+            "code": "SQB_CSHARP_CODE_SMELL",
+            "language": "C#",
+            "checkerCount": 329,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "SQB",
+            "description": "SonarQube C#语言编码规范",
+            "createdAt": "2025-01-10 09:32:20",
+            "updatedAt": "2025-09-05 09:31:24"
+        },
+        {
+            "id": "162819185326694400",
+            "name": "SonarQube Ruby质量缺陷",
+            "code": "SQB_RUBY",
+            "language": "Ruby",
+            "checkerCount": 103,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "SQB",
+            "description": "SonarQube Ruby语言编码规则集",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:31:24"
+        },
+        {
+            "id": "162819185339277312",
+            "name": "SonarQube YAML质量缺陷",
+            "code": "SQB_YAML",
+            "language": "YAML",
+            "checkerCount": 89,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "SQB",
+            "description": "SonarQube YAML语言编码规则集",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:31:24"
+        },
+        {
+            "id": "162819185351860224",
+            "name": "SonarQube PHP质量缺陷",
+            "code": "SQB_PHP",
+            "language": "PHP",
+            "checkerCount": 314,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "SQB",
+            "description": "SonarQube PHP语言编码规则集",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:31:24"
+        },
+        {
+            "id": "162819185364443136",
+            "name": "SonarQube XML质量缺陷",
+            "code": "SQB_XML",
+            "language": "XML",
+            "checkerCount": 97,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "SQB",
+            "description": "SonarQube XML语言编码规则集",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:31:24"
+        },
+        {
+            "id": "291716781137584128",
+            "name": "SonarQube Rust质量缺陷",
+            "code": "SQB_RUST",
+            "language": "Rust",
+            "checkerCount": 64,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "SQB",
+            "description": "SonarQube Rust语言编码规则集",
+            "createdAt": "2025-06-17 09:06:20",
+            "updatedAt": "2025-09-05 09:31:24"
+        },
+        {
+            "id": "162819185385414656",
+            "name": "PMD Java编码规范",
+            "code": "PMD_JAVA",
+            "language": "Java",
+            "checkerCount": 55,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "PMD",
+            "description": "PMD Java语言编码规则集",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:31:24"
+        },
+        {
+            "id": "162819185444134912",
+            "name": "PMD Swift编码规范",
+            "code": "PMD_SWIFT",
+            "language": "Swift",
+            "checkerCount": 4,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "PMD",
+            "description": "PMD Swift语言编码规则集",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:31:24"
+        },
+        {
+            "id": "162819185460912128",
+            "name": "PMD JSP编码规范",
+            "code": "PMD_JSP",
+            "language": "JSP",
+            "checkerCount": 12,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "PMD",
+            "description": "PMD JSP语言编码规则集",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-09-05 09:31:24"
+        },
+        {
+            "id": "235576486776942592",
+            "name": "PMD Kotlin编码规范",
+            "code": "PMD_KOTLIN",
+            "language": "Kotlin",
+            "checkerCount": 2,
+            "builtIn": true,
+            "tags": [
+                "第三方规则库"
+            ],
+            "toolType": "PMD",
+            "description": "PMD Kotlin语言编码规则集",
+            "createdAt": "2025-01-13 11:04:51",
+            "updatedAt": "2025-09-05 09:31:24"
+        },
+        {
+            "id": "283763606870147072",
+            "name": "C/C++编译警告",
+            "code": "NUWA_PW_CXX",
+            "language": "C/C++",
+            "checkerCount": 189,
+            "builtIn": true,
+            "tags": [
+                "编译警告"
+            ],
+            "toolType": "Nuwa",
+            "description": "C/C++ 编译警告，比如头文件缺失，参数类型不匹配等",
+            "createdAt": "2025-05-26 10:23:15",
+            "updatedAt": "2025-12-09 19:20:38"
+        },
+        {
+            "id": "162819185091813376",
+            "name": "代码度量指标",
+            "code": "NUWA_HIS",
+            "language": "Variant",
+            "checkerCount": 21,
+            "builtIn": true,
+            "tags": [
+                "代码度量指标"
+            ],
+            "toolType": "Nuwa",
+            "description": "代码度量指标规则集，包括圈复杂度、嵌套深度、认知复杂度等",
+            "createdAt": "2024-06-26 16:33:18",
+            "updatedAt": "2025-12-09 19:20:38"
+        },
+        {
+            "id": "262491030367248384",
+            "name": "通用扩展规则库",
+            "code": "NUWA_COMMON_EXT",
+            "language": "Variant",
+            "checkerCount": 23,
+            "builtIn": true,
+            "tags": [
+                "通用扩展规则库"
+            ],
+            "toolType": "Nuwa",
+            "description": "通用扩展规则库，一些不常用的规则",
+            "createdAt": "2025-03-28 17:33:38",
+            "updatedAt": "2025-12-09 19:20:38"
+        },
+        {
+            "id": "233475616136105984",
+            "name": "C/C++ SDK扩展规则集",
+            "code": "NUWA_SDK_EXT_CXX",
+            "language": "C/C++",
+            "checkerCount": 4,
+            "builtIn": true,
+            "tags": [
+                "自定义规则"
+            ],
+            "toolType": "EXT_SDK",
+            "description": "C/C++ SDK扩展规则集",
+            "createdAt": "2025-01-07 15:56:44",
+            "updatedAt": "2025-12-09 19:20:38"
+        }
+    ],
+    "totalPages": 1,
+    "totalElements": 55,
+    "size": 100
+}

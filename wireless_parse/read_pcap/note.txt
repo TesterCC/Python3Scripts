@@ -1,0 +1,6 @@
+## 两个程序
+
+程序1：实现构造包含加密数据的pcap包，如：python3 gen_pcap out.pcap
+
+程序2：解析这个构造的pcap包，从pcap包中还原数据。如：python3 extract_pcap -d /xxx/
+

@@ -1,0 +1,6 @@
+{
+    "receiver": "172.16.0.101:9999",
+    "sender": "",
+    "cipher_suite": "aes",
+    "cipher_key": "abcdef0123456789"
+}
